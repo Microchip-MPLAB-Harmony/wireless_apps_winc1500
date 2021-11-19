@@ -56,7 +56,7 @@
 */
 
 #include "user.h"
-#include "toolchain_specifics.h"
+#include "device.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -138,6 +138,7 @@ extern "C" {
 #define WDRV_WINC_DEVICE_MULTI_GAIN_TABLE
 #define WDRV_WINC_DEVICE_URL_TYPE           unsigned char
 #define WDRV_WINC_DEVICE_SCAN_STOP_ON_FIRST
+#define WDRV_WINC_DEVICE_DEPRECATE_WEP
 #define WDRV_WINC_DEVICE_OTA_STATUS_EXTENDED
 #define WDRV_WINC_DEVICE_SCAN_SSID_LIST
 #define WDRV_WINC_DEVICE_USE_SYS_DEBUG

@@ -23,7 +23,7 @@
  
  // DOM-IGNORE-BEGIN
  /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -63,6 +63,7 @@
 #include "app_iperf.h"
 #include "app_mqtt.h"
 #include "app_ssl.h"
+#include "app_cert_download_ota.h"
 
 
 // *****************************************************************************
@@ -148,7 +149,13 @@ if((APP_OTA_DEMO & appDemoId) == APP_OTA_DEMO)
        APP_SSL_Tasks(handle); 
     } 
 #endif
- 
+    
+#ifdef APP_CERT_DOWNLOAD_OTA
+    if((APP_CERT_DOWNLOAD_OTA_DEMO & appDemoId) == APP_CERT_DOWNLOAD_OTA_DEMO) 
+    { 
+       APP_CertDownloadOtaTasks(handle); 
+    } 
+#endif
 }
 
 
@@ -181,6 +188,12 @@ static inline void APP_INITIALIZE(APP_CALLBACK APPWiFiCallback)
     
 #ifdef APP_SSL
     APP_SSL_Initialize(APPWiFiCallback);
+#endif
+    
+#ifdef APP_CERT_DOWNLOAD_OTA
+
+   APP_CertDownloadOtaInitialize(APPWiFiCallback);
+
 #endif
 }
 

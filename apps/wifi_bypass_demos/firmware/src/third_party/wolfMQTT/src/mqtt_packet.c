@@ -1800,10 +1800,9 @@ int MqttPacket_Read(MqttClient *client, byte* rx_buf, int rx_buf_len,
                 rc += sizeof(header->type_flags);
                 client->packet.header_len = rc;
             }
-
-            FALL_THROUGH;
+ 
         }
-
+        FALL_THROUGH;
         case MQTT_PK_READ:
         {
             /* read remainder of packet */

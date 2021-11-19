@@ -171,6 +171,15 @@
           <itemPath>../src/config/sam_e54_xpro_winc1500/configuration.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="iot" displayName="iot" projectFiles="true">
+        <logicalFolder name="http" displayName="http" projectFiles="true">
+          <itemPath>../src/iot/http/http_client.h</itemPath>
+          <itemPath>../src/iot/http/http_entity.h</itemPath>
+          <itemPath>../src/iot/http/http_header.h</itemPath>
+        </logicalFolder>
+        <itemPath>../src/iot/stream_writer.h</itemPath>
+        <itemPath>../src/iot/sw_timer.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
         <logicalFolder name="f1" displayName="ATSAME54P20A_DFP" projectFiles="true">
           <logicalFolder name="f1" displayName="component" projectFiles="true">
@@ -213,6 +222,7 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/component/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/component/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f2" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/ac.h</itemPath>
@@ -274,6 +284,7 @@
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/trng.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/usb.h</itemPath>
             <itemPath>../src/packs/ATSAME54P20A_DFP/instance/wdt.h</itemPath>
+            <itemPath>../src/packs/ATSAME54P20A_DFP/instance/fuses.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAME54P20A_DFP/pio/same54p20a.h</itemPath>
@@ -324,6 +335,25 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="root_tls_cert"
+                     displayName="root_tls_cert"
+                     projectFiles="true">
+        <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
+          <itemPath>../src/root_tls_cert/crypto/crypto.h</itemPath>
+          <itemPath>../src/root_tls_cert/crypto/crypto_api.h</itemPath>
+          <itemPath>../src/root_tls_cert/crypto/crypto_types.h</itemPath>
+          <itemPath>../src/root_tls_cert/crypto/tls_buffer_manager.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="x509" displayName="x509" projectFiles="true">
+          <itemPath>../src/root_tls_cert/x509/asn1.h</itemPath>
+          <itemPath>../src/root_tls_cert/x509/x509_cert.h</itemPath>
+        </logicalFolder>
+        <itemPath>../src/root_tls_cert/pem.h</itemPath>
+        <itemPath>../src/root_tls_cert/root_setup.h</itemPath>
+        <itemPath>../src/root_tls_cert/root_tls_cert.h</itemPath>
+        <itemPath>../src/root_tls_cert/tls_setup.h</itemPath>
+        <itemPath>../src/root_tls_cert/tls_srv_sec.h</itemPath>
+      </logicalFolder>
       <itemPath>../src/app.h</itemPath>
       <itemPath>../src/app_iperf.h</itemPath>
       <itemPath>../src/app_mqtt.h</itemPath>
@@ -333,6 +363,7 @@
       <itemPath>../src/app_ssl.h</itemPath>
       <itemPath>../src/app_wifi.h</itemPath>
       <itemPath>../src/iperf.h</itemPath>
+      <itemPath>../src/app_cert_download_ota.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -495,6 +526,13 @@
           <itemPath>../src/config/sam_e54_xpro_winc1500/tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="iot" displayName="iot" projectFiles="true">
+        <logicalFolder name="http" displayName="http" projectFiles="true">
+          <itemPath>../src/iot/http/http_client.c</itemPath>
+        </logicalFolder>
+        <itemPath>../src/iot/stream_writer.c</itemPath>
+        <itemPath>../src/iot/sw_timer.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="paho.mqtt.embedded-c"
                      displayName="paho.mqtt.embedded-c"
                      projectFiles="true">
@@ -523,6 +561,24 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="root_tls_cert"
+                     displayName="root_tls_cert"
+                     projectFiles="true">
+        <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
+          <itemPath>../src/root_tls_cert/crypto/crypto_api.c</itemPath>
+          <itemPath>../src/root_tls_cert/crypto/hash.c</itemPath>
+          <itemPath>../src/root_tls_cert/crypto/rsa_key.c</itemPath>
+          <itemPath>../src/root_tls_cert/crypto/tls_buffer_manager.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="x509" displayName="x509" projectFiles="true">
+          <itemPath>../src/root_tls_cert/x509/asn1.c</itemPath>
+          <itemPath>../src/root_tls_cert/x509/x509_cert.c</itemPath>
+        </logicalFolder>
+        <itemPath>../src/root_tls_cert/pem.c</itemPath>
+        <itemPath>../src/root_tls_cert/root_setup.c</itemPath>
+        <itemPath>../src/root_tls_cert/tls_setup.c</itemPath>
+        <itemPath>../src/root_tls_cert/tls_srv_sec.c</itemPath>
+      </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/app_iperf.c</itemPath>
@@ -534,6 +590,7 @@
       <itemPath>../src/app_ssl.c</itemPath>
       <itemPath>../src/app_wifi.c</itemPath>
       <itemPath>../src/iperf.c</itemPath>
+      <itemPath>../src/app_cert_download_ota.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -802,6 +859,8 @@
         <property key="memories.programmemory.ranges" value="0-fffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/Harmony_new_released/wireless_apps_winc1500/apps/wifi_socket_demos/firmware/sam_e54_xpro_winc1500.X/debug/sam_e54_xpro_winc1500/sam_e54_xpro_winc1500_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -1369,6 +1428,8 @@
         <property key="memories.programmemory.ranges" value="0-fffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/Harmony_new_released/wireless_apps_winc1500/apps/wifi_socket_demos/firmware/sam_e54_xpro_winc1500.X/debug/sam_e54_xpro_winc1500/sam_e54_xpro_winc1500_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

@@ -2,29 +2,17 @@
   WINC Example Application
 
   File Name:
-    example.c
+    iperf.c
 
   Summary:
-    WINC scan and connection example
+    iperf example
 
   Description:
-     This example performs the following steps:
-        1) Scans all channels looking for the specified BSS
-        2) Displays all found BSSs
-        3) Connects to the specified BSS
-        4) Sends one or more ICMP echo requests to a known IP address
-
-    The configuration options for this example are:
-        WLAN_SSID           -- BSS to search for
-        WLAN_AUTH           -- Security for the BSS
-        WLAN_PSK            -- Passphrase for WPA security
-        ICMP_ECHO_TARGET    -- IP address to send ICMP echo request to
-        ICMP_ECHO_COUNT     -- Number of ICMP echo requests to send
-        ICMP_ECHO_INTERVAL  -- Time between ICMP echo requests, in milliseconds
+     This application demonstrates how a to run iperf application on WINC device in Socket Mode.
 *******************************************************************************/
 
 /*******************************************************************************
-* Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -72,7 +60,7 @@ app_status iperf_app_stat = {0,0,0,0};
 tstrIperfInit pstrIperfInit;
 
 
-static APP_WIFI_IPERF_EXAMP_STATES appWiFiIperfState;
+static APP_WIFI_IPERF_EXAMP_STATES  appWiFiIperfState;
 
 
 static int APP_IperfCMDProcess

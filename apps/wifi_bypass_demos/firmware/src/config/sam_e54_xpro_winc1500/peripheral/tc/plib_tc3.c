@@ -213,7 +213,7 @@ void TC3_TimerInterruptHandler( void )
         status = (TC_TIMER_STATUS) TC3_REGS->COUNT16.TC_INTFLAG;
         /* Clear interrupt flags */
         TC3_REGS->COUNT16.TC_INTFLAG = (uint8_t)TC_INTFLAG_Msk;
-        if((status != TC_TIMER_STATUS_NONE) && TC3_CallbackObject.callback != NULL)
+        if((status != TC_TIMER_STATUS_NONE) && (TC3_CallbackObject.callback != NULL))
         {
             TC3_CallbackObject.callback(status, TC3_CallbackObject.context);
         }

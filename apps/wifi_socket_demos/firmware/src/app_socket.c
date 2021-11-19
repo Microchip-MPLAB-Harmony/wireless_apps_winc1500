@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.c
+    app_socket.c
 
   Summary:
     This file contains the source code for the MPLAB Harmony application.
@@ -22,7 +22,7 @@
  *******************************************************************************/
 
 /*******************************************************************************
- * Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software
  * and any derivatives exclusively with Microchip products. It is your
@@ -54,7 +54,7 @@
 #include "wdrv_winc_client_api.h"
 #include "app_mqtt.h"
 
-#define SOCK_HOST_NAME              "test.mosquitto.org"
+#define SOCK_HOST_NAME              "broker.hivemq.com"
 #define SOCK_HOST_PORT              1883 
 #define SOCK_TCP_RECV_BUFFER_SIZE   1460
 #define SOCK_SERVER_NAME            64
@@ -83,7 +83,7 @@ typedef struct {
     uint8_t recvBuffer[SOCK_TCP_RECV_BUFFER_SIZE];
 } SOCKETMODE_SOCK_Config;
 
-SOCKETMODE_SOCK_Config g_sSockConfig;
+static SOCKETMODE_SOCK_Config g_sSockConfig;
 SOCKET g_clientSocket = -1;
 uint32_t g_u32SockStatus = 0;
 extern bool gbMQTTBrokerSendDone;

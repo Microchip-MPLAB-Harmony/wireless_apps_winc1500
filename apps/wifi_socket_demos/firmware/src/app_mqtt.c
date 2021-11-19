@@ -1,5 +1,5 @@
 /*******************************************************************************
-Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
+Copyright (C) 2020-21 released Microchip Technology Inc.  All rights reserved.
 
 Microchip licenses to you the right to use, modify, copy and distribute
 Software only when embedded on a Microchip microcontroller or digital signal
@@ -38,7 +38,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define MQTTPacket_connectData_initializer { {'M', 'Q', 'T', 'C'}, 0, 4, {NULL, {0, NULL}}, 60, 1, 0, \
 		MQTTPacket_willOptions_initializer, {NULL, {0, NULL}}, {NULL, {0, NULL}} }
 
-#define APP_MQTT_BROKER_NAME            "test.mosquitto.org"
+#define APP_MQTT_BROKER_NAME            "broker.hivemq.com"
 #define APP_MQTT_BROKER_PORT            1883
 
 #define APP_MQTT_MAX_TX_BUFF_LEN        512
@@ -478,6 +478,7 @@ void APP_MQTT_Tasks(DRV_HANDLE wdrvHandle) {
         case APP_MQTT_STATUS_MQTT_DISCONNECTED:
         case APP_MQTT_STATUS_MQTT_CONN_FAILED:
         {
+            SYS_CONSOLE_PRINT("Connection Failed\r\n\n");
         }
             break;
     }

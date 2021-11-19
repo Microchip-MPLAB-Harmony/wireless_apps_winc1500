@@ -1,0 +1,623 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="../src/root_tls_cert/crypto/crypto_api.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/**x * \filex *x * \brief Header file for cryptographic algorithms.x *x * Copyright (c) 2017-2018 Microchip Technology Inc. and its subsidiaries.x *x * \asf_license_startx *x * \page Licensex *x * Subject to your compliance with these terms, you may use Microchipx * software and any derivatives exclusively with Microchip products.x * It is your responsibility to comply with third party license terms applicablex * to your use of third party software (including open source software) thatx * may accompany Microchip software.x *x * THIS SOFTWARE IS SUPPLIED BY MICROCHIP &quot;AS IS&quot;. NO WARRANTIES,x * WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,x * INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,x * AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BEx * LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIALx * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THEx * SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THEx * POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENTx * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAYx * RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,x * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.x *x * \asf_license_stopx *x */"/>
+    <tok fileIndex="0" linenr="34" column="1" str="#"/>
+    <tok fileIndex="0" linenr="34" column="2" str="ifndef"/>
+    <tok fileIndex="0" linenr="34" column="9" str="__CRYPTO_API_H__"/>
+    <tok fileIndex="0" linenr="35" column="1" str="#"/>
+    <tok fileIndex="0" linenr="35" column="2" str="define"/>
+    <tok fileIndex="0" linenr="35" column="9" str="__CRYPTO_API_H__"/>
+    <tok fileIndex="0" linenr="37" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*INCLUDES*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="41" column="1" str="#"/>
+    <tok fileIndex="0" linenr="41" column="2" str="include"/>
+    <tok fileIndex="0" linenr="41" column="10" str="&quot;drv/common/nm_common.h&quot;"/>
+    <tok fileIndex="0" linenr="42" column="1" str="#"/>
+    <tok fileIndex="0" linenr="42" column="2" str="include"/>
+    <tok fileIndex="0" linenr="42" column="10" str="&quot;drv/driver/m2m_types.h&quot;"/>
+    <tok fileIndex="0" linenr="44" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*MACROS*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="48" column="1" str="#"/>
+    <tok fileIndex="0" linenr="48" column="2" str="define"/>
+    <tok fileIndex="0" linenr="48" column="9" str="CRYPTO_SHA1_DIGEST_SIZE"/>
+    <tok fileIndex="0" linenr="48" column="35" str="("/>
+    <tok fileIndex="0" linenr="48" column="36" str="20"/>
+    <tok fileIndex="0" linenr="48" column="38" str=")"/>
+    <tok fileIndex="0" linenr="49" column="1" str="#"/>
+    <tok fileIndex="0" linenr="49" column="2" str="define"/>
+    <tok fileIndex="0" linenr="49" column="9" str="ECC_POINT_MAX"/>
+    <tok fileIndex="0" linenr="49" column="27" str="("/>
+    <tok fileIndex="0" linenr="49" column="28" str="72"/>
+    <tok fileIndex="0" linenr="49" column="30" str=")"/>
+    <tok fileIndex="0" linenr="51" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*DATA TYPES*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="55" column="1" str="/*!@enumxtenuCertPubKeyType*/"/>
+    <tok fileIndex="0" linenr="59" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="59" column="9" str="enum"/>
+    <tok fileIndex="0" linenr="59" column="13" str="{"/>
+    <tok fileIndex="0" linenr="60" column="2" str="X509_CERT_PUBKEY_RSA"/>
+    <tok fileIndex="0" linenr="60" column="23" str="="/>
+    <tok fileIndex="0" linenr="60" column="25" str="1"/>
+    <tok fileIndex="0" linenr="60" column="26" str=","/>
+    <tok fileIndex="0" linenr="61" column="2" str="X509_CERT_PUBKEY_ECDSA"/>
+    <tok fileIndex="0" linenr="61" column="25" str="="/>
+    <tok fileIndex="0" linenr="61" column="27" str="2"/>
+    <tok fileIndex="0" linenr="62" column="1" str="}"/>
+    <tok fileIndex="0" linenr="62" column="2" str="tenuCertPubKeyType"/>
+    <tok fileIndex="0" linenr="62" column="20" str=";"/>
+    <tok fileIndex="0" linenr="65" column="1" str="/*!@structxxtstrRsaPrivateKey*/"/>
+    <tok fileIndex="0" linenr="69" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="69" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="69" column="15" str="{"/>
+    <tok fileIndex="0" linenr="70" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="70" column="11" str="u16NSize"/>
+    <tok fileIndex="0" linenr="70" column="19" str=";"/>
+    <tok fileIndex="0" linenr="71" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="71" column="11" str="u16eSize"/>
+    <tok fileIndex="0" linenr="71" column="19" str=";"/>
+    <tok fileIndex="0" linenr="72" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="72" column="11" str="u16dSize"/>
+    <tok fileIndex="0" linenr="72" column="19" str=";"/>
+    <tok fileIndex="0" linenr="73" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="73" column="11" str="u16PSize"/>
+    <tok fileIndex="0" linenr="73" column="19" str=";"/>
+    <tok fileIndex="0" linenr="74" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="74" column="11" str="u16QSize"/>
+    <tok fileIndex="0" linenr="74" column="19" str=";"/>
+    <tok fileIndex="0" linenr="75" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="75" column="11" str="u16dPSize"/>
+    <tok fileIndex="0" linenr="75" column="20" str=";"/>
+    <tok fileIndex="0" linenr="76" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="76" column="11" str="u16dQSize"/>
+    <tok fileIndex="0" linenr="76" column="20" str=";"/>
+    <tok fileIndex="0" linenr="77" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="77" column="11" str="u16QInvSize"/>
+    <tok fileIndex="0" linenr="77" column="22" str=";"/>
+    <tok fileIndex="0" linenr="78" column="2" str="uint32_t"/>
+    <tok fileIndex="0" linenr="78" column="11" str="u32Version"/>
+    <tok fileIndex="0" linenr="78" column="21" str=";"/>
+    <tok fileIndex="0" linenr="79" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="79" column="10" str="*"/>
+    <tok fileIndex="0" linenr="79" column="11" str="pu8N"/>
+    <tok fileIndex="0" linenr="79" column="15" str=";"/>
+    <tok fileIndex="0" linenr="80" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="80" column="10" str="*"/>
+    <tok fileIndex="0" linenr="80" column="11" str="pu8e"/>
+    <tok fileIndex="0" linenr="80" column="15" str=";"/>
+    <tok fileIndex="0" linenr="81" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="81" column="10" str="*"/>
+    <tok fileIndex="0" linenr="81" column="11" str="pu8d"/>
+    <tok fileIndex="0" linenr="81" column="15" str=";"/>
+    <tok fileIndex="0" linenr="82" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="82" column="10" str="*"/>
+    <tok fileIndex="0" linenr="82" column="11" str="pu8p"/>
+    <tok fileIndex="0" linenr="82" column="15" str=";"/>
+    <tok fileIndex="0" linenr="83" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="83" column="10" str="*"/>
+    <tok fileIndex="0" linenr="83" column="11" str="pu8q"/>
+    <tok fileIndex="0" linenr="83" column="15" str=";"/>
+    <tok fileIndex="0" linenr="84" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="84" column="10" str="*"/>
+    <tok fileIndex="0" linenr="84" column="11" str="pu8dP"/>
+    <tok fileIndex="0" linenr="84" column="16" str=";"/>
+    <tok fileIndex="0" linenr="85" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="85" column="10" str="*"/>
+    <tok fileIndex="0" linenr="85" column="11" str="pu8dQ"/>
+    <tok fileIndex="0" linenr="85" column="16" str=";"/>
+    <tok fileIndex="0" linenr="86" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="86" column="10" str="*"/>
+    <tok fileIndex="0" linenr="86" column="11" str="pu8QInv"/>
+    <tok fileIndex="0" linenr="86" column="18" str=";"/>
+    <tok fileIndex="0" linenr="87" column="1" str="}"/>
+    <tok fileIndex="0" linenr="87" column="2" str="tstrRsaPrivateKey"/>
+    <tok fileIndex="0" linenr="87" column="19" str=";"/>
+    <tok fileIndex="0" linenr="90" column="1" str="/*!@structxxtstrASN1RsaPrivateKey@briefxRSA Private Key ElementsxThe structure contains the elements of the RSA Private key as decoded fromxthe supplied private key file (PEM Format).*/"/>
+    <tok fileIndex="0" linenr="99" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="99" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="99" column="15" str="{"/>
+    <tok fileIndex="0" linenr="100" column="2" str="tstrRsaPrivateKey"/>
+    <tok fileIndex="0" linenr="100" column="20" str="strRsaPrivKey"/>
+    <tok fileIndex="0" linenr="100" column="33" str=";"/>
+    <tok fileIndex="0" linenr="101" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="101" column="13" str="*"/>
+    <tok fileIndex="0" linenr="101" column="14" str="pu8AllocPtr"/>
+    <tok fileIndex="0" linenr="101" column="25" str=";"/>
+    <tok fileIndex="0" linenr="102" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="102" column="14" str="u16KeyBufSz"/>
+    <tok fileIndex="0" linenr="102" column="25" str=";"/>
+    <tok fileIndex="0" linenr="103" column="1" str="}"/>
+    <tok fileIndex="0" linenr="103" column="2" str="tstrASN1RSAPrivateKey"/>
+    <tok fileIndex="0" linenr="103" column="23" str=";"/>
+    <tok fileIndex="0" linenr="106" column="1" str="/*!@structxxtstrRSAPubKey*/"/>
+    <tok fileIndex="0" linenr="110" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="110" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="110" column="15" str="{"/>
+    <tok fileIndex="0" linenr="111" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="111" column="11" str="u16NSize"/>
+    <tok fileIndex="0" linenr="111" column="19" str=";"/>
+    <tok fileIndex="0" linenr="112" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="112" column="11" str="u16ESize"/>
+    <tok fileIndex="0" linenr="112" column="19" str=";"/>
+    <tok fileIndex="0" linenr="113" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="113" column="10" str="*"/>
+    <tok fileIndex="0" linenr="113" column="11" str="pu8N"/>
+    <tok fileIndex="0" linenr="113" column="15" str=";"/>
+    <tok fileIndex="0" linenr="114" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="114" column="10" str="*"/>
+    <tok fileIndex="0" linenr="114" column="11" str="pu8E"/>
+    <tok fileIndex="0" linenr="114" column="15" str=";"/>
+    <tok fileIndex="0" linenr="115" column="1" str="}"/>
+    <tok fileIndex="0" linenr="115" column="2" str="tstrRSAPubKey"/>
+    <tok fileIndex="0" linenr="115" column="15" str=";"/>
+    <tok fileIndex="0" linenr="118" column="1" str="/*!@structxxtstrECDSAPubKey*/"/>
+    <tok fileIndex="0" linenr="122" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="122" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="122" column="15" str="{"/>
+    <tok fileIndex="0" linenr="123" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="123" column="11" str="u16CurveID"/>
+    <tok fileIndex="0" linenr="123" column="21" str=";"/>
+    <tok fileIndex="0" linenr="124" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="124" column="11" str="u16EcPointSz"/>
+    <tok fileIndex="0" linenr="124" column="23" str=";"/>
+    <tok fileIndex="0" linenr="125" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="125" column="10" str="au8EcPoint"/>
+    <tok fileIndex="0" linenr="125" column="20" str="["/>
+    <tok fileIndex="0" linenr="125" column="21" str="ECC_POINT_MAX"/>
+    <tok fileIndex="0" linenr="125" column="35" str="*"/>
+    <tok fileIndex="0" linenr="125" column="37" str="2"/>
+    <tok fileIndex="0" linenr="125" column="38" str="]"/>
+    <tok fileIndex="0" linenr="125" column="39" str=";"/>
+    <tok fileIndex="0" linenr="126" column="1" str="}"/>
+    <tok fileIndex="0" linenr="126" column="2" str="tstrECDSAPubKey"/>
+    <tok fileIndex="0" linenr="126" column="17" str=";"/>
+    <tok fileIndex="0" linenr="129" column="1" str="/*!@structxxtstrX509CertPublicKey*/"/>
+    <tok fileIndex="0" linenr="133" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="133" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="133" column="15" str="{"/>
+    <tok fileIndex="0" linenr="134" column="2" str="tenuCertPubKeyType"/>
+    <tok fileIndex="0" linenr="134" column="21" str="enuCertKeyType"/>
+    <tok fileIndex="0" linenr="134" column="35" str=";"/>
+    <tok fileIndex="0" linenr="135" column="2" str="union"/>
+    <tok fileIndex="0" linenr="135" column="7" str="{"/>
+    <tok fileIndex="0" linenr="136" column="3" str="tstrRSAPubKey"/>
+    <tok fileIndex="0" linenr="136" column="17" str="strRsaPub"/>
+    <tok fileIndex="0" linenr="136" column="26" str=";"/>
+    <tok fileIndex="0" linenr="137" column="3" str="tstrECDSAPubKey"/>
+    <tok fileIndex="0" linenr="137" column="19" str="strEcdsaPub"/>
+    <tok fileIndex="0" linenr="137" column="30" str=";"/>
+    <tok fileIndex="0" linenr="138" column="2" str="}"/>
+    <tok fileIndex="0" linenr="138" column="3" str=";"/>
+    <tok fileIndex="0" linenr="139" column="1" str="}"/>
+    <tok fileIndex="0" linenr="139" column="2" str="tstrX509CertPublicKey"/>
+    <tok fileIndex="0" linenr="139" column="23" str=";"/>
+    <tok fileIndex="0" linenr="142" column="1" str="/*!@structxxtstrX520Name@brief*/"/>
+    <tok fileIndex="0" linenr="148" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="148" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="148" column="15" str="{"/>
+    <tok fileIndex="0" linenr="149" column="2" str="char"/>
+    <tok fileIndex="0" linenr="149" column="7" str="acCmnName"/>
+    <tok fileIndex="0" linenr="149" column="16" str="["/>
+    <tok fileIndex="0" linenr="149" column="17" str="64"/>
+    <tok fileIndex="0" linenr="149" column="19" str="]"/>
+    <tok fileIndex="0" linenr="149" column="20" str=";"/>
+    <tok fileIndex="0" linenr="150" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="150" column="10" str="au8NameSHA1"/>
+    <tok fileIndex="0" linenr="150" column="21" str="["/>
+    <tok fileIndex="0" linenr="150" column="22" str="20"/>
+    <tok fileIndex="0" linenr="150" column="24" str="]"/>
+    <tok fileIndex="0" linenr="150" column="25" str=";"/>
+    <tok fileIndex="0" linenr="151" column="1" str="}"/>
+    <tok fileIndex="0" linenr="151" column="2" str="tstrX509Name"/>
+    <tok fileIndex="0" linenr="151" column="14" str=";"/>
+    <tok fileIndex="0" linenr="154" column="1" str="/*!@structxxtxtrX509CertInfo*/"/>
+    <tok fileIndex="0" linenr="158" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="158" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="158" column="15" str="{"/>
+    <tok fileIndex="0" linenr="159" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="159" column="14" str="u8SerialNumberLength"/>
+    <tok fileIndex="0" linenr="159" column="34" str=";"/>
+    <tok fileIndex="0" linenr="160" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="160" column="14" str="au8SerialNo"/>
+    <tok fileIndex="0" linenr="160" column="25" str="["/>
+    <tok fileIndex="0" linenr="160" column="26" str="64"/>
+    <tok fileIndex="0" linenr="160" column="28" str="]"/>
+    <tok fileIndex="0" linenr="160" column="29" str=";"/>
+    <tok fileIndex="0" linenr="161" column="2" str="tstrX509Name"/>
+    <tok fileIndex="0" linenr="161" column="17" str="strIssuer"/>
+    <tok fileIndex="0" linenr="161" column="26" str=";"/>
+    <tok fileIndex="0" linenr="162" column="2" str="tstrSystemTime"/>
+    <tok fileIndex="0" linenr="162" column="19" str="strExpiryDate"/>
+    <tok fileIndex="0" linenr="162" column="32" str=";"/>
+    <tok fileIndex="0" linenr="163" column="2" str="tstrSystemTime"/>
+    <tok fileIndex="0" linenr="163" column="19" str="strStartDate"/>
+    <tok fileIndex="0" linenr="163" column="31" str=";"/>
+    <tok fileIndex="0" linenr="164" column="2" str="tstrX509Name"/>
+    <tok fileIndex="0" linenr="164" column="17" str="strSubject"/>
+    <tok fileIndex="0" linenr="164" column="27" str=";"/>
+    <tok fileIndex="0" linenr="165" column="2" str="tstrX509CertPublicKey"/>
+    <tok fileIndex="0" linenr="165" column="24" str="strPubKey"/>
+    <tok fileIndex="0" linenr="165" column="33" str=";"/>
+    <tok fileIndex="0" linenr="166" column="2" str="void"/>
+    <tok fileIndex="0" linenr="166" column="11" str="*"/>
+    <tok fileIndex="0" linenr="166" column="12" str="pvPrivate"/>
+    <tok fileIndex="0" linenr="166" column="21" str=";"/>
+    <tok fileIndex="0" linenr="167" column="1" str="}"/>
+    <tok fileIndex="0" linenr="167" column="2" str="txtrX509CertInfo"/>
+    <tok fileIndex="0" linenr="167" column="18" str=";"/>
+    <tok fileIndex="0" linenr="169" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*xFUNCTION PROTOTYPESx*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="173" column="1" str="int8_t"/>
+    <tok fileIndex="0" linenr="173" column="8" str="CryptoX509CertDecode"/>
+    <tok fileIndex="0" linenr="173" column="28" str="("/>
+    <tok fileIndex="0" linenr="173" column="29" str="uint8_t"/>
+    <tok fileIndex="0" linenr="173" column="37" str="*"/>
+    <tok fileIndex="0" linenr="173" column="38" str="pu8X509CertBuf"/>
+    <tok fileIndex="0" linenr="173" column="52" str=","/>
+    <tok fileIndex="0" linenr="173" column="54" str="uint16_t"/>
+    <tok fileIndex="0" linenr="173" column="63" str="u16X509CertBuffer"/>
+    <tok fileIndex="0" linenr="173" column="80" str=","/>
+    <tok fileIndex="0" linenr="173" column="82" str="txtrX509CertInfo"/>
+    <tok fileIndex="0" linenr="173" column="99" str="*"/>
+    <tok fileIndex="0" linenr="173" column="100" str="pstrCert"/>
+    <tok fileIndex="0" linenr="173" column="108" str=","/>
+    <tok fileIndex="0" linenr="173" column="110" str="uint8_t"/>
+    <tok fileIndex="0" linenr="173" column="118" str="bDumpCert"/>
+    <tok fileIndex="0" linenr="173" column="127" str=")"/>
+    <tok fileIndex="0" linenr="173" column="128" str=";"/>
+    <tok fileIndex="0" linenr="174" column="1" str="void"/>
+    <tok fileIndex="0" linenr="174" column="6" str="CryptoX509DeleteContext"/>
+    <tok fileIndex="0" linenr="174" column="29" str="("/>
+    <tok fileIndex="0" linenr="174" column="30" str="txtrX509CertInfo"/>
+    <tok fileIndex="0" linenr="174" column="47" str="*"/>
+    <tok fileIndex="0" linenr="174" column="48" str="pstrCert"/>
+    <tok fileIndex="0" linenr="174" column="56" str=")"/>
+    <tok fileIndex="0" linenr="174" column="57" str=";"/>
+    <tok fileIndex="0" linenr="175" column="1" str="int8_t"/>
+    <tok fileIndex="0" linenr="175" column="8" str="CryptoDecodeRsaPrivKey"/>
+    <tok fileIndex="0" linenr="175" column="30" str="("/>
+    <tok fileIndex="0" linenr="175" column="31" str="uint8_t"/>
+    <tok fileIndex="0" linenr="175" column="39" str="*"/>
+    <tok fileIndex="0" linenr="175" column="40" str="pu8RsaKeyFile"/>
+    <tok fileIndex="0" linenr="175" column="53" str=","/>
+    <tok fileIndex="0" linenr="175" column="55" str="uint32_t"/>
+    <tok fileIndex="0" linenr="175" column="64" str="u32KeySize"/>
+    <tok fileIndex="0" linenr="175" column="74" str=","/>
+    <tok fileIndex="0" linenr="175" column="76" str="tstrASN1RSAPrivateKey"/>
+    <tok fileIndex="0" linenr="175" column="98" str="*"/>
+    <tok fileIndex="0" linenr="175" column="99" str="pstrRsaPrivKey"/>
+    <tok fileIndex="0" linenr="175" column="113" str=")"/>
+    <tok fileIndex="0" linenr="175" column="114" str=";"/>
+    <tok fileIndex="0" linenr="176" column="1" str="#"/>
+    <tok fileIndex="0" linenr="176" column="2" str="endif"/>
+    <tok fileIndex="0" linenr="176" column="8" str="/* __CRYPTO_API_H__ */"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="../src/root_tls_cert/crypto/crypto_api.h" linenr="34" str="#ifndef __CRYPTO_API_H__"/>
+    <directive file="../src/root_tls_cert/crypto/crypto_api.h" linenr="35" str="#define __CRYPTO_API_H__"/>
+    <directive file="../src/root_tls_cert/crypto/crypto_api.h" linenr="41" str="#include &quot;drv/common/nm_common.h&quot;"/>
+    <directive file="../src/root_tls_cert/crypto/crypto_api.h" linenr="42" str="#include &quot;drv/driver/m2m_types.h&quot;"/>
+    <directive file="../src/root_tls_cert/crypto/crypto_api.h" linenr="48" str="#define CRYPTO_SHA1_DIGEST_SIZE (20)"/>
+    <directive file="../src/root_tls_cert/crypto/crypto_api.h" linenr="49" str="#define ECC_POINT_MAX (72)"/>
+    <directive file="../src/root_tls_cert/crypto/crypto_api.h" linenr="176" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="0x7fd00237d710" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="59" column="9" str="enum" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023896f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="59" column="0" str="tenuCertPubKeyType" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002382280" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="59" column="13" str="{" scope="0x7fd0023898f0" link="0x7fd00238d4c0"/>
+    <token id="0x7fd00238cf10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="60" column="2" str="X509_CERT_PUBKEY_RSA" scope="0x7fd0023898f0" type="name" astParent="0x7fd00238cfe0"/>
+    <token id="0x7fd00238cfe0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="60" column="23" str="=" scope="0x7fd0023898f0" type="op" isAssignmentOp="True" astParent="0x7fd00238d180" astOperand1="0x7fd00238cf10" astOperand2="0x7fd00238d0b0"/>
+    <token id="0x7fd00238d0b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="60" column="25" str="1" scope="0x7fd0023898f0" type="number" isInt="True" values="0x7fd0023809f0" astParent="0x7fd00238cfe0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd00238d180" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="60" column="26" str="," scope="0x7fd0023898f0" astOperand1="0x7fd00238cfe0" astOperand2="0x7fd00238d320"/>
+    <token id="0x7fd00238d250" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="61" column="2" str="X509_CERT_PUBKEY_ECDSA" scope="0x7fd0023898f0" type="name" astParent="0x7fd00238d320"/>
+    <token id="0x7fd00238d320" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="61" column="25" str="=" scope="0x7fd0023898f0" type="op" isAssignmentOp="True" astParent="0x7fd00238d180" astOperand1="0x7fd00238d250" astOperand2="0x7fd00238d3f0"/>
+    <token id="0x7fd00238d3f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="61" column="27" str="2" scope="0x7fd0023898f0" type="number" isInt="True" values="0x7fd00237fcd0" astParent="0x7fd00238d320" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd00238d4c0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="62" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd002382280"/>
+    <token id="0x7fd0023897c0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="62" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002389890" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="69" column="9" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd00238d730" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="69" column="0" str="tstrRsaPrivateKey" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd00238d8d0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="69" column="15" str="{" scope="0x7fd0023898f0" link="0x7fd0023366f0"/>
+    <token id="0x7fd00238d9a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="70" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd00238da70" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="70" column="11" str="u16NSize" scope="0x7fd0023898f0" type="name" varId="1"/>
+    <token id="0x7fd0023351f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="70" column="19" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335240" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="71" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002335290" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="71" column="11" str="u16eSize" scope="0x7fd0023898f0" type="name" varId="2"/>
+    <token id="0x7fd0023352e0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="71" column="19" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335330" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="72" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002335380" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="72" column="11" str="u16dSize" scope="0x7fd0023898f0" type="name" varId="3"/>
+    <token id="0x7fd00238de40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="72" column="19" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335450" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="73" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023354a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="73" column="11" str="u16PSize" scope="0x7fd0023898f0" type="name" varId="4"/>
+    <token id="0x7fd0023354f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="73" column="19" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335540" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="74" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002335610" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="74" column="11" str="u16QSize" scope="0x7fd0023898f0" type="name" varId="5"/>
+    <token id="0x7fd002335660" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="74" column="19" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023356b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="75" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002335700" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="75" column="11" str="u16dPSize" scope="0x7fd0023898f0" type="name" varId="6"/>
+    <token id="0x7fd002335750" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="75" column="20" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023357a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="76" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023357f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="76" column="11" str="u16dQSize" scope="0x7fd0023898f0" type="name" varId="7"/>
+    <token id="0x7fd002335840" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="76" column="20" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335910" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="77" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002335960" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="77" column="11" str="u16QInvSize" scope="0x7fd0023898f0" type="name" varId="8"/>
+    <token id="0x7fd0023359b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="77" column="22" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335a00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="78" column="2" str="uint32_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002335a50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="78" column="11" str="u32Version" scope="0x7fd0023898f0" type="name" varId="9"/>
+    <token id="0x7fd002335aa0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="78" column="21" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335af0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="79" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002335b40"/>
+    <token id="0x7fd002335b40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="79" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd002335af0" astOperand2="0x7fd002335c10"/>
+    <token id="0x7fd002335c10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="79" column="11" str="pu8N" scope="0x7fd0023898f0" type="name" varId="10" astParent="0x7fd002335b40"/>
+    <token id="0x7fd002335c60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="79" column="15" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335cb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="80" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002335d00"/>
+    <token id="0x7fd002335d00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="80" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd002335cb0" astOperand2="0x7fd002335d50"/>
+    <token id="0x7fd002335d50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="80" column="11" str="pu8e" scope="0x7fd0023898f0" type="name" varId="11" astParent="0x7fd002335d00"/>
+    <token id="0x7fd002335da0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="80" column="15" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335df0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="81" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002335e40"/>
+    <token id="0x7fd002335e40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="81" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd002335df0" astOperand2="0x7fd002335f10"/>
+    <token id="0x7fd002335f10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="81" column="11" str="pu8d" scope="0x7fd0023898f0" type="name" varId="12" astParent="0x7fd002335e40"/>
+    <token id="0x7fd002335f60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="81" column="15" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002335fb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="82" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002336000"/>
+    <token id="0x7fd002336000" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="82" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd002335fb0" astOperand2="0x7fd002336050"/>
+    <token id="0x7fd002336050" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="82" column="11" str="pu8p" scope="0x7fd0023898f0" type="name" varId="13" astParent="0x7fd002336000"/>
+    <token id="0x7fd0023360a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="82" column="15" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023360f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="83" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002336140"/>
+    <token id="0x7fd002336140" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="83" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd0023360f0" astOperand2="0x7fd002336210"/>
+    <token id="0x7fd002336210" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="83" column="11" str="pu8q" scope="0x7fd0023898f0" type="name" varId="14" astParent="0x7fd002336140"/>
+    <token id="0x7fd002336260" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="83" column="15" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023362b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="84" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002336300"/>
+    <token id="0x7fd002336300" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="84" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd0023362b0" astOperand2="0x7fd002336350"/>
+    <token id="0x7fd002336350" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="84" column="11" str="pu8dP" scope="0x7fd0023898f0" type="name" varId="15" astParent="0x7fd002336300"/>
+    <token id="0x7fd0023363a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="84" column="16" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023363f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="85" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002336440"/>
+    <token id="0x7fd002336440" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="85" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd0023363f0" astOperand2="0x7fd002336510"/>
+    <token id="0x7fd002336510" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="85" column="11" str="pu8dQ" scope="0x7fd0023898f0" type="name" varId="16" astParent="0x7fd002336440"/>
+    <token id="0x7fd002336560" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="85" column="16" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023365b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="86" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002336600"/>
+    <token id="0x7fd002336600" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="86" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd0023365b0" astOperand2="0x7fd002336650"/>
+    <token id="0x7fd002336650" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="86" column="11" str="pu8QInv" scope="0x7fd0023898f0" type="name" varId="17" astParent="0x7fd002336600"/>
+    <token id="0x7fd0023366a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="86" column="18" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023366f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="87" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd00238d8d0"/>
+    <token id="0x7fd00231db10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="87" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002336860" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="99" column="9" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002336810" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="99" column="0" str="tstrASN1RSAPrivateKey" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002336900" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="99" column="15" str="{" scope="0x7fd0023898f0" link="0x7fd002336cf0"/>
+    <token id="0x7fd002336950" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="100" column="2" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd00238d800" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="100" column="0" str="tstrRsaPrivateKey" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023369a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="100" column="20" str="strRsaPrivKey" scope="0x7fd0023898f0" type="name" varId="18"/>
+    <token id="0x7fd0023369f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="100" column="33" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002336a40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="101" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002336b10"/>
+    <token id="0x7fd002336b10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="101" column="13" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd002336a40" astOperand2="0x7fd002336b60"/>
+    <token id="0x7fd002336b60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="101" column="14" str="pu8AllocPtr" scope="0x7fd0023898f0" type="name" varId="19" astParent="0x7fd002336b10"/>
+    <token id="0x7fd002336bb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="101" column="25" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002336c00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="102" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002336c50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="102" column="14" str="u16KeyBufSz" scope="0x7fd0023898f0" type="name" varId="20"/>
+    <token id="0x7fd002336ca0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="102" column="25" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002336cf0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="103" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd002336900"/>
+    <token id="0x7fd002336740" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="103" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002336e60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="110" column="9" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002336e10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="110" column="0" str="tstrRSAPubKey" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002336f00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="110" column="15" str="{" scope="0x7fd0023898f0" link="0x7fd0023374b0"/>
+    <token id="0x7fd002336f50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="111" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002336fa0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="111" column="11" str="u16NSize" scope="0x7fd0023898f0" type="name" varId="21"/>
+    <token id="0x7fd002336ff0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="111" column="19" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002337040" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="112" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337110" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="112" column="11" str="u16ESize" scope="0x7fd0023898f0" type="name" varId="22"/>
+    <token id="0x7fd002337160" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="112" column="19" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023371b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="113" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002337200"/>
+    <token id="0x7fd002337200" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="113" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd0023371b0" astOperand2="0x7fd002337250"/>
+    <token id="0x7fd002337250" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="113" column="11" str="pu8N" scope="0x7fd0023898f0" type="name" varId="23" astParent="0x7fd002337200"/>
+    <token id="0x7fd0023372a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="113" column="15" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023372f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="114" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002337340"/>
+    <token id="0x7fd002337340" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="114" column="10" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd0023372f0" astOperand2="0x7fd002337410"/>
+    <token id="0x7fd002337410" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="114" column="11" str="pu8E" scope="0x7fd0023898f0" type="name" varId="24" astParent="0x7fd002337340"/>
+    <token id="0x7fd002337460" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="114" column="15" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023374b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="115" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd002336f00"/>
+    <token id="0x7fd002336d40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="115" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023375a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="122" column="9" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337550" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="122" column="0" str="tstrECDSAPubKey" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337640" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="122" column="15" str="{" scope="0x7fd0023898f0" link="0x7fd002337d10"/>
+    <token id="0x7fd002337710" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="123" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337760" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="123" column="11" str="u16CurveID" scope="0x7fd0023898f0" type="name" varId="25"/>
+    <token id="0x7fd0023377b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="123" column="21" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002337800" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="124" column="2" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337850" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="124" column="11" str="u16EcPointSz" scope="0x7fd0023898f0" type="name" varId="26"/>
+    <token id="0x7fd0023378a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="124" column="23" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023378f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337940" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="10" str="au8EcPoint" scope="0x7fd0023898f0" type="name" varId="27" astParent="0x7fd002337a10"/>
+    <token id="0x7fd002337a10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="20" str="[" scope="0x7fd0023898f0" link="0x7fd002337bf0" astOperand1="0x7fd002337940" astOperand2="0x7fd002337b00"/>
+    <token id="0x7fd002337a60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="21" str="72" scope="0x7fd0023898f0" type="number" isInt="True" isExpandedMacro="True" values="0x7fd00237ee30" astParent="0x7fd002337b00" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd002337b00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="35" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" values="0x7fd00237e650" astParent="0x7fd002337a10" astOperand1="0x7fd002337a60" astOperand2="0x7fd002337ba0" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd002337ba0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="37" str="2" scope="0x7fd0023898f0" type="number" isInt="True" values="0x7fd00237f5b0" astParent="0x7fd002337b00" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd002337bf0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="38" str="]" scope="0x7fd0023898f0" link="0x7fd002337a10"/>
+    <token id="0x7fd002337c40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="125" column="39" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002337d10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="126" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd002337640"/>
+    <token id="0x7fd002337500" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="126" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002337e00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="133" column="9" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337db0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="133" column="0" str="tstrX509CertPublicKey" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337ea0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="133" column="15" str="{" scope="0x7fd0023898f0" link="0x7fd002338400"/>
+    <token id="0x7fd002337ef0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="134" column="2" str="tenuCertPubKeyType" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337f40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="134" column="21" str="enuCertKeyType" scope="0x7fd0023898f0" type="name" varId="28"/>
+    <token id="0x7fd002338010" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="134" column="35" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002338060" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="135" column="2" str="union" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023380b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="135" column="7" str="{" scope="0x7fd002389be0" link="0x7fd002338360"/>
+    <token id="0x7fd002338100" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="136" column="3" str="struct" scope="0x7fd002389be0" type="name"/>
+    <token id="0x7fd002336eb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="136" column="0" str="tstrRSAPubKey" scope="0x7fd002389be0" type="name"/>
+    <token id="0x7fd002338150" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="136" column="17" str="strRsaPub" scope="0x7fd002389be0" type="name" varId="29" variable="0x7fd00238a070" valueType-type="record"/>
+    <token id="0x7fd0023381a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="136" column="26" str=";" scope="0x7fd002389be0"/>
+    <token id="0x7fd0023381f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="137" column="3" str="struct" scope="0x7fd002389be0" type="name"/>
+    <token id="0x7fd0023375f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="137" column="0" str="tstrECDSAPubKey" scope="0x7fd002389be0" type="name"/>
+    <token id="0x7fd002338240" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="137" column="19" str="strEcdsaPub" scope="0x7fd002389be0" type="name" varId="30" variable="0x7fd00238a140" valueType-type="record"/>
+    <token id="0x7fd002338310" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="137" column="30" str=";" scope="0x7fd002389be0"/>
+    <token id="0x7fd002338360" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="138" column="2" str="}" scope="0x7fd002389be0" link="0x7fd0023380b0"/>
+    <token id="0x7fd0023383b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="138" column="3" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002338400" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="139" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd002337ea0"/>
+    <token id="0x7fd002337d60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="139" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023384f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="148" column="9" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023384a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="148" column="0" str="tstrX509Name" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338610" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="148" column="15" str="{" scope="0x7fd0023898f0" link="0x7fd002338aa0"/>
+    <token id="0x7fd002338660" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="149" column="2" str="char" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023386b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="149" column="7" str="acCmnName" scope="0x7fd0023898f0" type="name" varId="31" astParent="0x7fd002338700"/>
+    <token id="0x7fd002338700" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="149" column="16" str="[" scope="0x7fd0023898f0" link="0x7fd0023387a0" astOperand1="0x7fd0023386b0" astOperand2="0x7fd002338750"/>
+    <token id="0x7fd002338750" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="149" column="17" str="64" scope="0x7fd0023898f0" type="number" isInt="True" values="0x7fd00237de70" astParent="0x7fd002338700" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd0023387a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="149" column="19" str="]" scope="0x7fd0023898f0" link="0x7fd002338700"/>
+    <token id="0x7fd0023387f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="149" column="20" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002338840" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="150" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338910" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="150" column="10" str="au8NameSHA1" scope="0x7fd0023898f0" type="name" varId="32" astParent="0x7fd002338960"/>
+    <token id="0x7fd002338960" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="150" column="21" str="[" scope="0x7fd0023898f0" link="0x7fd002338a00" astOperand1="0x7fd002338910" astOperand2="0x7fd0023389b0"/>
+    <token id="0x7fd0023389b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="150" column="22" str="20" scope="0x7fd0023898f0" type="number" isInt="True" values="0x7fd002380d10" astParent="0x7fd002338960" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd002338a00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="150" column="24" str="]" scope="0x7fd0023898f0" link="0x7fd002338960"/>
+    <token id="0x7fd002338a50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="150" column="25" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002338aa0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="151" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd002338610"/>
+    <token id="0x7fd002338450" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="151" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002338c10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="158" column="9" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338b40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="158" column="0" str="txtrX509CertInfo" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338cb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="158" column="15" str="{" scope="0x7fd0023898f0" link="0x7fd002339740"/>
+    <token id="0x7fd002338d00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="159" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338d50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="159" column="14" str="u8SerialNumberLength" scope="0x7fd0023898f0" type="name" varId="33"/>
+    <token id="0x7fd002338da0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="159" column="34" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002338df0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="160" column="2" str="uint8_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338e40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="160" column="14" str="au8SerialNo" scope="0x7fd0023898f0" type="name" varId="34" astParent="0x7fd002338f10"/>
+    <token id="0x7fd002338f10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="160" column="25" str="[" scope="0x7fd0023898f0" link="0x7fd002338fb0" astOperand1="0x7fd002338e40" astOperand2="0x7fd002338f60"/>
+    <token id="0x7fd002338f60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="160" column="26" str="64" scope="0x7fd0023898f0" type="number" isInt="True" values="0x7fd002308f20" astParent="0x7fd002338f10" valueType-type="int" valueType-sign="signed"/>
+    <token id="0x7fd002338fb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="160" column="28" str="]" scope="0x7fd0023898f0" link="0x7fd002338f10"/>
+    <token id="0x7fd002339000" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="160" column="29" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002339050" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="161" column="2" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338540" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="161" column="0" str="tstrX509Name" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023390a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="161" column="17" str="strIssuer" scope="0x7fd0023898f0" type="name" varId="35"/>
+    <token id="0x7fd0023390f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="161" column="26" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002339140" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="162" column="2" str="tstrSystemTime" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002339210" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="162" column="19" str="strExpiryDate" scope="0x7fd0023898f0" type="name" varId="36"/>
+    <token id="0x7fd002339260" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="162" column="32" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023392b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="163" column="2" str="tstrSystemTime" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002339300" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="163" column="19" str="strStartDate" scope="0x7fd0023898f0" type="name" varId="37"/>
+    <token id="0x7fd002339350" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="163" column="31" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023393a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="164" column="2" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002389a30" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="164" column="0" str="tstrX509Name" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023393f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="164" column="17" str="strSubject" scope="0x7fd0023898f0" type="name" varId="38"/>
+    <token id="0x7fd002339440" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="164" column="27" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002339510" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="165" column="2" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002337e50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="165" column="0" str="tstrX509CertPublicKey" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002339560" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="165" column="24" str="strPubKey" scope="0x7fd0023898f0" type="name" varId="39"/>
+    <token id="0x7fd0023395b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="165" column="33" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002339600" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="166" column="2" str="void" scope="0x7fd0023898f0" type="name" astParent="0x7fd002339650"/>
+    <token id="0x7fd002339650" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="166" column="11" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astOperand1="0x7fd002339600" astOperand2="0x7fd0023396a0"/>
+    <token id="0x7fd0023396a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="166" column="12" str="pvPrivate" scope="0x7fd0023898f0" type="name" varId="40" astParent="0x7fd002339650"/>
+    <token id="0x7fd0023396f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="166" column="21" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002339740" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="167" column="1" str="}" scope="0x7fd0023898f0" link="0x7fd002338cb0"/>
+    <token id="0x7fd002338af0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="167" column="0" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd0023398b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="1" str="int8_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002339900" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="8" str="CryptoX509CertDecode" scope="0x7fd0023898f0" type="name" function="0x7fd002389dd0" astParent="0x7fd002339950"/>
+    <token id="0x7fd002339950" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="28" str="(" scope="0x7fd0023898f0" link="0x7fd002339eb0" astOperand1="0x7fd002339900" astOperand2="0x7fd002339d40" valueType-type="char" valueType-sign="signed"/>
+    <token id="0x7fd0023399a0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="29" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd0023399f0"/>
+    <token id="0x7fd0023399f0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="37" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astParent="0x7fd002339b10" astOperand1="0x7fd0023399a0" astOperand2="0x7fd002339a40"/>
+    <token id="0x7fd002339a40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="38" str="pu8X509CertBuf" scope="0x7fd0023898f0" type="name" varId="41" variable="0x7fd00238a210" astParent="0x7fd0023399f0" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fd002339b10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="52" str="," scope="0x7fd0023898f0" astParent="0x7fd002339c00" astOperand1="0x7fd0023399f0" astOperand2="0x7fd002339bb0"/>
+    <token id="0x7fd002339b60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="54" str="uint16_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002339bb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="63" str="u16X509CertBuffer" scope="0x7fd0023898f0" type="name" varId="42" variable="0x7fd00238a2e0" astParent="0x7fd002339b10" valueType-type="short" valueType-sign="unsigned"/>
+    <token id="0x7fd002339c00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="80" str="," scope="0x7fd0023898f0" astParent="0x7fd002339d40" astOperand1="0x7fd002339b10" astOperand2="0x7fd002339ca0"/>
+    <token id="0x7fd002339c50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="82" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002338c60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="0" str="txtrX509CertInfo" scope="0x7fd0023898f0" type="name" astParent="0x7fd002339ca0"/>
+    <token id="0x7fd002339ca0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="99" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astParent="0x7fd002339c00" astOperand1="0x7fd002338c60" astOperand2="0x7fd002339cf0"/>
+    <token id="0x7fd002339cf0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="100" str="pstrCert" scope="0x7fd0023898f0" type="name" varId="43" variable="0x7fd00238a3b0" astParent="0x7fd002339ca0" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fd002339d40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="108" str="," scope="0x7fd0023898f0" astParent="0x7fd002339950" astOperand1="0x7fd002339c00" astOperand2="0x7fd002339e60"/>
+    <token id="0x7fd002339e10" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="110" str="uint8_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002339e60" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="118" str="bDumpCert" scope="0x7fd0023898f0" type="name" varId="44" variable="0x7fd00238a480" astParent="0x7fd002339d40" valueType-type="char" valueType-sign="unsigned"/>
+    <token id="0x7fd002339eb0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="127" str=")" scope="0x7fd0023898f0" link="0x7fd002339950"/>
+    <token id="0x7fd002339f00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="173" column="128" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd002339f50" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="1" str="void" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002339fa0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="6" str="CryptoX509DeleteContext" scope="0x7fd0023898f0" type="name" function="0x7fd002389eb0" astParent="0x7fd002339ff0"/>
+    <token id="0x7fd002339ff0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="29" str="(" scope="0x7fd0023898f0" link="0x7fd00233a1b0" astOperand1="0x7fd002339fa0" astOperand2="0x7fd00233a110" valueType-type="void"/>
+    <token id="0x7fd00233a0c0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="30" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002389b00" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="0" str="txtrX509CertInfo" scope="0x7fd0023898f0" type="name" astParent="0x7fd00233a110"/>
+    <token id="0x7fd00233a110" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="47" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astParent="0x7fd002339ff0" astOperand1="0x7fd002389b00" astOperand2="0x7fd00233a160"/>
+    <token id="0x7fd00233a160" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="48" str="pstrCert" scope="0x7fd0023898f0" type="name" varId="45" variable="0x7fd00238a550" astParent="0x7fd00233a110" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fd00233a1b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="56" str=")" scope="0x7fd0023898f0" link="0x7fd002339ff0"/>
+    <token id="0x7fd00233a200" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="174" column="57" str=";" scope="0x7fd0023898f0"/>
+    <token id="0x7fd00233a250" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="1" str="int8_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002388cf0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="8" str="CryptoDecodeRsaPrivKey" scope="0x7fd0023898f0" type="name" function="0x7fd002389f90" astParent="0x7fd002388d40"/>
+    <token id="0x7fd002388d40" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="30" str="(" scope="0x7fd0023898f0" link="0x7fd002389110" astOperand1="0x7fd002388cf0" astOperand2="0x7fd0023821e0" valueType-type="char" valueType-sign="signed"/>
+    <token id="0x7fd002388d90" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="31" str="uint8_t" scope="0x7fd0023898f0" type="name" astParent="0x7fd002388de0"/>
+    <token id="0x7fd002388de0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="39" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astParent="0x7fd002388e80" astOperand1="0x7fd002388d90" astOperand2="0x7fd002388e30"/>
+    <token id="0x7fd002388e30" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="40" str="pu8RsaKeyFile" scope="0x7fd0023898f0" type="name" varId="46" variable="0x7fd00238a620" astParent="0x7fd002388de0" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fd002388e80" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="53" str="," scope="0x7fd0023898f0" astParent="0x7fd0023821e0" astOperand1="0x7fd002388de0" astOperand2="0x7fd002382190"/>
+    <token id="0x7fd002388ed0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="55" str="uint32_t" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd002382190" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="64" str="u32KeySize" scope="0x7fd0023898f0" type="name" varId="47" variable="0x7fd00238a6f0" astParent="0x7fd002388e80" valueType-type="int" valueType-sign="unsigned"/>
+    <token id="0x7fd0023821e0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="74" str="," scope="0x7fd0023898f0" astParent="0x7fd002388d40" astOperand1="0x7fd002388e80" astOperand2="0x7fd002389070"/>
+    <token id="0x7fd002389020" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="76" str="struct" scope="0x7fd0023898f0" type="name"/>
+    <token id="0x7fd0023368b0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="0" str="tstrASN1RSAPrivateKey" scope="0x7fd0023898f0" type="name" astParent="0x7fd002389070"/>
+    <token id="0x7fd002389070" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="98" str="*" scope="0x7fd0023898f0" type="op" isArithmeticalOp="True" astParent="0x7fd0023821e0" astOperand1="0x7fd0023368b0" astOperand2="0x7fd0023890c0"/>
+    <token id="0x7fd0023890c0" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="99" str="pstrRsaPrivKey" scope="0x7fd0023898f0" type="name" varId="48" variable="0x7fd00238a7c0" astParent="0x7fd002389070" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fd002389110" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="113" str=")" scope="0x7fd0023898f0" link="0x7fd002388d40"/>
+    <token id="0x7fd002389160" file="../src/root_tls_cert/crypto/crypto_api.h" linenr="175" column="114" str=";" scope="0x7fd0023898f0"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x7fd0023898f0" type="Global">
+      <functionList>
+        <function id="0x7fd002389dd0" tokenDef="0x7fd002339900" name="CryptoX509CertDecode" type="Function">
+          <arg nr="1" variable="0x7fd00238a210"/>
+          <arg nr="2" variable="0x7fd00238a2e0"/>
+          <arg nr="3" variable="0x7fd00238a3b0"/>
+          <arg nr="4" variable="0x7fd00238a480"/>
+        </function>
+        <function id="0x7fd002389eb0" tokenDef="0x7fd002339fa0" name="CryptoX509DeleteContext" type="Function">
+          <arg nr="1" variable="0x7fd00238a550"/>
+        </function>
+        <function id="0x7fd002389f90" tokenDef="0x7fd002388cf0" name="CryptoDecodeRsaPrivKey" type="Function">
+          <arg nr="1" variable="0x7fd00238a620"/>
+          <arg nr="2" variable="0x7fd00238a6f0"/>
+          <arg nr="3" variable="0x7fd00238a7c0"/>
+        </function>
+      </functionList>
+    </scope>
+    <scope id="0x7fd002389be0" type="Union" bodyStart="0x7fd0023380b0" bodyEnd="0x7fd002338360" nestedIn="0x7fd0023898f0">
+      <varlist>
+        <var id="0x7fd00238a070"/>
+        <var id="0x7fd00238a140"/>
+      </varlist>
+    </scope>
+  </scopes>
+  <variables>
+    <var id="0x7fd00238a070" nameToken="0x7fd002338150" typeStartToken="0x7fd002336eb0" typeEndToken="0x7fd002336eb0" access="Public" scope="0x7fd002389be0" constness="0" isArgument="false" isArray="false" isClass="true" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a140" nameToken="0x7fd002338240" typeStartToken="0x7fd0023375f0" typeEndToken="0x7fd0023375f0" access="Public" scope="0x7fd002389be0" constness="0" isArgument="false" isArray="false" isClass="true" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a210" nameToken="0x7fd002339a40" typeStartToken="0x7fd0023399a0" typeEndToken="0x7fd0023399f0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a2e0" nameToken="0x7fd002339bb0" typeStartToken="0x7fd002339b60" typeEndToken="0x7fd002339b60" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a3b0" nameToken="0x7fd002339cf0" typeStartToken="0x7fd002338c60" typeEndToken="0x7fd002339ca0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a480" nameToken="0x7fd002339e60" typeStartToken="0x7fd002339e10" typeEndToken="0x7fd002339e10" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a550" nameToken="0x7fd00233a160" typeStartToken="0x7fd002389b00" typeEndToken="0x7fd00233a110" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a620" nameToken="0x7fd002388e30" typeStartToken="0x7fd002388d90" typeEndToken="0x7fd002388de0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a6f0" nameToken="0x7fd002382190" typeStartToken="0x7fd002388ed0" typeEndToken="0x7fd002388ed0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fd00238a7c0" nameToken="0x7fd0023890c0" typeStartToken="0x7fd0023368b0" typeEndToken="0x7fd002389070" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+    <values id="0x7fd0023809f0">
+      <value intvalue="1" known="true"/>
+    </values>
+    <values id="0x7fd00237fcd0">
+      <value intvalue="2" known="true"/>
+    </values>
+    <values id="0x7fd00237ee30">
+      <value intvalue="72" known="true"/>
+    </values>
+    <values id="0x7fd00237e650">
+      <value intvalue="144" known="true"/>
+    </values>
+    <values id="0x7fd00237f5b0">
+      <value intvalue="2" known="true"/>
+    </values>
+    <values id="0x7fd00237de70">
+      <value intvalue="64" known="true"/>
+    </values>
+    <values id="0x7fd002380d10">
+      <value intvalue="20" known="true"/>
+    </values>
+    <values id="0x7fd002308f20">
+      <value intvalue="64" known="true"/>
+    </values>
+  </valueflow>
+</dump>
+</dumps>

@@ -13,7 +13,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2019-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -35,20 +35,8 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "osal/osal.h"
 #include "wdrv_winc_common.h"
 
-#ifdef DRV_WIFI_WINC_RTOS_STACK_SIZE
-void WDRV_MSDelay(uint32_t ms)
-{
-    if (!ms)
-    {
-        ms = 1;
-    }
-
-    vTaskDelay(ms / portTICK_PERIOD_MS);
-}
-#else
 void WDRV_MSDelay(uint32_t ms)
 {
     SYS_TIME_HANDLE tmrHandle = SYS_TIME_HANDLE_INVALID;
@@ -62,6 +50,5 @@ void WDRV_MSDelay(uint32_t ms)
     {
     }
 }
-#endif /* DRV_WIFI_WINC_RTOS_STACK_SIZE */
 
 //DOM-IGNORE-END

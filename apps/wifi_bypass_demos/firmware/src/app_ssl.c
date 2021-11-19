@@ -23,7 +23,7 @@
  
  // DOM-IGNORE-BEGIN
  /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -72,7 +72,7 @@ typedef enum
     APP_WIFI_SSL_STATE_IDLE
 } APP_SSL_STATES;
 
-static APP_SSL_STATES appSslState; 
+static APP_SSL_STATES  appSslState; 
 
 // Maximum milliseconds to wait for TCP connection success
 #define TCP_CLIENT_CONNECTION_TIMEOUT_MS 	8000

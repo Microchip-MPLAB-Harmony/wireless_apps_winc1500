@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="../src/root_tls_cert/crypto/tls_buffer_manager.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/**x * \filex *x * \brief APIs and types for TLS  buffer manager.x *x * Copyright (c) 2017-2018 Microchip Technology Inc. and its subsidiaries.x *x * \asf_license_startx *x * \page Licensex *x * Subject to your compliance with these terms, you may use Microchipx * software and any derivatives exclusively with Microchip products.x * It is your responsibility to comply with third party license terms applicablex * to your use of third party software (including open source software) thatx * may accompany Microchip software.x *x * THIS SOFTWARE IS SUPPLIED BY MICROCHIP &quot;AS IS&quot;. NO WARRANTIES,x * WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,x * INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,x * AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BEx * LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIALx * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THEx * SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THEx * POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENTx * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAYx * RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,x * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.x *x * \asf_license_stopx *x */"/>
+    <tok fileIndex="0" linenr="34" column="1" str="#"/>
+    <tok fileIndex="0" linenr="34" column="2" str="ifndef"/>
+    <tok fileIndex="0" linenr="34" column="9" str="__TLS_BUFFER_MANAGER_H__"/>
+    <tok fileIndex="0" linenr="35" column="1" str="#"/>
+    <tok fileIndex="0" linenr="35" column="2" str="define"/>
+    <tok fileIndex="0" linenr="35" column="9" str="__TLS_BUFFER_MANAGER_H__"/>
+    <tok fileIndex="0" linenr="37" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*INCLUDES*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="41" column="1" str="#"/>
+    <tok fileIndex="0" linenr="41" column="2" str="include"/>
+    <tok fileIndex="0" linenr="41" column="10" str="&quot;root_tls_cert/crypto/crypto_types.h&quot;"/>
+    <tok fileIndex="0" linenr="43" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*DATA TYPES*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="47" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="47" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="47" column="15" str="{"/>
+    <tok fileIndex="0" linenr="48" column="2" str="uint8_t"/>
+    <tok fileIndex="0" linenr="48" column="11" str="*"/>
+    <tok fileIndex="0" linenr="48" column="12" str="pu8Buff"/>
+    <tok fileIndex="0" linenr="48" column="19" str=";"/>
+    <tok fileIndex="0" linenr="49" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="49" column="12" str="u16BuffSz"/>
+    <tok fileIndex="0" linenr="49" column="21" str=";"/>
+    <tok fileIndex="0" linenr="50" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="50" column="12" str="u16ReadOffset"/>
+    <tok fileIndex="0" linenr="50" column="25" str=";"/>
+    <tok fileIndex="0" linenr="51" column="1" str="}"/>
+    <tok fileIndex="0" linenr="51" column="2" str="tstrTlsBuffer"/>
+    <tok fileIndex="0" linenr="51" column="15" str=";"/>
+    <tok fileIndex="0" linenr="53" column="1" str="/*!@structxxtstrTLSBufferPos*/"/>
+    <tok fileIndex="0" linenr="57" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="57" column="9" str="struct"/>
+    <tok fileIndex="0" linenr="57" column="15" str="{"/>
+    <tok fileIndex="0" linenr="58" column="2" str="uint16_t"/>
+    <tok fileIndex="0" linenr="58" column="11" str="u16BuffOffset"/>
+    <tok fileIndex="0" linenr="58" column="24" str=";"/>
+    <tok fileIndex="0" linenr="59" column="1" str="}"/>
+    <tok fileIndex="0" linenr="59" column="2" str="tstrTLSBufferPos"/>
+    <tok fileIndex="0" linenr="59" column="18" str=";"/>
+    <tok fileIndex="0" linenr="61" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*xFUNCTION PROTOTYPESx*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="65" column="1" str="uint16_t"/>
+    <tok fileIndex="0" linenr="65" column="10" str="TLS_BufferReadCurrEntry"/>
+    <tok fileIndex="0" linenr="66" column="1" str="("/>
+    <tok fileIndex="0" linenr="67" column="1" str="tstrTlsBuffer"/>
+    <tok fileIndex="0" linenr="67" column="16" str="*"/>
+    <tok fileIndex="0" linenr="67" column="17" str="pstrTlsBuff"/>
+    <tok fileIndex="0" linenr="67" column="28" str=","/>
+    <tok fileIndex="0" linenr="68" column="1" str="uint16_t"/>
+    <tok fileIndex="0" linenr="68" column="11" str="u16ReadByteCount"/>
+    <tok fileIndex="0" linenr="68" column="27" str=","/>
+    <tok fileIndex="0" linenr="69" column="1" str="uint8_t"/>
+    <tok fileIndex="0" linenr="69" column="10" str="*"/>
+    <tok fileIndex="0" linenr="69" column="11" str="*"/>
+    <tok fileIndex="0" linenr="69" column="12" str="ppu8Buffer"/>
+    <tok fileIndex="0" linenr="69" column="22" str=","/>
+    <tok fileIndex="0" linenr="70" column="1" str="BOOL_T"/>
+    <tok fileIndex="0" linenr="70" column="9" str="bUpdateCursor"/>
+    <tok fileIndex="0" linenr="71" column="1" str=")"/>
+    <tok fileIndex="0" linenr="71" column="2" str=";"/>
+    <tok fileIndex="0" linenr="73" column="1" str="uint16_t"/>
+    <tok fileIndex="0" linenr="73" column="10" str="TLS_BufferRead"/>
+    <tok fileIndex="0" linenr="74" column="1" str="("/>
+    <tok fileIndex="0" linenr="75" column="1" str="tstrTlsBuffer"/>
+    <tok fileIndex="0" linenr="75" column="15" str="*"/>
+    <tok fileIndex="0" linenr="75" column="16" str="pstrTlsBuff"/>
+    <tok fileIndex="0" linenr="75" column="27" str=","/>
+    <tok fileIndex="0" linenr="76" column="1" str="uint16_t"/>
+    <tok fileIndex="0" linenr="76" column="11" str="u16ReadByteCount"/>
+    <tok fileIndex="0" linenr="76" column="27" str=","/>
+    <tok fileIndex="0" linenr="77" column="1" str="uint8_t"/>
+    <tok fileIndex="0" linenr="77" column="10" str="*"/>
+    <tok fileIndex="0" linenr="77" column="11" str="pu8ReadBuffer"/>
+    <tok fileIndex="0" linenr="78" column="1" str=")"/>
+    <tok fileIndex="0" linenr="78" column="2" str=";"/>
+    <tok fileIndex="0" linenr="80" column="1" str="void"/>
+    <tok fileIndex="0" linenr="80" column="6" str="TLS_BufferSetPos"/>
+    <tok fileIndex="0" linenr="81" column="1" str="("/>
+    <tok fileIndex="0" linenr="82" column="1" str="tstrTlsBuffer"/>
+    <tok fileIndex="0" linenr="82" column="17" str="*"/>
+    <tok fileIndex="0" linenr="82" column="18" str="pstrTlsBuff"/>
+    <tok fileIndex="0" linenr="82" column="29" str=","/>
+    <tok fileIndex="0" linenr="83" column="1" str="tstrTLSBufferPos"/>
+    <tok fileIndex="0" linenr="83" column="19" str="*"/>
+    <tok fileIndex="0" linenr="83" column="20" str="pstrNewPos"/>
+    <tok fileIndex="0" linenr="84" column="1" str=")"/>
+    <tok fileIndex="0" linenr="84" column="2" str=";"/>
+    <tok fileIndex="0" linenr="86" column="1" str="void"/>
+    <tok fileIndex="0" linenr="86" column="6" str="TLS_BufferGetPos"/>
+    <tok fileIndex="0" linenr="87" column="1" str="("/>
+    <tok fileIndex="0" linenr="88" column="1" str="tstrTlsBuffer"/>
+    <tok fileIndex="0" linenr="88" column="17" str="*"/>
+    <tok fileIndex="0" linenr="88" column="18" str="pstrTlsBuff"/>
+    <tok fileIndex="0" linenr="88" column="29" str=","/>
+    <tok fileIndex="0" linenr="89" column="1" str="tstrTLSBufferPos"/>
+    <tok fileIndex="0" linenr="89" column="19" str="*"/>
+    <tok fileIndex="0" linenr="89" column="20" str="pstrCurrPos"/>
+    <tok fileIndex="0" linenr="90" column="1" str=")"/>
+    <tok fileIndex="0" linenr="90" column="2" str=";"/>
+    <tok fileIndex="0" linenr="92" column="1" str="#"/>
+    <tok fileIndex="0" linenr="92" column="2" str="endif"/>
+    <tok fileIndex="0" linenr="92" column="8" str="/* __TLS_BUFFER_MANAGER_H__ */"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="34" str="#ifndef __TLS_BUFFER_MANAGER_H__"/>
+    <directive file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="35" str="#define __TLS_BUFFER_MANAGER_H__"/>
+    <directive file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="41" str="#include &quot;root_tls_cert/crypto/crypto_types.h&quot;"/>
+    <directive file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="92" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="0x7fcffdc43300" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="47" column="9" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdcaed40" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="47" column="0" str="tstrTlsBuffer" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc434a0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="47" column="15" str="{" scope="0x7fcffdcaefc0" link="0x7fcffdc43890"/>
+    <token id="0x7fcffdc434f0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="48" column="2" str="uint8_t" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc43540"/>
+    <token id="0x7fcffdc43540" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="48" column="11" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astOperand1="0x7fcffdc434f0" astOperand2="0x7fcffdc43590"/>
+    <token id="0x7fcffdc43590" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="48" column="12" str="pu8Buff" scope="0x7fcffdcaefc0" type="name" varId="1" astParent="0x7fcffdc43540"/>
+    <token id="0x7fcffdc435e0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="48" column="19" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc436b0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="49" column="2" str="uint16_t" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc43700" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="49" column="12" str="u16BuffSz" scope="0x7fcffdcaefc0" type="name" varId="2"/>
+    <token id="0x7fcffdc43750" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="49" column="21" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc437a0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="50" column="2" str="uint16_t" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc437f0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="50" column="12" str="u16ReadOffset" scope="0x7fcffdcaefc0" type="name" varId="3"/>
+    <token id="0x7fcffdc43840" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="50" column="25" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc43890" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="51" column="1" str="}" scope="0x7fcffdcaefc0" link="0x7fcffdc434a0"/>
+    <token id="0x7fcffdcaee10" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="51" column="0" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc43a00" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="57" column="9" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc439b0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="57" column="0" str="tstrTLSBufferPos" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc43aa0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="57" column="15" str="{" scope="0x7fcffdcaefc0" link="0x7fcffdc43be0"/>
+    <token id="0x7fcffdc43af0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="58" column="2" str="uint16_t" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc43b40" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="58" column="11" str="u16BuffOffset" scope="0x7fcffdcaefc0" type="name" varId="4"/>
+    <token id="0x7fcffdc43b90" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="58" column="24" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc43be0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="59" column="1" str="}" scope="0x7fcffdcaefc0" link="0x7fcffdc43aa0"/>
+    <token id="0x7fcffdc438e0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="59" column="0" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc43d50" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="65" column="1" str="uint16_t" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc43da0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="65" column="10" str="TLS_BufferReadCurrEntry" scope="0x7fcffdcaefc0" type="name" function="0x7fcffdcf1420" astParent="0x7fcffdc43df0"/>
+    <token id="0x7fcffdc43df0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="66" column="1" str="(" scope="0x7fcffdcaefc0" link="0x7fcffdc44380" astOperand1="0x7fcffdc43da0" astOperand2="0x7fcffdc44290" valueType-type="short" valueType-sign="unsigned"/>
+    <token id="0x7fcffdcf15c0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="67" column="1" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc433d0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="67" column="0" str="tstrTlsBuffer" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc43ec0"/>
+    <token id="0x7fcffdc43ec0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="67" column="16" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc43f60" astOperand1="0x7fcffdc433d0" astOperand2="0x7fcffdc43f10"/>
+    <token id="0x7fcffdc43f10" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="67" column="17" str="pstrTlsBuff" scope="0x7fcffdcaefc0" type="name" varId="5" variable="0x7fcffdcaf740" astParent="0x7fcffdc43ec0" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fcffdc43f60" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="67" column="28" str="," scope="0x7fcffdcaefc0" astParent="0x7fcffdc44080" astOperand1="0x7fcffdc43ec0" astOperand2="0x7fcffdcf1890"/>
+    <token id="0x7fcffdc43fb0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="68" column="1" str="uint16_t" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdcf1890" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="68" column="11" str="u16ReadByteCount" scope="0x7fcffdcaefc0" type="name" varId="6" variable="0x7fcffdcaf810" astParent="0x7fcffdc43f60" valueType-type="short" valueType-sign="unsigned"/>
+    <token id="0x7fcffdc44080" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="68" column="27" str="," scope="0x7fcffdcaefc0" astParent="0x7fcffdc44290" astOperand1="0x7fcffdc43f60" astOperand2="0x7fcffdc44120"/>
+    <token id="0x7fcffdc440d0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="69" column="1" str="uint8_t" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc44120"/>
+    <token id="0x7fcffdc44120" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="69" column="10" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc44080" astOperand1="0x7fcffdc440d0" astOperand2="0x7fcffdc441f0"/>
+    <token id="0x7fcffdc441f0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="69" column="11" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc44120" astOperand1="0x7fcffdc44240" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcffdc44240" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="69" column="12" str="ppu8Buffer" scope="0x7fcffdcaefc0" type="name" varId="7" variable="0x7fcffdcaf8e0" astParent="0x7fcffdc441f0" valueType-type="char" valueType-sign="unsigned" valueType-pointer="2"/>
+    <token id="0x7fcffdc44290" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="69" column="22" str="," scope="0x7fcffdcaefc0" astParent="0x7fcffdc43df0" astOperand1="0x7fcffdc44080" astOperand2="0x7fcffdc44330"/>
+    <token id="0x7fcffdc442e0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="70" column="1" str="BOOL_T" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc44330" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="70" column="9" str="bUpdateCursor" scope="0x7fcffdcaefc0" type="name" varId="8" variable="0x7fcffdcaf9b0" astParent="0x7fcffdc44290"/>
+    <token id="0x7fcffdc44380" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="71" column="1" str=")" scope="0x7fcffdcaefc0" link="0x7fcffdc43df0"/>
+    <token id="0x7fcffdc443d0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="71" column="2" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc44420" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="73" column="1" str="uint16_t" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc444f0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="73" column="10" str="TLS_BufferRead" scope="0x7fcffdcaefc0" type="name" function="0x7fcffdcaf4a0" astParent="0x7fcffdc44540"/>
+    <token id="0x7fcffdc44540" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="74" column="1" str="(" scope="0x7fcffdcaefc0" link="0x7fcffdc44930" astOperand1="0x7fcffdc444f0" astOperand2="0x7fcffdc447f0" valueType-type="short" valueType-sign="unsigned"/>
+    <token id="0x7fcffdc44590" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="75" column="1" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdcaf150" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="75" column="0" str="tstrTlsBuffer" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc445e0"/>
+    <token id="0x7fcffdc445e0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="75" column="15" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc44680" astOperand1="0x7fcffdcaf150" astOperand2="0x7fcffdc44630"/>
+    <token id="0x7fcffdc44630" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="75" column="16" str="pstrTlsBuff" scope="0x7fcffdcaefc0" type="name" varId="9" variable="0x7fcffdcafa80" astParent="0x7fcffdc445e0" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fcffdc44680" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="75" column="27" str="," scope="0x7fcffdcaefc0" astParent="0x7fcffdc447f0" astOperand1="0x7fcffdc445e0" astOperand2="0x7fcffdc44720"/>
+    <token id="0x7fcffdc446d0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="76" column="1" str="uint16_t" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc44720" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="76" column="11" str="u16ReadByteCount" scope="0x7fcffdcaefc0" type="name" varId="10" variable="0x7fcffdcafb50" astParent="0x7fcffdc44680" valueType-type="short" valueType-sign="unsigned"/>
+    <token id="0x7fcffdc447f0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="76" column="27" str="," scope="0x7fcffdcaefc0" astParent="0x7fcffdc44540" astOperand1="0x7fcffdc44680" astOperand2="0x7fcffdc44890"/>
+    <token id="0x7fcffdc44840" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="77" column="1" str="uint8_t" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc44890"/>
+    <token id="0x7fcffdc44890" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="77" column="10" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc447f0" astOperand1="0x7fcffdc44840" astOperand2="0x7fcffdc448e0"/>
+    <token id="0x7fcffdc448e0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="77" column="11" str="pu8ReadBuffer" scope="0x7fcffdcaefc0" type="name" varId="11" variable="0x7fcffdcafc20" astParent="0x7fcffdc44890" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcffdc44930" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="78" column="1" str=")" scope="0x7fcffdcaefc0" link="0x7fcffdc44540"/>
+    <token id="0x7fcffdc44980" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="78" column="2" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc449d0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="80" column="1" str="void" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc44a20" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="80" column="6" str="TLS_BufferSetPos" scope="0x7fcffdcaefc0" type="name" function="0x7fcffdcaf580" astParent="0x7fcffdc44af0"/>
+    <token id="0x7fcffdc44af0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="81" column="1" str="(" scope="0x7fcffdcaefc0" link="0x7fcffdc44df0" astOperand1="0x7fcffdc44a20" astOperand2="0x7fcffdc44c30" valueType-type="void"/>
+    <token id="0x7fcffdc44b40" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="82" column="1" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdcaf220" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="82" column="0" str="tstrTlsBuffer" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc44b90"/>
+    <token id="0x7fcffdc44b90" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="82" column="17" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc44c30" astOperand1="0x7fcffdcaf220" astOperand2="0x7fcffdc44be0"/>
+    <token id="0x7fcffdc44be0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="82" column="18" str="pstrTlsBuff" scope="0x7fcffdcaefc0" type="name" varId="12" variable="0x7fcffdcafcf0" astParent="0x7fcffdc44b90" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fcffdc44c30" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="82" column="29" str="," scope="0x7fcffdcaefc0" astParent="0x7fcffdc44af0" astOperand1="0x7fcffdc44b90" astOperand2="0x7fcffdc44cd0"/>
+    <token id="0x7fcffdc44c80" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="83" column="1" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc43a50" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="83" column="0" str="tstrTLSBufferPos" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc44cd0"/>
+    <token id="0x7fcffdc44cd0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="83" column="19" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc44c30" astOperand1="0x7fcffdc43a50" astOperand2="0x7fcffdc44d20"/>
+    <token id="0x7fcffdc44d20" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="83" column="20" str="pstrNewPos" scope="0x7fcffdcaefc0" type="name" varId="13" variable="0x7fcffdcafdc0" astParent="0x7fcffdc44cd0" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fcffdc44df0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="84" column="1" str=")" scope="0x7fcffdcaefc0" link="0x7fcffdc44af0"/>
+    <token id="0x7fcffdc44e40" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="84" column="2" str=";" scope="0x7fcffdcaefc0"/>
+    <token id="0x7fcffdc44e90" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="86" column="1" str="void" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdc44ee0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="86" column="6" str="TLS_BufferGetPos" scope="0x7fcffdcaefc0" type="name" function="0x7fcffdcaf660" astParent="0x7fcffdc44f30"/>
+    <token id="0x7fcffdc44f30" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="87" column="1" str="(" scope="0x7fcffdcaefc0" link="0x7fcffdc45230" astOperand1="0x7fcffdc44ee0" astOperand2="0x7fcffdc450f0" valueType-type="void"/>
+    <token id="0x7fcffdc44f80" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="88" column="1" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdcaf2f0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="88" column="0" str="tstrTlsBuffer" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc44fd0"/>
+    <token id="0x7fcffdc44fd0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="88" column="17" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc450f0" astOperand1="0x7fcffdcaf2f0" astOperand2="0x7fcffdc45020"/>
+    <token id="0x7fcffdc45020" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="88" column="18" str="pstrTlsBuff" scope="0x7fcffdcaefc0" type="name" varId="14" variable="0x7fcffdcb0610" astParent="0x7fcffdc44fd0" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fcffdc450f0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="88" column="29" str="," scope="0x7fcffdcaefc0" astParent="0x7fcffdc44f30" astOperand1="0x7fcffdc44fd0" astOperand2="0x7fcffdc45190"/>
+    <token id="0x7fcffdc45140" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="89" column="1" str="struct" scope="0x7fcffdcaefc0" type="name"/>
+    <token id="0x7fcffdcaf3c0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="89" column="0" str="tstrTLSBufferPos" scope="0x7fcffdcaefc0" type="name" astParent="0x7fcffdc45190"/>
+    <token id="0x7fcffdc45190" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="89" column="19" str="*" scope="0x7fcffdcaefc0" type="op" isArithmeticalOp="True" astParent="0x7fcffdc450f0" astOperand1="0x7fcffdcaf3c0" astOperand2="0x7fcffdc451e0"/>
+    <token id="0x7fcffdc451e0" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="89" column="20" str="pstrCurrPos" scope="0x7fcffdcaefc0" type="name" varId="15" variable="0x7fcffdcb06e0" astParent="0x7fcffdc45190" valueType-type="record" valueType-pointer="1"/>
+    <token id="0x7fcffdc45230" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="90" column="1" str=")" scope="0x7fcffdcaefc0" link="0x7fcffdc44f30"/>
+    <token id="0x7fcffdc45280" file="../src/root_tls_cert/crypto/tls_buffer_manager.h" linenr="90" column="2" str=";" scope="0x7fcffdcaefc0"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x7fcffdcaefc0" type="Global">
+      <functionList>
+        <function id="0x7fcffdcf1420" tokenDef="0x7fcffdc43da0" name="TLS_BufferReadCurrEntry" type="Function">
+          <arg nr="1" variable="0x7fcffdcaf740"/>
+          <arg nr="2" variable="0x7fcffdcaf810"/>
+          <arg nr="3" variable="0x7fcffdcaf8e0"/>
+          <arg nr="4" variable="0x7fcffdcaf9b0"/>
+        </function>
+        <function id="0x7fcffdcaf4a0" tokenDef="0x7fcffdc444f0" name="TLS_BufferRead" type="Function">
+          <arg nr="1" variable="0x7fcffdcafa80"/>
+          <arg nr="2" variable="0x7fcffdcafb50"/>
+          <arg nr="3" variable="0x7fcffdcafc20"/>
+        </function>
+        <function id="0x7fcffdcaf580" tokenDef="0x7fcffdc44a20" name="TLS_BufferSetPos" type="Function">
+          <arg nr="1" variable="0x7fcffdcafcf0"/>
+          <arg nr="2" variable="0x7fcffdcafdc0"/>
+        </function>
+        <function id="0x7fcffdcaf660" tokenDef="0x7fcffdc44ee0" name="TLS_BufferGetPos" type="Function">
+          <arg nr="1" variable="0x7fcffdcb0610"/>
+          <arg nr="2" variable="0x7fcffdcb06e0"/>
+        </function>
+      </functionList>
+    </scope>
+  </scopes>
+  <variables>
+    <var id="0x7fcffdcaf740" nameToken="0x7fcffdc43f10" typeStartToken="0x7fcffdc433d0" typeEndToken="0x7fcffdc43ec0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcaf810" nameToken="0x7fcffdcf1890" typeStartToken="0x7fcffdc43fb0" typeEndToken="0x7fcffdc43fb0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcaf8e0" nameToken="0x7fcffdc44240" typeStartToken="0x7fcffdc440d0" typeEndToken="0x7fcffdc441f0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcaf9b0" nameToken="0x7fcffdc44330" typeStartToken="0x7fcffdc442e0" typeEndToken="0x7fcffdc442e0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="true" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcafa80" nameToken="0x7fcffdc44630" typeStartToken="0x7fcffdcaf150" typeEndToken="0x7fcffdc445e0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcafb50" nameToken="0x7fcffdc44720" typeStartToken="0x7fcffdc446d0" typeEndToken="0x7fcffdc446d0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcafc20" nameToken="0x7fcffdc448e0" typeStartToken="0x7fcffdc44840" typeEndToken="0x7fcffdc44890" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcafcf0" nameToken="0x7fcffdc44be0" typeStartToken="0x7fcffdcaf220" typeEndToken="0x7fcffdc44b90" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcafdc0" nameToken="0x7fcffdc44d20" typeStartToken="0x7fcffdc43a50" typeEndToken="0x7fcffdc44cd0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcb0610" nameToken="0x7fcffdc45020" typeStartToken="0x7fcffdcaf2f0" typeEndToken="0x7fcffdc44fd0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcffdcb06e0" nameToken="0x7fcffdc451e0" typeStartToken="0x7fcffdcaf3c0" typeEndToken="0x7fcffdc45190" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+  </valueflow>
+</dump>
+</dumps>

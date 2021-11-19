@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    ping.h
+    sntp.h
 
   Summary:
-    This header file provides prototypes and definitions for the wifi ping application.
+    This header file provides prototypes and definitions for the wifi sntp application.
 
   Description:
     This header file provides function prototypes and data type definitions for
@@ -19,7 +19,7 @@
 *******************************************************************************/
 // DOM-IGNORE-BEGIN
  /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your

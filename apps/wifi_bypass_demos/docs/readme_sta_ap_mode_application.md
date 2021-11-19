@@ -1,4 +1,16 @@
+---
+grand_parent: Harmony 3 Wireless application examples for WINC1500
+parent: Wi-Fi Bypass Mode Demos
+title: WiFi Station Mode / Access Point Mode Demo
+has_toc: true
+has_children: false
+has_toc: false
+nav_order: 1
 
+family: SAME54
+family: SAMD21
+function: WiFi Station Mode / Access Point Mode Demo
+---
 
 ## WiFi Station Mode / Access Point Mode Demo<a name="stademo"></a>
 This example demonstrates the use of the WINC1500 to behave as a Station or Access Point(AP).

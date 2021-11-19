@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<dumps>
+  <platform name="Native" char_bit="8" short_bit="16" int_bit="32" long_bit="64" long_long_bit="64" pointer_bit="64"/>
+  <rawtokens>
+    <file index="0" name="../src/root_tls_cert/pem.h"/>
+    <tok fileIndex="0" linenr="1" column="1" str="/**x *x * \filex *x * \brief This module implements Base64 Decoder.x *x * Copyright (c) 2017-2018 Microchip Technology Inc. and its subsidiaries.x *x * \asf_license_startx *x * \page Licensex *x * Subject to your compliance with these terms, you may use Microchipx * software and any derivatives exclusively with Microchip products.x * It is your responsibility to comply with third party license terms applicablex * to your use of third party software (including open source software) thatx * may accompany Microchip software.x *x * THIS SOFTWARE IS SUPPLIED BY MICROCHIP &quot;AS IS&quot;. NO WARRANTIES,x * WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE,x * INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY,x * AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP BEx * LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, INCIDENTAL OR CONSEQUENTIALx * LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND WHATSOEVER RELATED TO THEx * SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS BEEN ADVISED OF THEx * POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE FULLEST EXTENTx * ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN ANY WAYx * RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,x * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.x *x * \asf_license_stopx *x */"/>
+    <tok fileIndex="0" linenr="35" column="1" str="#"/>
+    <tok fileIndex="0" linenr="35" column="2" str="ifndef"/>
+    <tok fileIndex="0" linenr="35" column="9" str="__PEM_H__"/>
+    <tok fileIndex="0" linenr="36" column="1" str="#"/>
+    <tok fileIndex="0" linenr="36" column="2" str="define"/>
+    <tok fileIndex="0" linenr="36" column="9" str="__PEM_H__"/>
+    <tok fileIndex="0" linenr="38" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*INCLUDES*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="42" column="1" str="#"/>
+    <tok fileIndex="0" linenr="42" column="2" str="include"/>
+    <tok fileIndex="0" linenr="42" column="10" str="&quot;drv/common/nm_common.h&quot;"/>
+    <tok fileIndex="0" linenr="43" column="1" str="#"/>
+    <tok fileIndex="0" linenr="43" column="2" str="include"/>
+    <tok fileIndex="0" linenr="43" column="10" str="&lt;string.h&gt;"/>
+    <tok fileIndex="0" linenr="45" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*DATA TYPES*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="49" column="1" str="typedef"/>
+    <tok fileIndex="0" linenr="49" column="9" str="enum"/>
+    <tok fileIndex="0" linenr="49" column="13" str="{"/>
+    <tok fileIndex="0" linenr="50" column="2" str="PEM_TYPE_NONE"/>
+    <tok fileIndex="0" linenr="50" column="15" str=","/>
+    <tok fileIndex="0" linenr="51" column="2" str="PEM_X509_CERT"/>
+    <tok fileIndex="0" linenr="51" column="15" str=","/>
+    <tok fileIndex="0" linenr="52" column="2" str="PEM_PRIV_KEY"/>
+    <tok fileIndex="0" linenr="52" column="14" str=","/>
+    <tok fileIndex="0" linenr="53" column="2" str="PEM_RSA_PRIV_KEY"/>
+    <tok fileIndex="0" linenr="54" column="1" str="}"/>
+    <tok fileIndex="0" linenr="54" column="2" str="tenuPEMEncType"/>
+    <tok fileIndex="0" linenr="54" column="16" str=";"/>
+    <tok fileIndex="0" linenr="56" column="1" str="/*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*xFUNCTION PROTOTYPESx*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/"/>
+    <tok fileIndex="0" linenr="60" column="1" str="int8_t"/>
+    <tok fileIndex="0" linenr="60" column="8" str="DecodeX509Certificate"/>
+    <tok fileIndex="0" linenr="60" column="29" str="("/>
+    <tok fileIndex="0" linenr="60" column="30" str="uint8_t"/>
+    <tok fileIndex="0" linenr="60" column="38" str="*"/>
+    <tok fileIndex="0" linenr="60" column="39" str="pu8X509File"/>
+    <tok fileIndex="0" linenr="60" column="50" str=","/>
+    <tok fileIndex="0" linenr="60" column="52" str="uint32_t"/>
+    <tok fileIndex="0" linenr="60" column="61" str="u32X509FileSz"/>
+    <tok fileIndex="0" linenr="60" column="74" str=","/>
+    <tok fileIndex="0" linenr="60" column="76" str="uint8_t"/>
+    <tok fileIndex="0" linenr="60" column="84" str="*"/>
+    <tok fileIndex="0" linenr="60" column="85" str="*"/>
+    <tok fileIndex="0" linenr="60" column="86" str="ppu8X509Der"/>
+    <tok fileIndex="0" linenr="60" column="97" str=","/>
+    <tok fileIndex="0" linenr="60" column="99" str="uint32_t"/>
+    <tok fileIndex="0" linenr="60" column="108" str="*"/>
+    <tok fileIndex="0" linenr="60" column="109" str="pu32X509Size"/>
+    <tok fileIndex="0" linenr="60" column="121" str=")"/>
+    <tok fileIndex="0" linenr="60" column="122" str=";"/>
+    <tok fileIndex="0" linenr="61" column="1" str="int8_t"/>
+    <tok fileIndex="0" linenr="61" column="8" str="DecodeBase64File"/>
+    <tok fileIndex="0" linenr="61" column="24" str="("/>
+    <tok fileIndex="0" linenr="61" column="25" str="uint8_t"/>
+    <tok fileIndex="0" linenr="61" column="33" str="*"/>
+    <tok fileIndex="0" linenr="61" column="34" str="pu8B64File"/>
+    <tok fileIndex="0" linenr="61" column="44" str=","/>
+    <tok fileIndex="0" linenr="61" column="46" str="uint32_t"/>
+    <tok fileIndex="0" linenr="61" column="55" str="u32FileSize"/>
+    <tok fileIndex="0" linenr="61" column="66" str=","/>
+    <tok fileIndex="0" linenr="61" column="68" str="uint8_t"/>
+    <tok fileIndex="0" linenr="61" column="76" str="*"/>
+    <tok fileIndex="0" linenr="61" column="77" str="*"/>
+    <tok fileIndex="0" linenr="61" column="78" str="ppu8Key"/>
+    <tok fileIndex="0" linenr="61" column="85" str=","/>
+    <tok fileIndex="0" linenr="61" column="87" str="uint32_t"/>
+    <tok fileIndex="0" linenr="61" column="96" str="*"/>
+    <tok fileIndex="0" linenr="61" column="97" str="pu32KeySize"/>
+    <tok fileIndex="0" linenr="61" column="108" str=","/>
+    <tok fileIndex="0" linenr="61" column="110" str="tenuPEMEncType"/>
+    <tok fileIndex="0" linenr="61" column="125" str="*"/>
+    <tok fileIndex="0" linenr="61" column="126" str="penuPemType"/>
+    <tok fileIndex="0" linenr="61" column="137" str=")"/>
+    <tok fileIndex="0" linenr="61" column="138" str=";"/>
+    <tok fileIndex="0" linenr="63" column="1" str="#"/>
+    <tok fileIndex="0" linenr="63" column="2" str="endif"/>
+    <tok fileIndex="0" linenr="63" column="8" str="/* __PEM_H__ */"/>
+  </rawtokens>
+  <suppressions>
+  </suppressions>
+<dump cfg="">
+  <standards>
+    <c version="c11"/>
+    <cpp version="c++20"/>
+  </standards>
+  <directivelist>
+    <directive file="../src/root_tls_cert/pem.h" linenr="35" str="#ifndef __PEM_H__"/>
+    <directive file="../src/root_tls_cert/pem.h" linenr="36" str="#define __PEM_H__"/>
+    <directive file="../src/root_tls_cert/pem.h" linenr="42" str="#include &quot;drv/common/nm_common.h&quot;"/>
+    <directive file="../src/root_tls_cert/pem.h" linenr="43" str="#include &lt;string.h&gt;"/>
+    <directive file="../src/root_tls_cert/pem.h" linenr="63" str="#endif"/>
+  </directivelist>
+  <tokenlist>
+    <token id="0x7fcfffe06890" file="../src/root_tls_cert/pem.h" linenr="49" column="9" str="enum" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe05ff0" file="../src/root_tls_cert/pem.h" linenr="49" column="0" str="tenuPEMEncType" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe15540" file="../src/root_tls_cert/pem.h" linenr="49" column="13" str="{" scope="0x7fcfffe13fe0" link="0x7fcfffeea640"/>
+    <token id="0x7fcfffe15590" file="../src/root_tls_cert/pem.h" linenr="50" column="2" str="PEM_TYPE_NONE" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe258a0" file="../src/root_tls_cert/pem.h" linenr="50" column="15" str="," scope="0x7fcfffe13fe0"/>
+    <token id="0x7fcfffe258f0" file="../src/root_tls_cert/pem.h" linenr="51" column="2" str="PEM_X509_CERT" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe25c90" file="../src/root_tls_cert/pem.h" linenr="51" column="15" str="," scope="0x7fcfffe13fe0"/>
+    <token id="0x7fcfffe205f0" file="../src/root_tls_cert/pem.h" linenr="52" column="2" str="PEM_PRIV_KEY" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffeea5a0" file="../src/root_tls_cert/pem.h" linenr="52" column="14" str="," scope="0x7fcfffe13fe0"/>
+    <token id="0x7fcfffeea5f0" file="../src/root_tls_cert/pem.h" linenr="53" column="2" str="PEM_RSA_PRIV_KEY" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffeea640" file="../src/root_tls_cert/pem.h" linenr="54" column="1" str="}" scope="0x7fcfffe13fe0" link="0x7fcfffe15540"/>
+    <token id="0x7fcfffe060c0" file="../src/root_tls_cert/pem.h" linenr="54" column="0" str=";" scope="0x7fcfffe13fe0"/>
+    <token id="0x7fcfffe3d190" file="../src/root_tls_cert/pem.h" linenr="60" column="1" str="int8_t" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe99f00" file="../src/root_tls_cert/pem.h" linenr="60" column="8" str="DecodeX509Certificate" scope="0x7fcfffe13fe0" type="name" function="0x7fcfffe14110" astParent="0x7fcfffe99f50"/>
+    <token id="0x7fcfffe99f50" file="../src/root_tls_cert/pem.h" linenr="60" column="29" str="(" scope="0x7fcfffe13fe0" link="0x7fcfffe067f0" astOperand1="0x7fcfffe99f00" astOperand2="0x7fcfffe06680" valueType-type="char" valueType-sign="signed"/>
+    <token id="0x7fcfffe21dc0" file="../src/root_tls_cert/pem.h" linenr="60" column="30" str="uint8_t" scope="0x7fcfffe13fe0" type="name" astParent="0x7fcfffeea880"/>
+    <token id="0x7fcfffeea880" file="../src/root_tls_cert/pem.h" linenr="60" column="38" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe1fb80" astOperand1="0x7fcfffe21dc0" astOperand2="0x7fcfffe1fb30"/>
+    <token id="0x7fcfffe1fb30" file="../src/root_tls_cert/pem.h" linenr="60" column="39" str="pu8X509File" scope="0x7fcfffe13fe0" type="name" varId="1" variable="0x7fcfffe1f5e0" astParent="0x7fcfffeea880" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcfffe1fb80" file="../src/root_tls_cert/pem.h" linenr="60" column="50" str="," scope="0x7fcfffe13fe0" astParent="0x7fcfffe21fb0" astOperand1="0x7fcfffeea880" astOperand2="0x7fcfffe21f60"/>
+    <token id="0x7fcfffe21f10" file="../src/root_tls_cert/pem.h" linenr="60" column="52" str="uint32_t" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe21f60" file="../src/root_tls_cert/pem.h" linenr="60" column="61" str="u32X509FileSz" scope="0x7fcfffe13fe0" type="name" varId="2" variable="0x7fcfffe3dc40" astParent="0x7fcfffe1fb80" valueType-type="int" valueType-sign="unsigned"/>
+    <token id="0x7fcfffe21fb0" file="../src/root_tls_cert/pem.h" linenr="60" column="74" str="," scope="0x7fcfffe13fe0" astParent="0x7fcfffe06680" astOperand1="0x7fcfffe1fb80" astOperand2="0x7fcfffe06590"/>
+    <token id="0x7fcfffe903c0" file="../src/root_tls_cert/pem.h" linenr="60" column="76" str="uint8_t" scope="0x7fcfffe13fe0" type="name" astParent="0x7fcfffe06590"/>
+    <token id="0x7fcfffe06590" file="../src/root_tls_cert/pem.h" linenr="60" column="84" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe21fb0" astOperand1="0x7fcfffe903c0" astOperand2="0x7fcfffe065e0"/>
+    <token id="0x7fcfffe065e0" file="../src/root_tls_cert/pem.h" linenr="60" column="85" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe06590" astOperand1="0x7fcfffe06630" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcfffe06630" file="../src/root_tls_cert/pem.h" linenr="60" column="86" str="ppu8X509Der" scope="0x7fcfffe13fe0" type="name" varId="3" variable="0x7fcfffe3dd10" astParent="0x7fcfffe065e0" valueType-type="char" valueType-sign="unsigned" valueType-pointer="2"/>
+    <token id="0x7fcfffe06680" file="../src/root_tls_cert/pem.h" linenr="60" column="97" str="," scope="0x7fcfffe13fe0" astParent="0x7fcfffe99f50" astOperand1="0x7fcfffe21fb0" astOperand2="0x7fcfffe06750"/>
+    <token id="0x7fcfffe1f430" file="../src/root_tls_cert/pem.h" linenr="60" column="99" str="uint32_t" scope="0x7fcfffe13fe0" type="name" astParent="0x7fcfffe06750"/>
+    <token id="0x7fcfffe06750" file="../src/root_tls_cert/pem.h" linenr="60" column="108" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe06680" astOperand1="0x7fcfffe1f430" astOperand2="0x7fcfffe067a0"/>
+    <token id="0x7fcfffe067a0" file="../src/root_tls_cert/pem.h" linenr="60" column="109" str="pu32X509Size" scope="0x7fcfffe13fe0" type="name" varId="4" variable="0x7fcfffe21190" astParent="0x7fcfffe06750" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcfffe067f0" file="../src/root_tls_cert/pem.h" linenr="60" column="121" str=")" scope="0x7fcfffe13fe0" link="0x7fcfffe99f50"/>
+    <token id="0x7fcfffe06840" file="../src/root_tls_cert/pem.h" linenr="60" column="122" str=";" scope="0x7fcfffe13fe0"/>
+    <token id="0x7fcfffe05dd0" file="../src/root_tls_cert/pem.h" linenr="61" column="1" str="int8_t" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe09130" file="../src/root_tls_cert/pem.h" linenr="61" column="8" str="DecodeBase64File" scope="0x7fcfffe13fe0" type="name" function="0x7fcfffe3d1f0" astParent="0x7fcfffe09180"/>
+    <token id="0x7fcfffe09180" file="../src/root_tls_cert/pem.h" linenr="61" column="24" str="(" scope="0x7fcfffe13fe0" link="0x7fcfffeb7790" astOperand1="0x7fcfffe09130" astOperand2="0x7fcfffeb7620" valueType-type="char" valueType-sign="signed"/>
+    <token id="0x7fcfffe32930" file="../src/root_tls_cert/pem.h" linenr="61" column="25" str="uint8_t" scope="0x7fcfffe13fe0" type="name" astParent="0x7fcfffe09250"/>
+    <token id="0x7fcfffe09250" file="../src/root_tls_cert/pem.h" linenr="61" column="33" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe092f0" astOperand1="0x7fcfffe32930" astOperand2="0x7fcfffe092a0"/>
+    <token id="0x7fcfffe092a0" file="../src/root_tls_cert/pem.h" linenr="61" column="34" str="pu8B64File" scope="0x7fcfffe13fe0" type="name" varId="5" variable="0x7fcfffe21260" astParent="0x7fcfffe09250" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcfffe092f0" file="../src/root_tls_cert/pem.h" linenr="61" column="44" str="," scope="0x7fcfffe13fe0" astParent="0x7fcfffe0ca60" astOperand1="0x7fcfffe09250" astOperand2="0x7fcfffe093c0"/>
+    <token id="0x7fcfffe8e400" file="../src/root_tls_cert/pem.h" linenr="61" column="46" str="uint32_t" scope="0x7fcfffe13fe0" type="name"/>
+    <token id="0x7fcfffe093c0" file="../src/root_tls_cert/pem.h" linenr="61" column="55" str="u32FileSize" scope="0x7fcfffe13fe0" type="name" varId="6" variable="0x7fcfffe21330" astParent="0x7fcfffe092f0" valueType-type="int" valueType-sign="unsigned"/>
+    <token id="0x7fcfffe0ca60" file="../src/root_tls_cert/pem.h" linenr="61" column="66" str="," scope="0x7fcfffe13fe0" astParent="0x7fcfffe0cca0" astOperand1="0x7fcfffe092f0" astOperand2="0x7fcfffe0cb80"/>
+    <token id="0x7fcfffe0cab0" file="../src/root_tls_cert/pem.h" linenr="61" column="68" str="uint8_t" scope="0x7fcfffe13fe0" type="name" astParent="0x7fcfffe0cb80"/>
+    <token id="0x7fcfffe0cb80" file="../src/root_tls_cert/pem.h" linenr="61" column="76" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe0ca60" astOperand1="0x7fcfffe0cab0" astOperand2="0x7fcfffe09bc0"/>
+    <token id="0x7fcfffe09bc0" file="../src/root_tls_cert/pem.h" linenr="61" column="77" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe0cb80" astOperand1="0x7fcfffe0cbd0" valueType-type="char" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcfffe0cbd0" file="../src/root_tls_cert/pem.h" linenr="61" column="78" str="ppu8Key" scope="0x7fcfffe13fe0" type="name" varId="7" variable="0x7fcfffe29650" astParent="0x7fcfffe09bc0" valueType-type="char" valueType-sign="unsigned" valueType-pointer="2"/>
+    <token id="0x7fcfffe0cca0" file="../src/root_tls_cert/pem.h" linenr="61" column="85" str="," scope="0x7fcfffe13fe0" astParent="0x7fcfffeb7620" astOperand1="0x7fcfffe0ca60" astOperand2="0x7fcfffe11630"/>
+    <token id="0x7fcfffe0ccf0" file="../src/root_tls_cert/pem.h" linenr="61" column="87" str="uint32_t" scope="0x7fcfffe13fe0" type="name" astParent="0x7fcfffe11630"/>
+    <token id="0x7fcfffe11630" file="../src/root_tls_cert/pem.h" linenr="61" column="96" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffe0cca0" astOperand1="0x7fcfffe0ccf0" astOperand2="0x7fcfffeb75d0"/>
+    <token id="0x7fcfffeb75d0" file="../src/root_tls_cert/pem.h" linenr="61" column="97" str="pu32KeySize" scope="0x7fcfffe13fe0" type="name" varId="8" variable="0x7fcfffe29720" astParent="0x7fcfffe11630" valueType-type="int" valueType-sign="unsigned" valueType-pointer="1"/>
+    <token id="0x7fcfffeb7620" file="../src/root_tls_cert/pem.h" linenr="61" column="108" str="," scope="0x7fcfffe13fe0" astParent="0x7fcfffe09180" astOperand1="0x7fcfffe0cca0" astOperand2="0x7fcfffe06e70"/>
+    <token id="0x7fcfffeb7670" file="../src/root_tls_cert/pem.h" linenr="61" column="110" str="tenuPEMEncType" scope="0x7fcfffe13fe0" type="name" astParent="0x7fcfffe06e70"/>
+    <token id="0x7fcfffe06e70" file="../src/root_tls_cert/pem.h" linenr="61" column="125" str="*" scope="0x7fcfffe13fe0" type="op" isArithmeticalOp="True" astParent="0x7fcfffeb7620" astOperand1="0x7fcfffeb7670" astOperand2="0x7fcfffeb7740"/>
+    <token id="0x7fcfffeb7740" file="../src/root_tls_cert/pem.h" linenr="61" column="126" str="penuPemType" scope="0x7fcfffe13fe0" type="name" varId="9" variable="0x7fcfffe1ec80" astParent="0x7fcfffe06e70"/>
+    <token id="0x7fcfffeb7790" file="../src/root_tls_cert/pem.h" linenr="61" column="137" str=")" scope="0x7fcfffe13fe0" link="0x7fcfffe09180"/>
+    <token id="0x7fcfffeb77e0" file="../src/root_tls_cert/pem.h" linenr="61" column="138" str=";" scope="0x7fcfffe13fe0"/>
+  </tokenlist>
+  <scopes>
+    <scope id="0x7fcfffe13fe0" type="Global">
+      <functionList>
+        <function id="0x7fcfffe14110" tokenDef="0x7fcfffe99f00" name="DecodeX509Certificate" type="Function">
+          <arg nr="1" variable="0x7fcfffe1f5e0"/>
+          <arg nr="2" variable="0x7fcfffe3dc40"/>
+          <arg nr="3" variable="0x7fcfffe3dd10"/>
+          <arg nr="4" variable="0x7fcfffe21190"/>
+        </function>
+        <function id="0x7fcfffe3d1f0" tokenDef="0x7fcfffe09130" name="DecodeBase64File" type="Function">
+          <arg nr="1" variable="0x7fcfffe21260"/>
+          <arg nr="2" variable="0x7fcfffe21330"/>
+          <arg nr="3" variable="0x7fcfffe29650"/>
+          <arg nr="4" variable="0x7fcfffe29720"/>
+          <arg nr="5" variable="0x7fcfffe1ec80"/>
+        </function>
+      </functionList>
+    </scope>
+  </scopes>
+  <variables>
+    <var id="0x7fcfffe1ec80" nameToken="0x7fcfffeb7740" typeStartToken="0x7fcfffeb7670" typeEndToken="0x7fcfffe06e70" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe1f5e0" nameToken="0x7fcfffe1fb30" typeStartToken="0x7fcfffe21dc0" typeEndToken="0x7fcfffeea880" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe21190" nameToken="0x7fcfffe067a0" typeStartToken="0x7fcfffe1f430" typeEndToken="0x7fcfffe06750" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe21260" nameToken="0x7fcfffe092a0" typeStartToken="0x7fcfffe32930" typeEndToken="0x7fcfffe09250" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe21330" nameToken="0x7fcfffe093c0" typeStartToken="0x7fcfffe8e400" typeEndToken="0x7fcfffe8e400" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe29650" nameToken="0x7fcfffe0cbd0" typeStartToken="0x7fcfffe0cab0" typeEndToken="0x7fcfffe09bc0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe29720" nameToken="0x7fcfffeb75d0" typeStartToken="0x7fcfffe0ccf0" typeEndToken="0x7fcfffe11630" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe3dc40" nameToken="0x7fcfffe21f60" typeStartToken="0x7fcfffe21f10" typeEndToken="0x7fcfffe21f10" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="false" isReference="false" isStatic="false"/>
+    <var id="0x7fcfffe3dd10" nameToken="0x7fcfffe06630" typeStartToken="0x7fcfffe903c0" typeEndToken="0x7fcfffe065e0" access="Argument" scope="0x0" constness="0" isArgument="true" isArray="false" isClass="false" isConst="false" isExtern="false" isLocal="false" isPointer="true" isReference="false" isStatic="false"/>
+  </variables>
+  <valueflow>
+  </valueflow>
+</dump>
+</dumps>

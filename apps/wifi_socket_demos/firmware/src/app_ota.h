@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    ping.h
+    ota.h
 
   Summary:
-    This header file provides prototypes and definitions for the wifi ping application.
+    This header file provides prototypes and definitions for the wifi ota application.
 
   Description:
     This header file provides function prototypes and data type definitions for

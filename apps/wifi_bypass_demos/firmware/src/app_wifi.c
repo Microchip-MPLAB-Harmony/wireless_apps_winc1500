@@ -24,7 +24,7 @@
  
  // DOM-IGNORE-BEGIN
  /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -158,12 +158,6 @@ static int APP_WiFiCMDProcess
             
             memcpy((uint8_t *)appWiFiConfig.auth.authInfo.WPAPerPSK.key,argv[5],strlen(argv[5])+1);
             
-        } 
-        else if(appWiFiConfig.auth.authType == WDRV_WINC_AUTH_TYPE_WEP)
-        {            
-            memcpy((uint8_t *)appWiFiConfig.auth.authInfo.WEP.key,argv[5],strlen(argv[5])+1);
-            appWiFiConfig.auth.authInfo.WEP.idx = strtol(argv[6], NULL, 0);
-            appWiFiConfig.auth.authInfo.WEP.size = strlen((const char *)appWiFiConfig.auth.authInfo.WEP.key)+1;
         }  
         else if(appWiFiConfig.auth.authType == WDRV_WINC_AUTH_TYPE_802_1X_MSCHAPV2)
         {
@@ -183,10 +177,6 @@ static int APP_WiFiCMDProcess
         if(appWiFiConfig.auth.authType == WDRV_WINC_AUTH_TYPE_WPA_PSK)
         {
             SYS_CONSOLE_PRINT( "Password:%s\r\n",appWiFiConfig.auth.authInfo.WPAPerPSK.key);
-        }
-        else if(appWiFiConfig.auth.authType == WDRV_WINC_AUTH_TYPE_WEP)
-        {
-            SYS_CONSOLE_PRINT( "Password:%s\r\n",appWiFiConfig.auth.authInfo.WEP.key);
         }
         else if(appWiFiConfig.auth.authType == WDRV_WINC_AUTH_TYPE_802_1X_MSCHAPV2)
         {
@@ -479,11 +469,6 @@ void APP_WiFiTasks(DRV_HANDLE handle)
             {
                 WDRV_WINC_AuthCtxSetWPAEnterpriseMSCHAPv2(&authCtx, (char*)appWiFiConfig.auth.authInfo.WPAEntMSCHAPv2.domainUserName, (uint8_t*)appWiFiConfig.auth.authInfo.WPAEntMSCHAPv2.password, strlen((const char *)appWiFiConfig.auth.authInfo.WPAEntMSCHAPv2.password), false);
             }
-            else if (WDRV_WINC_AUTH_TYPE_WEP == appWiFiConfig.auth.authType)
-            {
-                WDRV_WINC_AuthCtxSetWEP(&authCtx, appWiFiConfig.auth.authInfo.WEP.idx, (uint8_t*)appWiFiConfig.auth.authInfo.WEP.key, strlen((const char *)appWiFiConfig.auth.authInfo.WEP.key));
-            }
-            
             appSocketStaApState = APP_WIFI_STA_AP_STATE_TCP_INIT;
             
             break;

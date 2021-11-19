@@ -1,6 +1,6 @@
 ---
-parent: Harmony 3 Wireless Package
-title: WiFi Applications in Socket Mode and Bypass Mode
+parent: Harmony 3 Wireless application examples for WINC1500
+title: Wi-Fi Socket Mode Demos
 has_toc: true
 has_children: false
 has_toc: false
@@ -8,12 +8,12 @@ nav_order: 1
 
 family: SAME54
 family: SAMD21
-function: WiFi Applications in Socket Mode and Bypass Mode
+function: Wi-Fi Socket Mode Demos
 ---
 
 # WINC1500 Example Applications
 
-This example project demonstrates the WINC1500 applications of WiFi in Socket mode and Bypass Mode.
+This example project demonstrates the WINC1500 applications of WiFi in Socket mode.
 
 ## Description
 
@@ -21,11 +21,10 @@ This project has WiFi example applications of WINC1500 . The user can configure 
 
 ## Downloading and building the application
 
-To download or clone this application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/wireless)
+To download or clone this application from Github, go to the [top level of the repository](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_winc1500)
 
 
-Path of the application within the repository is ,<br>Socket Mode: **wireless_apps_winc1500/apps/wifi_socket_demos/firmware** 
-<br>Bypass Mode: **wireless_apps_winc1500/apps/wifi_bypass_demos/firmware**.
+Path of the application within the repository is , **wireless_apps_winc1500/apps/wifi_socket_demos/firmware** 
 
 To build the application, refer to the following table and open the project using its IDE.
 
@@ -33,6 +32,7 @@ To build the application, refer to the following table and open the project usin
 | ----------------| -----------------------------------------------------  |
 | sam_e54_xpro_winc1500.X | MPLABX project for SAME54 and WINC1500 Xplained pro|
 | sam_d21_xpro_winc1500.X | MPLABX project for SAMD21 and WINC1500 Xplained pro|
+| sam_e54_xpro_winc1500_freertos.X | MPLABX project for SAME54 and WINC1500 Xplained pro using FreeRTOS|
 |||
 
 
@@ -93,22 +93,44 @@ Application command parameters information
 
 | Parameter       | Sub Parameter                                          |
 | ----------------| -----------------------------------------------------  |
-| demo_ID         | 1 - WiFi station mode/Access point mode demo.<br> 7 - OTA Demo. <br> 8 - SSL Demo. <br> 9 - Ping Demo. <br> 10 - Iperf demo. <br> 11 - SNTP demo. <br> 18 - MQTT Demo.|
+| demo_ID         | 1 - WiFi station mode/Access point mode demo.<br> 7 - OTA Demo. <br> 8 - SSL Demo. <br> 9 - Ping Demo. <br> 10 - Iperf demo. <br> 11 - SNTP demo. <br> 18 - MQTT Demo. <br> 19 - Certificate download via OTA Demo.|
 |||
 
 **List of Applications**
 
-| Application         | Socket Mode        |               Bypass Mode                
-| ----------------| ---------------| -------------------------------       |
-| [WiFi station mode/Access point mode demo](docs/readme_sta_ap_mode_application.md)    	  | Available| Available                 | Available |Available| 
-| [OTA Demo](docs/readme_ota_application.md)        | Available   | Not Available   |
-| [SSL Demo](docs/readme_ssl_application.md)        | Available   | Available   |
-| [Ping Demo](docs/readme_ping_application.md)        | Available   | Available   |
-| [Iperf Demo](docs/readme_iperf_application.md)       | Available   | Available   |
-| [SNTP Demo](docs/readme_sntp_application.md)       | Available   | Available   |
-| [MQTT Demo](docs/readme_mqtt_application.md)       | Available   | Available   |
-| [WiFi Provisioning Demo](docs/readme_wifi_provision_application.md)       | Available   | Available   |
+| Application      | Description                                    |
+| ----------------| -----------------------------------------------------  |
+| [WiFi station mode/Access point mode demo](docs/readme_sta_ap_mode_application.md)   | Demonstartes the Station Mode or Access Point(AP) mode of WINC1500  | 	  
+| [OTA Demo](docs/readme_ota_application.md)  | Demonstrates OTA firmware upgrade |      
+| [SSL Demo](docs/readme_ssl_application.md) |  Demonstrates TCP SSL Client application |       
+| [Ping Demo](docs/readme_ping_application.md)| Demonstrates the Ping test |        
+| [Iperf Demo](docs/readme_iperf_application.md) | Demonstrates the iperf application|      
+| [SNTP Demo](docs/readme_sntp_application.md) |Demonstrates how to retrieve time information from the time server|      
+| [MQTT Demo](docs/readme_mqtt_application.md) | Demonstrates  MQTT Application  |      
+| [WiFi Provisioning Demo](docs/readme_wifi_provision_application.md) | Demonstartes the WiFi provisioning application|
+| [Certificate download via OTA Demo](docs/readme_certificate_download_ota_application.md) | Demonstartes Certificate download via OTA application|      
 |||
+
+### Steps to isolate/copy individual application(s) from the demo
+
+ If the user wants to isolate an application, follow the below mentioned steps <br>
+
+ For example, the user wants to create an SNTP demo in Socket mode.
+1. The SNTP demo uses the WiFi functionalities to get connected with the network. So copy the files "<em> app_wifi.c</em>" and "<em> app_wifi.h </em>" from the path "<em>wireless_apps_winc1500/apps/wifi_bypass_demos/firmware/src </em>" or "<em>wireless_apps_winc1500/apps/wifi_socket_demos/firmware/src</em>" to "src" folder of the new demo project. Then add these files to the project.<br>
+
+2. Now user should copy and add the SNTP application files "<em>app_sntp.c</em>" and "<em>app_sntp.h</em>" from the path "<em>wireless_apps_winc1500/apps/wifi_bypass_demos/firmware/src </em>" or "<em>wireless_apps_winc1500/apps/wifi_socket_demos/firmware/src</em>" to the "<em>src</em> folder of the new demo project. <br>
+
+3. The "<em>app.c</em>" and "<em>app.h</em>"  files need to be copied by the user. These files integrate the SNTP application and WiFi functionalities. Copy and add these two files from the same "src" path to the "src" folder of the new demo project. <br>
+
+4. In "app.c", within "<em>APP_Initialize()</em>" function, initialize the sntp application by calling "<em> APP_SntpInitialize(APPWiFiCallback)</em>".
+
+5. In "app.c" file, make sure that, "<em> APP_WiFiTasks(wdrvHandle)</em>" is getting called from the "<em> APP_STATE_WDRV_OPEN </em>" state of "<em> APP_Tasks() </em>" state machine.
+
+6. In the same state machine "<em> APP_Tasks() </em>", within the state "<em> APP_STATE_WDRV_APP_LOOP </em>" , call the sntp application state machine "<em>APP_SntpTasks(handle)</em>".
+
+7. Now follow the steps mentioned in the SNTP demo document to run the SNTP demo using "wifi", "sntp" and "appdemo" commands.
+
+Similarly, for any application demo, take the required application files along with WiFi files and "app" files to create the demo.
 
 
 **Note:** <br> 

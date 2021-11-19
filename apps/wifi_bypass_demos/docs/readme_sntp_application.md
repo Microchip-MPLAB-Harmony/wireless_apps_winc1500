@@ -1,10 +1,22 @@
+---
+grand_parent: Harmony 3 Wireless application examples for WINC1500
+parent: Wi-Fi Bypass Mode Demos
+title: SNTP Demo
+has_toc: true
+has_children: false
+has_toc: false
+nav_order: 1
 
+family: SAME54
+family: SAMD21
+function: SNTP Demo
+---
 
 ## SNTP Demo<a name="sntpdemo"></a>
-This example demonstrates the use of the WINC1500 to retrieve time information from the time server. Follow the below mentioned steps to run the demo in both Socket and Bypass mode.
+This example demonstrates the use of the WINC1500 to retrieve time information from the time server. Follow the below mentioned steps to run the demo.
 1. Configure the wifi parameters using "wifi set" command.
 
-	![](images/ping_demo_config.png)
+	![](images/wifi_config.png)
 
 2.  Enter the command "sntp get".
 

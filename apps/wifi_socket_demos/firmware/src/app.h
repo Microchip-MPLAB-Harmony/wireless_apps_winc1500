@@ -19,7 +19,7 @@
 *******************************************************************************/
 // DOM-IGNORE-BEGIN
  /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -76,6 +76,9 @@ extern "C" {
 #define APP_IPERF
 #define APP_MQTT
 #define APP_SSL
+#if (defined __SAME54P20A__)
+#define APP_CERT_DOWNLOAD_OTA
+#endif
     
 typedef enum 
 {
@@ -96,7 +99,8 @@ typedef enum
     APP_PROXIMITY_REPORTER_DEMO     = 1 << 14,
     APP_TRANSPARENT_SERVICE_DEMO    = 1 << 15,
     APP_WIFI_PROV_SOFTAP_DEMO       = 1 << 16,
-    APP_MQTT_DEMO                   = 1 << 17,     
+    APP_MQTT_DEMO                   = 1 << 17, 
+    APP_CERT_DOWNLOAD_OTA_DEMO      = 1 << 18,
 } APP_DEMOS;
 
 

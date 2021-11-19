@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name:
-    app.c
+    ssl.c
 
   Summary:
-    This file contains the source code for the MPLAB Harmony application.
+    This file contains the source code for the MPLAB Harmony wifi ssl application
 
   Description:
     This file contains the source code for the MPLAB Harmony application.  It
@@ -22,7 +22,7 @@
  *******************************************************************************/
 
 /*******************************************************************************
-* Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2020-21 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -89,7 +89,7 @@ typedef struct {
     uint8_t                     recvBuffer[SOCK_TCP_RECV_BUFFER_SIZE];    
 }SOCKETMODE_SOCK_Config;
 
-SOCKETMODE_SOCK_Config  g_sSockConfig;
+static SOCKETMODE_SOCK_Config  g_sSockConfig;
 SOCKET                  ssl_g_clientSocket = -1;
 uint32_t                ssl_g_u32SockStatus = 0;
 
@@ -126,13 +126,14 @@ char APP_URL_Buffer[MAX_URL_SIZE];
 // *****************************************************************************
 static void SocketMode_ExampleSocketResolverCallback(uint8_t *pu8DomainName, uint32_t u32IP)
 {
-    char s[20];
+    char s[SOCK_SERVER_NAME];
 
     SYS_CONSOLE_PRINT("%s: IP address is %s\r\n", pu8DomainName, inet_ntop(AF_INET, &u32IP, s, sizeof(s)));
 
     g_sSockConfig.hostIp = u32IP;
     
     g_sSockConfig.ssl_state = APP_SSL_STATE_CONNECT;
+    WDRV_MSDelay(500);
 }
 
 static int8_t SocketMode_ExampleSocketConnect(void)
@@ -177,6 +178,9 @@ static void SocketMode_ExampleSslClientEventCallback(SOCKET socket, uint8_t mess
             {
                 if (strstr((char *)(pRecvMessage->pu8Buffer), "</html>") != 0) {
                     SYS_CONSOLE_PRINT("TcpClientCallback(): End of Html Page\r\n");
+                    shutdown(ssl_g_clientSocket);
+                    ssl_g_clientSocket = -1;
+                    break;
                 }
                 memset(g_sSockConfig.recvBuffer, 0, SOCK_TCP_RECV_BUFFER_SIZE);
                 recv(ssl_g_clientSocket, g_sSockConfig.recvBuffer, SOCK_TCP_RECV_BUFFER_SIZE, 0);
@@ -198,7 +202,13 @@ static void SocketMode_ExampleSslClientEventCallback(SOCKET socket, uint8_t mess
             char networkBuffer[256];
             if(pstrConnMsg->s8Error != 0)
             {
-                SYS_CONSOLE_PRINT( "Socket %d Connect failed; Error = %d\r\n\n", socket, pstrConnMsg->s8Error);                
+                SYS_CONSOLE_PRINT( "Socket %d Connect failed; Error = %d\r\n\n", socket, pstrConnMsg->s8Error);
+                if (SOCK_ERR_CONN_ABORTED == pstrConnMsg->s8Error)
+                {
+                    shutdown(ssl_g_clientSocket);
+                    ssl_g_clientSocket = -1;
+                    break;
+                }
             }
             
             SYS_CONSOLE_PRINT( "Socket %d Connected\r\n\n", socket);
@@ -356,7 +366,8 @@ void APP_SSL_Tasks(DRV_HANDLE wdrvHandle)
         {
             if (APP_URL_Buffer[0] != '\0')
             {
-                memcpy(g_sSockConfig.hostName,&APP_URL_Buffer[8],APP_URL_LENGTH);
+                memset(g_sSockConfig.hostName,0,SOCK_SERVER_NAME);
+                memcpy(g_sSockConfig.hostName,&APP_URL_Buffer[8],strlen(APP_URL_Buffer)-9);
                 g_sSockConfig.ssl_state = APP_SSL_STATE_INIT;
             }
             break;
