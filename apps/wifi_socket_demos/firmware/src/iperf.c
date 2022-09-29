@@ -1211,3 +1211,5 @@ void IperfTCP_Client_SendTestPacket(void)
 	IperfIncrementTimerUse();
 	IperfTCP_SendTestPacket(tcp_client_sock);
 }
+
+#endif
