@@ -52,7 +52,7 @@
 #define WLAN_WEB_KEY_INDEX      1
 #define WLAN_WEB_KEY            "1234567890"
 
-#define TCP_LISTEN_PORT         80
+#define TCP_LISTEN_PORT         8000
 #define TCP_BUFFER_SIZE         1460
 
 #define WLAN_DHCP_SRV_ADDR      "192.168.1.1"
