@@ -27,6 +27,15 @@ children:
       children:
       - type: Dynamic
         attributes: {id: sys_time, value: ''}
+  - type: Boolean
+    attributes: {id: SYS_TIME_USE_SYSTICK}
+    children:
+    - type: Attributes
+      children:
+      - type: Boolean
+        attributes: {id: visible}
+        children:
+        - {type: Value, value: 'true'}
 - type: Attachments
   children:
   - type: DirectDependency
@@ -43,4 +52,4 @@ children:
         children:
         - {type: Value, value: TC3_TMR}
 - type: ElementPosition
-  attributes: {x: '520', y: '101', id: sys_time}
+  attributes: {x: '550', y: '60', id: sys_time}

@@ -11,12 +11,5 @@ children:
       children:
       - type: Dynamic
         attributes: {id: FreeRTOS, value: '120000000'}
-  - type: Integer
-    attributes: {id: FREERTOS_MINIMAL_STACK_SIZE}
-    children:
-    - type: Values
-      children:
-      - type: User
-        attributes: {value: '512'}
 - type: ElementPosition
-  attributes: {x: '520', y: '20', id: FreeRTOS}
+  attributes: {x: '330', y: '60', id: FreeRTOS}

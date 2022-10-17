@@ -5839,7 +5839,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\definitions.h</file>
-         <hash>f01182bed6e5f4bdc97065f65a726964978137aae21db332141f676e48ee621e</hash>
+         <hash>2418ae6359480a8e6e0d4b123e4faa5d302e09cb4e7d340e53814becf2aac0ab</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\hmatrixb.h</file>
@@ -5979,7 +5979,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\initialization.c</file>
-         <hash>9dd4e26f924f631650bf3c4606140a737ee60fec82e45015c3d123fe173084fe</hash>
+         <hash>c110d97421985cad66fc29eab34d09a8b85e1ba756f5ecc53f576a44f4465a40</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\system\console\src\sys_console_uart_definitions.h</file>

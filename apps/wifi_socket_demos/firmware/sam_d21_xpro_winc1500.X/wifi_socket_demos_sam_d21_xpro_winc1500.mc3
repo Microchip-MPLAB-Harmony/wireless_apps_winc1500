@@ -647,7 +647,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;527&quot; canvasWidth=&quot;690&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; x=&quot;546&quot; y=&quot;15&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;cmsis&quot; x=&quot;430&quot; y=&quot;60&quot;/&gt;
@@ -667,7 +668,6 @@
         &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tc3&quot; x=&quot;7&quot; y=&quot;405&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;527&quot; canvasWidth=&quot;690&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -5776,7 +5776,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\definitions.h</file>
-         <hash>274c7d7b8de8e442fbaa6d6d4a704ee589e874d66c467f06c3ce8fcbc22d463e</hash>
+         <hash>0700ed500b4a36f1286850d5fe25c8312f9b2b551d6c2dbfe7dbfbb49c6ee60e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\hmatrixb.h</file>
@@ -5920,7 +5920,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\initialization.c</file>
-         <hash>4f45437c80299af220bf89e7e8dfb9200164a0b88931fc9804f1de41e02c525e</hash>
+         <hash>6c83d8198a4364e4fb4729b9e30d8208796cabfc06002cd1559f6528975c65fd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\system\console\src\sys_console_uart_definitions.h</file>

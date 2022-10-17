@@ -28,7 +28,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: drv_spi, value: Synchronous}
+        attributes: {id: drv_spi, value: Asynchronous}
       - type: User
         attributes: {value: Asynchronous}
   - type: File
@@ -169,7 +169,7 @@ children:
           - type: String
             attributes: {id: targetAttachmentID}
             children:
-            - {type: Value, value: spi}
+            - {type: Value, value: drv_spi_dependency}
       - type: DirectDependency
         attributes: {id: drv_spi_SPI_dependency}
         children:
@@ -184,4 +184,4 @@ children:
             children:
             - {type: Value, value: SERCOM4_SPI}
 - type: ElementPosition
-  attributes: {x: '176', y: '252', id: drv_spi}
+  attributes: {x: '210', y: '140', id: drv_spi}

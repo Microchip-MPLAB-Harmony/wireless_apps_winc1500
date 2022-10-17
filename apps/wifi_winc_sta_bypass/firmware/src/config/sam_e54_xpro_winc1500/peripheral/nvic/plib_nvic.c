@@ -81,6 +81,8 @@ void NVIC_Initialize( void )
     NVIC_EnableIRQ(TC3_IRQn);
 
 
+    /* Enable Bus fault */
+    SCB->SHCSR |= (SCB_SHCSR_BUSFAULTENA_Msk);
 
 }
 
@@ -92,9 +94,7 @@ void NVIC_INT_Enable( void )
 
 bool NVIC_INT_Disable( void )
 {
-    bool processorStatus;
-
-    processorStatus = (bool) (__get_PRIMASK() == 0);
+    bool processorStatus = (__get_PRIMASK() == 0U);
 
     __disable_irq();
     __DMB();

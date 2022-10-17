@@ -5830,7 +5830,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\definitions.h</file>
-         <hash>2418ae6359480a8e6e0d4b123e4faa5d302e09cb4e7d340e53814becf2aac0ab</hash>
+         <hash>2293d683fcdd28e7fa5b8b5a8d8fb827e8f336da82708a86eb3f05e059f3e1db</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\hmatrixb.h</file>
@@ -5970,7 +5970,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\initialization.c</file>
-         <hash>c110d97421985cad66fc29eab34d09a8b85e1ba756f5ecc53f576a44f4465a40</hash>
+         <hash>06a7b776b125d33a13a7ba2803e9ce6957933f73f03412f1312bd812e68f6419</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\system\console\src\sys_console_uart_definitions.h</file>
@@ -6706,7 +6706,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\configuration.h</file>
-         <hash>668070f8cd10d86e191fd58d958d85c632e28af6160972e46133ce567609854f</hash>
+         <hash>da0bc91f706680a8bbbd203f6aed1356b22e50ca29dd8ecedb21e22e725884c4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\driver\winc\wdrv_winc_powersave.c</file>
