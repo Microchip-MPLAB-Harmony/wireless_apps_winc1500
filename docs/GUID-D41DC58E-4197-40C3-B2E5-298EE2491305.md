@@ -20,7 +20,7 @@ This repository contains the MPLAB® Harmony 3 Wireless application examples for
 -   [MPLAB® Harmony License](GUID-64DD8072-6E57-4604-A82E-C848D7527955.md)
 
 
-To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_winc1500) and then click **Clone** button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
+To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_winc1500) and then click **Clone** button to clone this repository or download as zip file.<br />This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
 -   **[WINC STA Bypass](GUID-00146421-1EA8-48A6-9637-4AE38CC69A31.md)**  
 
@@ -86,5 +86,5 @@ The following applications are provided to demonstrate the typical or interestin
 |Socket Mode|WINC1500+SAMD21|This document explains a step by step approach to create a WINC1500 Socket mode project with SAMD21 host.|
 |Socket Mode|WINC1500+SAME54|This document explains a step by step approach to create a WINC1500 Socket mode project with SAME54 host.|
 |Bypass Mode|WINC1500+SAME54|This document explains a step by step approach to create a WINC1500 Bypass mode project with SAME54 host.|
-| | | |
+| |
 

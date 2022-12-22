@@ -34,4 +34,13 @@
     -   [Supported Network Modes in WINC](GUID-74562C24-BC96-4BBA-8346-836D98E39F8C.md)
     -   [WINC Devices – Integrated Serial Flash Memory Download Procedure](GUID-AE48AE71-0F91-444B-8AC3-C5C1939A37FB.md)
     -   [Create WINC Project - Getting Started](GUID-8C38797E-1BBB-4ACF-A496-EEC03A6075AC.md)
+-   [Microchip Information](GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.md)
+    -   [The Microchip Website](GUID-7551DC67-D79D-4F0C-B56F-7B17E12400E0.md)
+    -   [Product Change Notification Service](GUID-CDA512D8-0DE4-4672-8716-04CAC681CB38.md)
+    -   [Customer Support](GUID-F05182E4-B102-4775-A746-1FF37F465312.md)
+    -   [Microchip Devices Code Protection Feature](GUID-E8251634-7B15-4073-A103-5A5F128B8699.md)
+    -   [Legal Notice](GUID-125F1A93-76CC-4BD7-BACA-01844FBD5F4F.md)
+    -   [Trademarks](GUID-21750586-F9F2-4E33-87FB-8F2994BF4744.md)
+    -   [Quality Management System](GUID-07985EED-D525-413B-AEFE-78B563328687.md)
+    -   [Worldwide Sales and Service](GUID-02A694CF-88A5-4ADA-8785-7EEEC62D66EA.md)
 

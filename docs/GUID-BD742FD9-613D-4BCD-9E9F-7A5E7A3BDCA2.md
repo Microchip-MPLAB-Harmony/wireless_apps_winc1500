@@ -2,13 +2,13 @@
 
 This example demonstrates how to download the TLS certificates into WINC1500 via OTA. It downloads the certificates from an OTA download server, which is a web server.
 
-**Note:** This example will be only available with SAME54 Host
+**Note:**<br />This example will be only available with SAME54 Host
 
 1.  Use any HTTP server or hfs.exe from [http://www.rejetto.com/hfs/](http://www.rejetto.com/hfs/)
 
 2.  Run the hfs.exe
 
-3.  Add the certificates from “\\utilities\\cert\_store” to the root folder in the hfs.exe tool.
+3.  Add the certificates from “\\utilities\\cert\_store�? to the root folder in the hfs.exe tool.
 
     ![cert_down_ota_1](GUID-25F9CE1D-4222-477D-B45A-D07904C0BB11-low.png)
 

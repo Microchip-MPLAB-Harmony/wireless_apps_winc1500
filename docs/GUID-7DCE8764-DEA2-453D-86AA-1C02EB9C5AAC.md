@@ -1,34 +1,32 @@
----
-title: Release notes
-nav_order: 99
----
-
-![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
-![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
-
 # Microchip MPLAB® Harmony 3 Release Notes
 
-## Harmony 3 Wireless application examples for WINC1500 v3.6.0
+## Harmony 3 Wireless application examples for WINC1500 v3.6.1
 
 ### Development kit and demo application support
 
 Following table provides number of Wireless examples available for different development kits.
 
-| Development Kits           | MPLABx applications |
-|:--------------------------:|:-------------------:|
-| SAMD21 with WINC1500 Xpro  |       7             |
-|:--------------------------:|:-------------------:|
-| SAME54 with WINC1500 Xpro  |       9             |
-|:--------------------------:|:-------------------:|
+|Development Kits|MPLABx applications|
+|----------------|-------------------|
+|SAMD21 with WINC1500 Xpro|7|
+|SAME54 with WINC1500 Xpro|9|
+|SAMA5D27-SOM1-EK1 with WINC1500 Wifi 7 Click board|1|
 
 ### New Features
 
 -   All applications have been migrated from MHC to MCC.
 
+-   "wifi\_socket\_demos" is available for SAMA5D27-SOM1-EK1 with WINC1500 Wifi 7 Click board with latest "wireless\_wifi" driver v3.7.1
+
+
+**Note**
+
+Only "wifi\_socket\_demos" of SAMA5D27-SOM1-EK1 with WINC1500 Wifi 7 Click board is upgraded with the latest "wireless\_wifi" driver v3.7.1. All Other applcations are having "wireless\_wifi" driver v3.7.0
 
 ### Bug fixes
 
 -   "wireless\_wifi\_apps\_winc1500" applications are upgraded with latest "wireless\_wifi" driver v3.7.0.
+
 
 ### Known Issues
 
@@ -43,7 +41,7 @@ Following table provides number of Wireless examples available for different dev
 
 -   MPLAB® X IDE plug-ins:
 
-    -   MPLAB® Code Configurator (MCC) v5.1.17
+    -   MPLAB® Code Configurator \(MCC\) v5.1.17
 
 -   [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
 
