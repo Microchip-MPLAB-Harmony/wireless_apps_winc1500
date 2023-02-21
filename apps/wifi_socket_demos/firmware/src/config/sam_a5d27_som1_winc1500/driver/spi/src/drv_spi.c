@@ -48,6 +48,7 @@
 #include <string.h>
 #include "configuration.h"
 #include "driver/spi/drv_spi.h"
+#include "system/cache/sys_cache.h"
 #include "system/debug/sys_debug.h"
 
 // *****************************************************************************
@@ -408,6 +409,11 @@ static void _DRV_SPI_StartDMATransfer(DRV_SPI_TRANSFER_OBJ* transferObj)
     dObj->txDummyDataSize = 0;
     dObj->rxDummyDataSize = 0;
 
+     /* Clean cache to push the data in transmit buffer to the main memory */
+    SYS_CACHE_CleanDCache_by_Addr((uint32_t *)transferObj->pTransmitData, transferObj->txSize);
+
+    /* Invalidate the receive buffer to force the CPU to load from main memory */
+    SYS_CACHE_InvalidateDCache_by_Addr((uint32_t *)transferObj->pReceiveData, transferObj->rxSize);
 
     if (transferObj->rxSize >= transferObj->txSize)
     {
@@ -877,6 +883,11 @@ SYS_MODULE_OBJ DRV_SPI_Initialize (
     for (txDummyDataIdx = 0; txDummyDataIdx < sizeof(txDummyData); txDummyDataIdx++)
     {
         txDummyData[txDummyDataIdx] = 0xFF;
+    }
+    if (dObj->txDMAChannel != SYS_DMA_CHANNEL_NONE)
+    {
+        /* Clean cache lines to push the dummy data to the main memory */
+        SYS_CACHE_CleanDCache_by_Addr((uint32_t *)txDummyData, sizeof(txDummyData));
     }
 
     if((dObj->txDMAChannel == SYS_DMA_CHANNEL_NONE) || (dObj->rxDMAChannel == SYS_DMA_CHANNEL_NONE))

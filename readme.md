@@ -22,35 +22,35 @@ This repository contains the MPLAB® Harmony 3 Wireless application examples for
 
 To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_winc1500) and then click **Clone** button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
 
--   **[WINC STA Bypass](docs/GUID-00146421-1EA8-48A6-9637-4AE38CC69A31.md)**  
+-   **[WINC STA Bypass](apps/wifi_winc_sta_bypass/readme.md)**  
 
--   **[TCP Server in SoftAP](docs/GUID-46A687C1-607D-45CA-8E2C-E10E16EF22A7.md)**  
+-   **[TCP Server in SoftAP](apps/wifi_tcp_server_in_softap/readme.md)**  
 
--   **[Wifi Provisioning via WPS](docs/GUID-103308B4-FF34-41B2-A825-F2C6837EC078.md)**  
+-   **[Wifi Provisioning via WPS](apps/wifi_provisioning_via_wps/readme.md)**  
 
--   **[Wifi Provisioning via SoftAP](docs/GUID-C95FB72C-D74D-49D7-B5C4-BD8464838039.md)**  
+-   **[Wifi Provisioning via SoftAP](apps/wifi_provisioning_via_softap/readme.md)**  
 
--   **[TCP Client](docs/GUID-79933B21-92EE-4851-BCFD-566505CF43DF.md)**  
+-   **[TCP Client](apps/tcp_client/readme.md)**  
 
--   **[Power Save Mode](docs/GUID-E9C1573C-3116-41FF-B88B-424E4E4AEBF8.md)**  
+-   **[Power Save Mode](apps/power_save_mode_example/readme.md)**  
 
--   **[AP Scan](docs/GUID-915C13AA-4559-43AF-865E-210A114E9733.md)**  
+-   **[AP Scan](apps/ap_scan/readme.md)**  
 
--   **[WINC1500 Socket Mode Demo Applications](docs/GUID-52D24502-1FE3-473D-9DA1-624A4E26166B.md)**  
+-   **[WINC1500 Socket Mode Demo Applications](apps/wifi_socket_demos/readme.md)**  
 
--   **[Example project creation - WINC Socket mode project with SAMD21](docs/GUID-7C51815B-F559-46A3-A8B7-3F48A517B4A4.md)**  
+-   **[Example project creation - WINC Socket mode project with SAMD21](apps/wifi_socket_demos/docs/GUID-7C51815B-F559-46A3-A8B7-3F48A517B4A4.md)**  
 
--   **[Example project creation - WINC Socket mode project with SAME54](docs/GUID-BB3E45B9-E26C-4E97-8325-FBF9B81BBF81.md)**  
+-   **[Example project creation - WINC Socket mode project with SAME54](apps/wifi_socket_demos/docs/GUID-BB3E45B9-E26C-4E97-8325-FBF9B81BBF81.md)**  
 
--   **[WINC1500 Bypass Mode Demo Applications](docs/GUID-40C3ABB9-0449-4A53-94DF-0DFB4CE5540E.md)**  
+-   **[WINC1500 Bypass Mode Demo Applications](apps/wifi_bypass_demos/docs/GUID-40C3ABB9-0449-4A53-94DF-0DFB4CE5540E.md)**  
 
--   **[Create your first WINC1500 Bypass mode example using Harmony TCP/IP stack](docs/GUID-34243CDA-B156-4D2B-B9C1-7ED5BE2586A6.md)**  
+-   **[Create your first WINC1500 Bypass mode example using Harmony TCP/IP stack](apps/wifi_bypass_demos/docs/GUID-34243CDA-B156-4D2B-B9C1-7ED5BE2586A6.md)**  
 
--   **[Supported Network Modes in WINC](docs/GUID-74562C24-BC96-4BBA-8346-836D98E39F8C.md)**  
+-   **[Supported Network Modes in WINC](apps/getting_started/GUID-74562C24-BC96-4BBA-8346-836D98E39F8C.md)**  
 
--   **[WINC Devices – Integrated Serial Flash Memory Download Procedure](docs/GUID-AE48AE71-0F91-444B-8AC3-C5C1939A37FB.md)**  
+-   **[WINC Devices – Integrated Serial Flash Memory Download Procedure](apps/getting_started/GUID-AE48AE71-0F91-444B-8AC3-C5C1939A37FB.md)**  
 
--   **[Create WINC Project - Getting Started](docs/GUID-8C38797E-1BBB-4ACF-A496-EEC03A6075AC.md)**  
+-   **[Create WINC Project - Getting Started](apps/getting_started/GUID-8C38797E-1BBB-4ACF-A496-EEC03A6075AC.md)**  
 
 
 ## Contents Summary

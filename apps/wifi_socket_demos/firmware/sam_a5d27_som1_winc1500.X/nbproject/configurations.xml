@@ -562,15 +562,15 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.69"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.9.106"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="false"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="D:\mcc_project_porting\SAMD27_after_compiling\firmware\at91bootstrap_sam_a5d27_som1_ek.X\binaries\at91bootstrap.elf"/>
+                          value="${ProjectDir}\..\at91bootstrap_sam_a5d27_som1_ek.X\binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -778,7 +778,6 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
-        <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
         <property key="memories.bootflash" value="true"/>

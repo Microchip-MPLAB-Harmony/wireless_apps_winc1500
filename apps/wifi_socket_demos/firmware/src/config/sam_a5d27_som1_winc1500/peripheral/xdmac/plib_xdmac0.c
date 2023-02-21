@@ -43,7 +43,7 @@
 #include "interrupts.h"
 
 /* Macro for limiting XDMAC objects to highest channel enabled */
-#define XDMAC_ACTIVE_CHANNELS_MAX 4
+#define XDMAC_ACTIVE_CHANNELS_MAX 2
 
 
 typedef struct
@@ -151,38 +151,6 @@ void XDMAC0_Initialize( void )
     XDMAC0_REGS->XDMAC_CHID[1].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
     XDMAC0_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 1);
     xdmacChannelObj[1].inUse = 1U;
-    /* Configure Channel 2 */
-    XDMAC0_REGS->XDMAC_CHID[2].XDMAC_CC =  (XDMAC_CC_TYPE_PER_TRAN |
-                                            XDMAC_CC_PERID(19U) |
-                                            XDMAC_CC_DSYNC_MEM2PER |
-                                            XDMAC_CC_PROT_SEC |
-                                            XDMAC_CC_SWREQ_HWR_CONNECTED |
-                                            XDMAC_CC_DAM_FIXED_AM |
-                                            XDMAC_CC_SAM_INCREMENTED_AM |
-                                            XDMAC_CC_SIF_AHB_IF0 |
-                                            XDMAC_CC_DIF_AHB_IF1 |
-                                            XDMAC_CC_DWIDTH_BYTE |
-                                            XDMAC_CC_CSIZE_CHK_1 |\
-                                            XDMAC_CC_MBSIZE_SINGLE);
-    XDMAC0_REGS->XDMAC_CHID[2].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
-    XDMAC0_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 2);
-    xdmacChannelObj[2].inUse = 1U;
-    /* Configure Channel 3 */
-    XDMAC0_REGS->XDMAC_CHID[3].XDMAC_CC =  (XDMAC_CC_TYPE_PER_TRAN |
-                                            XDMAC_CC_PERID(20U) |
-                                            XDMAC_CC_DSYNC_PER2MEM |
-                                            XDMAC_CC_PROT_SEC |
-                                            XDMAC_CC_SWREQ_HWR_CONNECTED |
-                                            XDMAC_CC_DAM_INCREMENTED_AM |
-                                            XDMAC_CC_SAM_FIXED_AM |
-                                            XDMAC_CC_SIF_AHB_IF1 |
-                                            XDMAC_CC_DIF_AHB_IF0 |
-                                            XDMAC_CC_DWIDTH_BYTE |
-                                            XDMAC_CC_CSIZE_CHK_1 |\
-                                            XDMAC_CC_MBSIZE_SINGLE);
-    XDMAC0_REGS->XDMAC_CHID[3].XDMAC_CIE= (XDMAC_CIE_BIE_Msk | XDMAC_CIE_RBIE_Msk | XDMAC_CIE_WBIE_Msk | XDMAC_CIE_ROIE_Msk);
-    XDMAC0_REGS->XDMAC_GIE= (XDMAC_GIE_IE0_Msk << 3);
-    xdmacChannelObj[3].inUse = 1U;
     return;
 }
 

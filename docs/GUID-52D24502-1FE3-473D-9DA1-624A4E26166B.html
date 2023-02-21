@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2022" />
-<meta name="DC.rights.owner" content="(C) Copyright 2022" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2023" />
+<meta name="DC.rights.owner" content="(C) Copyright 2023" />
 <meta name="DC.type" content="topic" />
 <meta name="DC.title" content="WINC1500 Socket Mode Demo Applications" />
 <meta name="DC.relation" scheme="URI" content="GUID-D41DC58E-4197-40C3-B2E5-298EE2491305.html" />
@@ -268,23 +268,23 @@
 <p class="p">Path of the application within the repository is , <strong class="ph b">wireless_apps_winc1500/apps/wifi_socket_demos/firmware</strong></p>
 <p class="p">To build the application, refer to the following table and open the project using its IDE.</p>
 
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e92"><span>Project Name</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e94"><span>Description</span></th>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e92"><span>Project Name</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e94"><span>Description</span></th>
 </tr>
 </thead>
-<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e92 "><span>sam_e54_xpro_winc1500.X</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e94 "><span>MPLABX project for SAME54 and WINC1500 Xplained pro</span></td>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e92 "><span>sam_e54_xpro_winc1500.X</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e94 "><span>MPLABX project for SAME54 and WINC1500 Xplained pro</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e92 "><span>sam_d21_xpro_winc1500.X</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e94 "><span>MPLABX project for SAMD21 and WINC1500 Xplained pro</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e92 "><span>sam_d21_xpro_winc1500.X</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e94 "><span>MPLABX project for SAMD21 and WINC1500 Xplained pro</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e92 "><span>sam_e54_xpro_winc1500_freertos.X</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e94 "><span>MPLABX project for SAME54 and WINC1500 Xplained pro using FreeRTOS</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e92 "><span>sam_e54_xpro_winc1500_freertos.X</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e94 "><span>MPLABX project for SAME54 and WINC1500 Xplained pro using FreeRTOS</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e92 "><span>sam_a5d27_som1_winc1500.X</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e94 "><span>MPLABX project for SAMA5D27 and WINC1500 WiFi 7 Click board</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e92 "><span>sam_a5d27_som1_winc1500.X</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e94 "><span>MPLABX project for SAMA5D27 and WINC1500 WiFi 7 Click board</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d14979e92 d14979e94 "><span> </span></td>
+<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d15106e92 d15106e94 "><span> </span></td>
 </tr>
 </tbody>
 </table>
@@ -302,15 +302,27 @@
 </li>
 </ul>
 </div>
-<div class="topic nested2" aria-labelledby="ariaid-title6" id="setting-up-the-sd-card"><h3 class="title topictitle3" id="ariaid-title6" style="">Setting up the SD Card</h3><div class="body"><ul class="ul"><li class="li"><p class="p">Copy the boot loader binary( boot.bin) from "firmware\at91bootstrap_sam_a5d27_som1_ek.X\binaries" onto the SD card</p>
+<div class="topic nested2" aria-labelledby="ariaid-title6" id="addtional-hardware-required"><h3 class="title topictitle3" id="ariaid-title6" style="">Addtional hardware required</h3><div class="body"><ul class="ul"><li class="li"><p class="p">SD Card with FAT32 file system</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="topic nested2" aria-labelledby="ariaid-title7" id="setting-up-the-sd-card"><h3 class="title topictitle3" id="ariaid-title7" style="">Setting up the SD Card</h3><div class="body"><ul class="ul"><li class="li"><p class="p">Copy the boot loader binary( boot.bin) from "firmware\at91bootstrap_sam_a5d27_som1_ek.X\binaries" onto the SD card</p>
 </li>
 <li class="li"><p class="p">Copy the application (harmony.bin) from "firmware/sam_a5d27_som1_winc1500.X/dist/sam_a5d27_som1_winc1500/production" onto the SD card, available after a successful build of the application</p>
 </li>
 </ul>
 </div>
 </div>
+<div class="topic nested2" aria-labelledby="ariaid-title8" id="setting-up-the-board"><h3 class="title topictitle3" id="ariaid-title8" style="">Setting up the board</h3><div class="body"><ul class="ul"><li class="li"><p class="p">Insert the SD card into SDMMC slot (J12).</p>
+</li>
+<li class="li"><p class="p">Connect the Debug USB port on the board to the computer using a micro USB cable.</p>
+</li>
+</ul>
 </div>
-<div class="topic nested1" aria-labelledby="ariaid-title7" id="running-the-application"><h2 class="title topictitle2" id="ariaid-title7" style="">Running the Application</h2><div class="body"><ol class="ol"><li class="li"><span class="indent-level-default">1.</span><p class="p">Build and program the application project using its respective IDE.</p>
+</div>
+</div>
+<div class="topic nested1" aria-labelledby="ariaid-title9" id="running-the-application"><h2 class="title topictitle2" id="ariaid-title9" style="">Running the Application</h2><div class="body"><ol class="ol"><li class="li"><span class="indent-level-default">1.</span><p class="p">Build and program the application project using its respective IDE. ( This step is not applicable for the host SAMA5D27.The application will load from SD card.)</p>
 </li>
 <li class="li"><span class="indent-level-default">2.</span><p class="p">Open the Terminal application (Ex.:Tera term) on the computer</p>
 </li>
@@ -332,136 +344,136 @@
 </ol>
 <p class="p">WiFi Commands Details</p>
 
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e191"><span>Command</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e193"><span>Details</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e195"><span>Example</span></th>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e210"><span>Command</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e212"><span>Details</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e214"><span>Example</span></th>
 </tr>
 </thead>
-<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e191 "><span>wifi help</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e193 "><span>Wi-Fi Service help command</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e195 "><span>wifi help</span></td>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e210 "><span>wifi help</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e212 "><span>Wi-Fi Service help command</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e214 "><span>wifi help</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e191 "><span>wifi set &lt;bootmode&gt; &lt;ssid_name&gt; &lt;auth_type&gt; &lt;pwd&gt; &lt;username/index&gt;</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e193 "><span>Set Wi-Fi Configuration for Station(STA) mode or Access Point (AP) mode</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e195 "><span>wifi set 2 DEMO_AP 2 12345678</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e210 "><span>wifi set &lt;bootmode&gt; &lt;ssid_name&gt; &lt;auth_type&gt; &lt;pwd&gt; &lt;username/index&gt;</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e212 "><span>Set Wi-Fi Configuration for Station(STA) mode or Access Point (AP) mode</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e214 "><span>wifi set 2 DEMO_AP 2 12345678</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e191 "><span>wifi get</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e193 "><span>Get Wi-Fi Configuration</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e195 "><span>wifi get</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e210 "><span>wifi get</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e212 "><span>Get Wi-Fi Configuration</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e214 "><span>wifi get</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d14979e191 d14979e193 "><span> </span></td>
+<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d15106e210 d15106e212 "><span> </span></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p class="p">Wi-Fi command parameters information</p>
 
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e229"><span>Parameter</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e231"><span>Sub Parameter</span></th>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e248"><span>Parameter</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e250"><span>Sub Parameter</span></th>
 </tr>
 </thead>
-<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e229 "><span>bootmode</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e231 "><span>1- Access point(AP) mode.2- Station(STA) mode.</span></td>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e248 "><span>bootmode</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e250 "><span>1- Access point(AP) mode.2- Station(STA) mode.</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e229 "><span>ssid_name</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e231 "><span>SSID name</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e248 "><span>ssid_name</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e250 "><span>SSID name</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e229 "><span>authtype(Security type)</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e231 "><span>1 - OPEN Mode. 2 - WPAPSK mode. 3 - WEP mode.  5 -  802.1x authentication MSCHAPV2 mode.</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e248 "><span>authtype(Security type)</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e250 "><span>1 - OPEN Mode. 2 - WPAPSK mode. 3 - WEP mode.  5 -  802.1x authentication MSCHAPV2 mode.</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e229 "><span>pwd(password)</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e231 "><span>Password/passphrase</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e248 "><span>pwd(password)</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e250 "><span>Password/passphrase</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e229 "><span>username/index</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e231 "><span>Username if authtype is 802.1x authentication MSCHAPV2  or Key Index if the authtype is WEP.</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e248 "><span>username/index</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e250 "><span>Username if authtype is 802.1x authentication MSCHAPV2  or Key Index if the authtype is WEP.</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d14979e229 d14979e231 "><span> </span></td>
+<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d15106e248 d15106e250 "><span> </span></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p class="p">Application command parameters information</p>
 
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e270"><span>Command</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e272"><span>Details</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e274"><span>Example</span></th>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e289"><span>Command</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e291"><span>Details</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e293"><span>Example</span></th>
 </tr>
 </thead>
-<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e270 "><span>appdemo help</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e272 "><span>Application Service help command</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e274 "><span>appdemo help</span></td>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e289 "><span>appdemo help</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e291 "><span>Application Service help command</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e293 "><span>appdemo help</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e270 "><span>appdemo start &lt;demo_id&gt;</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e272 "><span>Select and start an application demo</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e274 "><span>appdemo start 1</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e289 "><span>appdemo start &lt;demo_id&gt;</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e291 "><span>Select and start an application demo</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e293 "><span>appdemo start 1</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e270 "><span>appdemo get</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e272 "><span>Get the ID of currently running application demo</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e274 "><span>appdemo get</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e289 "><span>appdemo get</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e291 "><span>Get the ID of currently running application demo</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e293 "><span>appdemo get</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e270 "><span>appdemo stop</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e272 "><span>Stop the currently running application demo</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e274 "><span>appdemo stop</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e289 "><span>appdemo stop</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e291 "><span>Stop the currently running application demo</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e293 "><span>appdemo stop</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d14979e270 d14979e272 "><span> </span></td>
+<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d15106e289 d15106e291 "><span> </span></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p class="p">Application command parameters information</p>
 
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e315"><span>Parameter</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e317"><span>Sub Parameter</span></th>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e334"><span>Parameter</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e336"><span>Sub Parameter</span></th>
 </tr>
 </thead>
-<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e315 "><span>demo_ID</span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e317 "><span>1 - WiFi station mode/Access point mode demo. 7 - OTA Demo.  8 - SSL Demo.  9 - Ping Demo.  10 - Iperf demo.  11 - SNTP demo.  18 - MQTT Demo.  19 - Certificate download via OTA Demo.</span></td>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e334 "><span>demo_ID</span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e336 "><span>1 - WiFi station mode/Access point mode demo. 7 - OTA Demo.  8 - SSL Demo.  9 - Ping Demo.  10 - Iperf demo.  11 - SNTP demo.  18 - MQTT Demo.  19 - Certificate download via OTA Demo.</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d14979e315 d14979e317 "><span> </span></td>
+<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d15106e334 d15106e336 "><span> </span></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p class="p"><strong class="ph b">List of Applications</strong></p>
 
-<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e336"><span>Application</span></th>
-<th class="entry cellrowborder" style="vertical-align:middle;" id="d14979e338"><span>Description</span></th>
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" class="table" frame="border" border="1" rules="all"><col style="width:" /><col style="width:" /><thead class="thead" style="text-align:left;"><tr class="row"><th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e355"><span>Application</span></th>
+<th class="entry cellrowborder" style="vertical-align:middle;" id="d15106e357"><span>Description</span></th>
 </tr>
 </thead>
-<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-F459DB00-6C0A-4DC0-99F6-C67C5C4A7C52.html">WiFi station mode/Access point mode demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstartes the Station Mode or Access Point(AP) mode of WINC1500</span></td>
+<tbody class="tbody"><tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-F459DB00-6C0A-4DC0-99F6-C67C5C4A7C52.html">WiFi station mode/Access point mode demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstartes the Station Mode or Access Point(AP) mode of WINC1500</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-6D2D8401-87A9-4600-8700-F113BA941E5D.html">OTA Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstrates OTA firmware upgrade</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-6D2D8401-87A9-4600-8700-F113BA941E5D.html">OTA Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstrates OTA firmware upgrade</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-D776A67C-BE2A-4EC3-A149-32AC22EB4C5A.html">SSL Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstrates TCP SSL Client application</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-D776A67C-BE2A-4EC3-A149-32AC22EB4C5A.html">SSL Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstrates TCP SSL Client application</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-BADEF0EB-B3EA-4EF9-8B9B-8DAC044C7957.html">Ping Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstrates the Ping test</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-BADEF0EB-B3EA-4EF9-8B9B-8DAC044C7957.html">Ping Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstrates the Ping test</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-0FD5A351-8B22-466E-90C3-3DCA88C651D3.html">Iperf Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstrates the iperf application</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-0FD5A351-8B22-466E-90C3-3DCA88C651D3.html">Iperf Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstrates the iperf application</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-EC458E8F-7C6B-4F4A-929B-3DB23A6508CF.html">SNTP Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstrates how to retrieve time information from the time server</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-EC458E8F-7C6B-4F4A-929B-3DB23A6508CF.html">SNTP Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstrates how to retrieve time information from the time server</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-AE60932A-703A-481E-817A-53DCFD93BA11.html">MQTT Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstrates  MQTT Application</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-AE60932A-703A-481E-817A-53DCFD93BA11.html">MQTT Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstrates  MQTT Application</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-DB7F0202-30DD-4848-AE43-CF154294E842.html">WiFi Provisioning Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstartes the WiFi provisioning application</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-DB7F0202-30DD-4848-AE43-CF154294E842.html">WiFi Provisioning Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstartes the WiFi provisioning application</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e336 "><span><a class="xref" href="GUID-BD742FD9-613D-4BCD-9E9F-7A5E7A3BDCA2.html">Certificate download via OTA Demo</a></span></td>
-<td class="entry cellrowborder" style="vertical-align:middle;" headers="d14979e338 "><span>Demonstartes Certificate download via OTA application</span></td>
+<tr class="row"><td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e355 "><span><a class="xref" href="GUID-BD742FD9-613D-4BCD-9E9F-7A5E7A3BDCA2.html">Certificate download via OTA Demo</a></span></td>
+<td class="entry cellrowborder" style="vertical-align:middle;" headers="d15106e357 "><span>Demonstartes Certificate download via OTA application</span></td>
 </tr>
-<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d14979e336 d14979e338 "><span> </span></td>
+<tr class="row"><td class="entry cellrowborder" colspan="2" style="vertical-align:middle;" headers="d15106e355 d15106e357 "><span> </span></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div class="topic nested2" aria-labelledby="ariaid-title8" id="steps-to-isolatecopy-individual-applications-from-the-demo"><h3 class="title topictitle3" id="ariaid-title8" style="">Steps to isolate/copy individual application(s) from the demo</h3><div class="body"><p class="p">If the user wants to isolate an application, follow the below mentioned steps </p>
+<div class="topic nested2" aria-labelledby="ariaid-title10" id="steps-to-isolatecopy-individual-applications-from-the-demo"><h3 class="title topictitle3" id="ariaid-title10" style="">Steps to isolate/copy individual application(s) from the demo</h3><div class="body"><p class="p">If the user wants to isolate an application, follow the below mentioned steps </p>
 <p class="p">For example, the user wants to create an SNTP demo in Socket mode.</p>
 <ol class="ol"><li class="li"><span class="indent-level-default">1.</span><p class="p">The SNTP demo uses the WiFi functionalities to get connected with the network. So copy the files "<em class="ph i"> app_wifi.c</em>" and "<em class="ph i"> app_wifi.h </em>" from the path "<em class="ph i">wireless_apps_winc1500/apps/wifi_bypass_demos/firmware/src </em>" or "<em class="ph i">wireless_apps_winc1500/apps/wifi_socket_demos/firmware/src</em>" to "src" folder of the new demo project. Then add these files to the project.</p>
 </li>
