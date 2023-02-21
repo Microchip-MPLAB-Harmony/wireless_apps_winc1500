@@ -15,9 +15,9 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 
 This repository contains the MPLAB® Harmony 3 Wireless application examples for WINC1500
 
--   [Release Notes](docs/GUID-7DCE8764-DEA2-453D-86AA-1C02EB9C5AAC.md)
+-   [Release Notes](release_notes.md)
 
--   [MPLAB® Harmony License](docs/GUID-64DD8072-6E57-4604-A82E-C848D7527955.md)
+-   [MPLAB® Harmony License](mplab_harmony_license.md)
 
 
 To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/wireless_apps_winc1500) and then click **Clone** button to clone this repository or download as zip file. This content can also be downloaded using content manager by following these [instructions](https://github.com/Microchip-MPLAB-Harmony/contentmanager/wiki).
