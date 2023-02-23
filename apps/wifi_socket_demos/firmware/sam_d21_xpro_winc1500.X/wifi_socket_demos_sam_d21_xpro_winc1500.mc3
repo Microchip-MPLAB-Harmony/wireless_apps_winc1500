@@ -5784,7 +5784,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\driver\winc\dev\spi\wdrv_winc_spi.c</file>
-         <hash>1c793506fb215f62b363eccb885ca40b271710b3c381c47e1a7d1530cf10a527</hash>
+         <hash>8ef6ddbeb1cfcd750c3fdf4a40a0ed0b93426401b7053c864eb90e98a804b1c0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\instance\dmac.h</file>
@@ -5920,7 +5920,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\initialization.c</file>
-         <hash>6c83d8198a4364e4fb4729b9e30d8208796cabfc06002cd1559f6528975c65fd</hash>
+         <hash>f9a7c76452d43ca60dfebd49d17da9660c20d1f4e1697051e4c1b804a8bcac43</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\system\console\src\sys_console_uart_definitions.h</file>
@@ -5952,7 +5952,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\driver\winc\include\dev\wdrv_winc_spi.h</file>
-         <hash>e87e6ba9cb409542bed1b3de76bb5248bf145ce31201768d6c811a6d1f0cd4f0</hash>
+         <hash>21bcdea3495b4d9e5664710e87fd42d82ce326308c9f9e0eccbac473c0890bb6</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h</file>
@@ -6240,7 +6240,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\driver\winc\dev\gpio\wdrv_winc_eint.c</file>
-         <hash>41942501c8d9502763cdc13b4300fe4728369c4c6ff0348c99cf7cd4a5db276b</hash>
+         <hash>8ffc0f79262c44908c380a3ad15d46449d63fc532e94c8a4d10156b2a1d42493</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\interrupts.h</file>
@@ -6332,7 +6332,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\driver\winc\wdrv_winc.c</file>
-         <hash>796e6722497630e5a4cbc9a2ae40ad36437c62d7ee5f6fcdff708c5ca7f3ee4c</hash>
+         <hash>ad1ee1cc4c9591b5390c2609898cadf5fafd09141c4e8dd25e648eb00a0e2c4d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\driver\winc\include\wdrv_winc_systime.h</file>

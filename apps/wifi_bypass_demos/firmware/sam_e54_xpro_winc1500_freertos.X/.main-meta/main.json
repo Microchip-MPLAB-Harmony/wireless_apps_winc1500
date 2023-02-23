@@ -4,18 +4,18 @@
 	"content": {
 		"metaDataVersion": "1.3.0",
 		"name": "com.microchip.mcu32.mplabx.project.azure_rtos_basic_threadx_sam_e54_xpro",
-		"version": "3.6.0",
+		"version": "3.7.0",
 		"displayName": "Azure RTOS ThreadX basic example for SAM D5x/E5x Family",
 		"projectName": "basic_threadx_sam_e54_xpro",
 		"shortDescription": "This example application blinks an LED to show the Azure RTOS ThreadX threads that are running and to indicate status",
 		"ide": {
 			"name": "MPLABX",
-			"semverRange": ">=5.50.0"
+			"semverRange": ">=6.0.5"
 		},
 		"compiler": [
 			{
 				"name": "XC32",
-				"semverRange": ">=3.1.0"
+				"semverRange": ">=4.2.0"
 			}
 		],
 		"dfp": {

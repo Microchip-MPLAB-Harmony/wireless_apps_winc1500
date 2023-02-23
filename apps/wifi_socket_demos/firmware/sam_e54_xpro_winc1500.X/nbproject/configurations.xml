@@ -640,7 +640,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>EdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.10</languageToolchainVersion>
+        <languageToolchainVersion>4.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -868,7 +868,7 @@
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="D:/H3_sep_rel/wireless_apps_winc1500/apps/wifi_socket_demos/firmware/sam_e54_xpro_winc1500.X/debug/sam_e54_xpro_winc1500/sam_e54_xpro_winc1500_ptg"/>
+                  value="D:/Harmony_new_released/wireless_apps_winc1500/apps/wifi_socket_demos/firmware/sam_e54_xpro_winc1500.X/debug/sam_e54_xpro_winc1500/sam_e54_xpro_winc1500_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

@@ -8581,7 +8581,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\configuration.h</file>
-         <hash>46c76017f62238e65a948ebb49321e4c465273e0ca8a523c22f4c01c0f072127</hash>
+         <hash>cfa0cf2335f56cb89664bbb2d25465ddc452aa462c2f6ab611bf99959d725f25</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\sercom0.h</file>
@@ -8593,7 +8593,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\driver\winc\dev\spi\wdrv_winc_spi.c</file>
-         <hash>1c793506fb215f62b363eccb885ca40b271710b3c381c47e1a7d1530cf10a527</hash>
+         <hash>8ef6ddbeb1cfcd750c3fdf4a40a0ed0b93426401b7053c864eb90e98a804b1c0</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\tcc.h</file>
@@ -8888,12 +8888,12 @@
          <hash>2195f531dd5af8ea3bb5b496205abae4b862644e6616cc5f4bd3f32c3942bb05</hash>
       </entry>
       <entry>
-         <file>..\src\config\sam_e54_xpro_winc1500\driver\winc\wdrv_winc_systime.c</file>
-         <hash>740bfa85d241095598526c40510657ad8191665ca2c14ac7820ef1d879a4f575</hash>
-      </entry>
-      <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\system\command\src\sys_command.c</file>
          <hash>f6ffa260b5a6f1e0134c8845c405d0e21dcdc5fd02e95dcc7a4a5fccf1cb23ae</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_e54_xpro_winc1500\driver\winc\wdrv_winc_systime.c</file>
+         <hash>740bfa85d241095598526c40510657ad8191665ca2c14ac7820ef1d879a4f575</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\fuses.h</file>
@@ -9053,7 +9053,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\initialization.c</file>
-         <hash>c557a10956d51520c3736b117a21590022bc2178a8264a949846b99b40d946e3</hash>
+         <hash>25ee4d97589139cdd44ce2c16bb4551bf51601f20eae15a5c1f1a6516cbdffd2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\component\dsu.h</file>
@@ -9213,7 +9213,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\driver\winc\wdrv_winc.c</file>
-         <hash>796e6722497630e5a4cbc9a2ae40ad36437c62d7ee5f6fcdff708c5ca7f3ee4c</hash>
+         <hash>ad1ee1cc4c9591b5390c2609898cadf5fafd09141c4e8dd25e648eb00a0e2c4d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAME54P20A_DFP\instance\dac.h</file>
@@ -9333,7 +9333,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\definitions.h</file>
-         <hash>e554272835f11cdcc28d58d8f09eaebd5bd07827590e501b0edf0d172504d05d</hash>
+         <hash>472221ab034e6673825971c8777bb94dde6a46aa3843a3454773f06dfee984a6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\peripheral\nvmctrl\plib_nvmctrl.h</file>
@@ -9401,7 +9401,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\driver\winc\dev\gpio\wdrv_winc_eint.c</file>
-         <hash>41942501c8d9502763cdc13b4300fe4728369c4c6ff0348c99cf7cd4a5db276b</hash>
+         <hash>8ffc0f79262c44908c380a3ad15d46449d63fc532e94c8a4d10156b2a1d42493</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\system\console\src\sys_console_local.h</file>
@@ -9425,7 +9425,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\driver\winc\include\dev\wdrv_winc_spi.h</file>
-         <hash>e87e6ba9cb409542bed1b3de76bb5248bf145ce31201768d6c811a6d1f0cd4f0</hash>
+         <hash>21bcdea3495b4d9e5664710e87fd42d82ce326308c9f9e0eccbac473c0890bb6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_e54_xpro_winc1500\driver\winc\include\drv\common\nm_common.h</file>

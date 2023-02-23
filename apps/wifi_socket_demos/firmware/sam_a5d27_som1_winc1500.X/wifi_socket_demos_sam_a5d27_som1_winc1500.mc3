@@ -10800,7 +10800,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_winc1500\definitions.h</file>
-         <hash>923919d54e23f08f4770b57a3c535a71cf4412763ad29c8529e93edc00d71c32</hash>
+         <hash>1d0f48db56f027aebfba0b2d24bffb7e0eb385d4009f53211f77814e98416497</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_winc1500\system\dma\sys_dma_mapping.h</file>
@@ -11280,7 +11280,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_winc1500\peripheral\flexcom\spi\master\plib_flexcom4_spi_master.c</file>
-         <hash>935cd4286b64b39daa1b9303d4aef45f7707d29d8cc69ca93c5aad5eab30bc11</hash>
+         <hash>dcff0954cd0f2dbd7194accf97e5e23c2161a9f9bbe3516e4af1a26a12be23cf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_winc1500\peripheral\pio\plib_pio.c</file>
@@ -11632,7 +11632,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_winc1500\peripheral\flexcom\spi\master\plib_flexcom_spi_master_common.h</file>
-         <hash>b15e3b2e34ea934f1bfc8a0d9a70a36145db45bcfa4ed770d6ddb084162446a1</hash>
+         <hash>ef102e449c813b287b72a5dc000061074da25284809b072b86371b91349a5f8f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a5d27_som1_winc1500\driver\winc\include\wdrv_winc_debug.h</file>
