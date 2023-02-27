@@ -630,8 +630,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;469&quot; canvasWidth=&quot;867&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; x=&quot;538&quot; y=&quot;21&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;appWincExampleConf&quot; x=&quot;573&quot; y=&quot;209&quot;/&gt;
@@ -651,6 +650,7 @@
         &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tc3&quot; x=&quot;6&quot; y=&quot;396&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;469&quot; canvasWidth=&quot;867&quot; dnOrder=&quot;1&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -5839,7 +5839,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\definitions.h</file>
-         <hash>614df3febcb96af90d563f81845f526d56dc9a90121d21eee2cd8afac038c693</hash>
+         <hash>f01182bed6e5f4bdc97065f65a726964978137aae21db332141f676e48ee621e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMD21J18A_DFP\component\hmatrixb.h</file>
@@ -5979,7 +5979,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\initialization.c</file>
-         <hash>2a7a6efe412d4e916bf74801c04eaff08cb6524e90e0523362e0ad8ae2bcb352</hash>
+         <hash>8d6bf14448fb3931a0acc7ef3b42357a44b5bf5413050bf9476dfe1dffbf63bf</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\system\console\src\sys_console_uart_definitions.h</file>
@@ -6715,7 +6715,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\configuration.h</file>
-         <hash>da0bc91f706680a8bbbd203f6aed1356b22e50ca29dd8ecedb21e22e725884c4</hash>
+         <hash>668070f8cd10d86e191fd58d958d85c632e28af6160972e46133ce567609854f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_d21_xpro_winc1500\driver\winc\wdrv_winc_powersave.c</file>
