@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Module name="wireless_apps_winc1500" id="1b959267-a0bb-48a8-874c-f3a8870b4bdf" version="3.4.1">
+<Module name="wireless_apps_winc1500" id="1b959267-a0bb-48a8-874c-f3a8870b4bdf" version="3.7.0">
     <ConfigRoot path="config/module.py"/>
 </Module>
