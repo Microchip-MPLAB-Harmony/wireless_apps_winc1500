@@ -48,6 +48,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #ifndef _APP_CERT_DOWNLOAD_OTA_H
 #define _APP_CERT_DOWNLOAD_OTA_H
 
+//#define ROOT_CERT_BUNDLE
 
 #define MAIN_HTTP_PORT_NUMBER                (80)
 
@@ -58,7 +59,12 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define CERTIFICATES_BUFFER_SIZE             (6000)
 
 /** No of certificates to be written to WINC **/
+
+#ifdef ROOT_CERT_BUNDLE
+#define NUM_OF_ROOT_TLS_CHAIN_CERTIFICATES  1
+#else
 #define NUM_OF_ROOT_TLS_CHAIN_CERTIFICATES  3
+#endif
 
 typedef enum {
         NOT_READY = 0, /*!< Not ready. */

@@ -71,11 +71,10 @@
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
-static DRV_HANDLE wdrvHandle;
+DRV_HANDLE wdrvHandle;
 static APP_DEMOS appDemoId;
 
 #define APP_PRINT_BUFFER_SIZ    2048
-static DRV_HANDLE wdrvHandle;
 
 static OSAL_MUTEX_HANDLE_TYPE consoleMutex;
 

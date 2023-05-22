@@ -37,6 +37,7 @@ INCLUDES
 
 #include "x509_cert.h"
 #include "root_tls_cert/crypto/crypto.h"
+#include "root_tls_cert/crypto/sha1_routines.h"
 
 /*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
  MACROS
@@ -554,7 +555,8 @@ tstrMemPool	*pstrMemPool
 	{
 		tstrAsn1Element				strSetElem,strSeqElem;
 		tstrX520DistinguishedName	strDN;
-		tstrSha1Context				strSha1Cxt;
+		//tstrSha1Context strSha1Cxt;
+		CL_HashContext strSha1Cxt; //switch hash function source to sha1_routines.c (old one broken)
 		uint16_t						u16Offset = 0;
 		
 		SHA1_INIT(&strSha1Cxt);

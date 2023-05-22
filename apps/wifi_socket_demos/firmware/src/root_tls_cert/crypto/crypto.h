@@ -85,12 +85,16 @@ HASH RELATED DEFINITIONS
 	Perform Full hash operation with the DIGEST
 	returned to the caller.
 */
-
-
+#if 1
+#define SHA1_INIT(ctxt) CL_hashInit(ctxt)//SHA1_Hash((ctxt), SHA_FLAGS_INIT, NULL, 0, NULL)
+#define SHA1_UPDATE(ctxt,data,dataLen) CL_hashUpdate(ctxt, data, dataLen)//SHA1_Hash((ctxt), SHA_FLAGS_UPDATE, (data), (dataLen), NULL)
+#define SHA1_FINISH(ctxt,digest) CL_hashFinal(ctxt, digest)//SHA1_Hash((ctxt), SHA_FLAGS_FINISH, NULL, 0, digest)
+#else
 
 #define SHA1_INIT(ctxt)						SHA1_Hash((ctxt), SHA_FLAGS_INIT, NULL, 0, NULL)
 #define SHA1_UPDATE(ctxt,data,dataLen)		SHA1_Hash((ctxt), SHA_FLAGS_UPDATE, (data), (dataLen), NULL)
 #define SHA1_FINISH(ctxt,digest)			SHA1_Hash((ctxt), SHA_FLAGS_FINISH, NULL, 0, digest)
+#endif
 
 #define MD5_INIT(ctxt)						MD5_Hash((ctxt), SHA_FLAGS_INIT, NULL, 0, NULL)
 #define MD5_UPDATE(ctxt,data,dataLen)		MD5_Hash((ctxt), SHA_FLAGS_UPDATE, (data), (dataLen), NULL)

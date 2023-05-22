@@ -41,6 +41,7 @@ INCLUDESS
 #include "drv/spi_flash/spi_flash.h"
 #include "drv/spi_flash/spi_flash_map.h"
 #include "pem.h"
+#include "wdrv_winc_client_api.h"
 
 /*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*
 MACROS
@@ -50,6 +51,8 @@ MACROS
 #define programmer_erase_root_cert(buff)        spi_flash_erase(M2M_TLS_ROOTCER_FLASH_OFFSET, M2M_TLS_SERVER_FLASH_SIZE)
 
 extern APP_DATA appData;
+
+//#define ENABLE_VERIFICATION
 
 #define ROOT_CERT_FLASH_START_PATTERN_LENGTH		16
 
@@ -183,7 +186,7 @@ static uint16_t writeRootCertEntry(uint8_t *pu8WriteBuff, txtrX509CertInfo *pstr
 			Write Root Certificate Entry Header
 		*/
 		memcpy(pstrEntryHdr->au8SHA1NameHash, pstrRootCert->strSubject.au8NameSHA1, CRYPTO_SHA1_DIGEST_SIZE);		// Subject Name SHA1
-		memcpy((uint8_t*)&pstrEntryHdr->strStartDate, (uint8_t*)&pstrRootCert->strStartDate, sizeof(tstrSystemTime));	// Cert. Start Date.
+		//memcpy((uint8_t*)&pstrEntryHdr->strStartDate, (uint8_t*)&pstrRootCert->strStartDate, sizeof(tstrSystemTime));	// Cert. Start Date.
 		memcpy((uint8_t*)&pstrEntryHdr->strExpDate, (uint8_t*)&pstrRootCert->strExpiryDate, sizeof(tstrSystemTime));	// Cert. Expiration Date.
 
 		/*
@@ -319,45 +322,54 @@ int WriteRootCertificate(uint8_t *pu8RootCert, uint32_t u32RootCertSz)
 	memset(gau8CertMem, 0, M2M_TLS_ROOTCER_FLASH_SIZE);
 	if(GetRootCertificate(pu8RootCert, u32RootCertSz, &strX509Root) == 0)
 	{
-		programmer_read_root_cert(gau8CertMem);
+
+        if( WDRV_WINC_STATUS_OK != WDRV_WINC_NVMRead(wdrvHandle,WDRV_WINC_NVM_REGION_ROOT_CERTS,(void*)gau8CertMem,0,M2M_TLS_ROOTCER_FLASH_SIZE))
+        {            
+                SYS_CONSOLE_PRINT("ROOT CERT read failed, Press RESET button to try again.\r\n");
+                while(1);               
+        }
 		if(UpdateRootList(&strX509Root) == 0)
 		{			
 			/* Erase memory. 
 			*/
-			ret = programmer_erase_root_cert();
-			if(M2M_SUCCESS != ret) goto END;
-			/* Write.
-			*/
-			SYS_CONSOLE_Print(appData.consoleHandle, "\r\n>> Writing the Root Certificate to SPI flash...\r\n");
-			ret = programmer_write_root_cert(gau8CertMem);
-			if(M2M_SUCCESS != ret) goto END;
-			SYS_CONSOLE_Print(appData.consoleHandle, "--- Root Certificate written to SPI flash ---\r\n\r\n");
-			//ms_delay(50);
+			if ( WDRV_WINC_STATUS_OK !=WDRV_WINC_NVMEraseSector(wdrvHandle,WDRV_WINC_NVM_REGION_ROOT_CERTS,0,1))
+            {
+               SYS_CONSOLE_PRINT(" WDRV_WINC_NVMEraseSector  failed.\r\n");
+               while(1);
+            }
+            SYS_CONSOLE_PRINT(" WDRV_WINC_NVMEraseSector  passed.\r\n");
+            if( WDRV_WINC_STATUS_OK != WDRV_WINC_NVMWrite(wdrvHandle,WDRV_WINC_NVM_REGION_ROOT_CERTS,(void*)gau8CertMem,0,M2M_TLS_ROOTCER_FLASH_SIZE))
+            {
+                SYS_CONSOLE_PRINT("ROOT  CERT update(WDRV_WINC_NVMWrite) failed, Press RESET button to try again.\r\n");
+                while(1);
+            }
+
+			ret =0;// cert write completed.
 
 #ifdef ENABLE_VERIFICATION //Enable verification or print array
 
-			{
-				uint32_t			u32Idx;
+            uint8_t	pu8FileData[4096];
+            memset(pu8FileData,0,4096);
+            if( WDRV_WINC_STATUS_OK != WDRV_WINC_NVMRead(wdrvHandle,WDRV_WINC_NVM_REGION_ROOT_CERTS,(void*)pu8FileData,0,4096))
+            {            
+                SYS_CONSOLE_PRINT("ROOT  CERT read failed, Press RESET button to try again.\r\n");
+                while(1);               
+            } 
+            if (0!= memcmp(pu8FileData,gau8CertMem,4096))
+            {
+                SYS_CONSOLE_PRINT("memcmp failed...\r\n");
+                while(1);            
+            }
+            else
+            {            
+                SYS_CONSOLE_PRINT("memcmp passed....\r\n");
+            }
 
-				memset(gau8Verify, 0, M2M_TLS_ROOTCER_FLASH_SIZE);
-				programmer_read_root_cert(gau8Verify);
-
-				for(u32Idx = 0; u32Idx < M2M_TLS_ROOTCER_FLASH_SIZE; u32Idx ++)
-				{
-					if(gau8CertMem[u32Idx] != gau8Verify[u32Idx])
-					{
-						SYS_CONSOLE_Print(appData.consoleHandle, ">> ERROR Root certificate verification failed\r\n");
-						ret = -1;
-						break;
-					}
-				}
-				SYS_CONSOLE_Print(appData.consoleHandle, ">> Root Certificates Verified OK\r\n");
-			}
 
 #endif //Enable verification or print array 
 		}
 		CryptoX509DeleteContext(&strX509Root);
 	}
-END:
+//END:
 	return ret;
 }

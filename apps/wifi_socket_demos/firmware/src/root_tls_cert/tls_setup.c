@@ -38,6 +38,7 @@ INCLUDESS
 *=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/
 #include "drv/spi_flash/spi_flash.h"
 #include "tls_setup.h"
+#include "wdrv_winc_client_api.h"
 
 #define programmer_read(pu8Buf, u32Offset, u32sz)   spi_flash_read(pu8Buf, u32Offset, u32sz)
 
@@ -64,9 +65,15 @@ int WriteTlsCertificate(uint8_t *pu8PrivKey, uint32_t u32PrivKeySz, tstrFileInfo
 	/* Read already loaded TLS Certificates from Flash.
 	*/ 
 	memset(gau8CertMem, 0, M2M_TLS_SERVER_FLASH_SIZE);
-	ret = programmer_read_tls_cert_store(gau8CertMem);
-	if(M2M_SUCCESS != ret) goto END;
-	
+
+
+    if ( WDRV_WINC_STATUS_OK != WDRV_WINC_NVMRead(wdrvHandle,WDRV_WINC_NVM_REGION_LOCAL_CERTS,(void*)gau8CertMem,0,M2M_TLS_SERVER_FLASH_SIZE))
+    {
+        SYS_CONSOLE_PRINT("TLS CERT read failed, Press RESET button to try again.\r\n");
+        while(1);  
+    }
+
+    
 	/*Modify the TLS Certificate Store Contents.
 	*/
 	ret = TlsSrvSecWriteCertChain(pu8PrivKey, u32PrivKeySz, astrCertList, u8nCerts, gau8CertMem, &pu32SecSz, TLS_SRV_SEC_MODE_WRITE);	
@@ -75,16 +82,27 @@ int WriteTlsCertificate(uint8_t *pu8PrivKey, uint32_t u32PrivKeySz, tstrFileInfo
 	/*
 	Erase the TLS Certificate Section
 	*/
-	ret = programmer_erase_tls_cert_store();
-	if(M2M_SUCCESS != ret) goto END;
+
+    if ( WDRV_WINC_STATUS_OK !=WDRV_WINC_NVMEraseSector(wdrvHandle,WDRV_WINC_NVM_REGION_LOCAL_CERTS,0,1))
+    {
+       SYS_CONSOLE_PRINT(" WDRV_WINC_NVMEraseSector  failed.\r\n");
+       while(1);
+    }
+
+
 
 	/*
 	Write the TLS Certificate Section buffer to WINC stacked flash directly.
 	*/
 	SYS_CONSOLE_Print(appData.consoleHandle, "\r\n>> Writing the TLS Certificate to SPI flash...\r\n");
-	ret = programmer_write_tls_cert_store(gau8CertMem);
-	if(M2M_SUCCESS != ret) goto END;
-	SYS_CONSOLE_Print(appData.consoleHandle, "--- TLS Certificate written to SPI flash ---\r\n\r\n");
+    if( WDRV_WINC_STATUS_OK != WDRV_WINC_NVMWrite(wdrvHandle,WDRV_WINC_NVM_REGION_LOCAL_CERTS,(void*)gau8CertMem,0,M2M_TLS_SERVER_FLASH_SIZE))
+    {
+        SYS_CONSOLE_PRINT("ROOT  CERT update(WDRV_WINC_NVMWrite) failed, Press RESET button to try again.\r\n");
+        while(1);
+    }
+
+    SYS_CONSOLE_Print(appData.consoleHandle, "\r\n>> Writing the TLS Certificate to SPI flash...\r\n");
+	SYS_CONSOLE_PRINT("--- TLS Certificate written to SPI flash ---\r\n\r\n");
 #ifdef ENABLE_VERIFICATION //Enable verification
 
 		{
