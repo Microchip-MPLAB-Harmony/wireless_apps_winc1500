@@ -395,9 +395,9 @@ void APP_WiFiTasks(DRV_HANDLE handle)
             {
                 /* Enable use of DHCP for network configuration, DHCP is the default
                  but this also registers the callback for notifications. */
-
+             
                 WDRV_WINC_IPUseDHCPSet(handle, &APP_WiFiDHCPAddressEventCallback);
-
+                
                 /* Start a BSS find operation on all channels. */
                 if (WDRV_WINC_STATUS_OK == WDRV_WINC_BSSFindFirst(handle, WDRV_WINC_ALL_CHANNELS, true, NULL, NULL))
                 {
@@ -413,7 +413,7 @@ void APP_WiFiTasks(DRV_HANDLE handle)
         {
             /* Wait for BSS find operation to complete, then report the number
              of results found. */
-
+            
             if (false == WDRV_WINC_BSSFindInProgress(handle))
             {
                 SYS_CONSOLE_PRINT("Scan complete, %d AP(s) found\r\n", WDRV_WINC_BSSFindGetNumBSSResults(handle));
@@ -488,7 +488,7 @@ void APP_WiFiTasks(DRV_HANDLE handle)
             {
                 break;
             }
-
+            
             switch (appWiFiConfig.auth.authType)
             {
                 case WDRV_WINC_AUTH_TYPE_OPEN:
@@ -504,7 +504,7 @@ void APP_WiFiTasks(DRV_HANDLE handle)
                 case WDRV_WINC_AUTH_TYPE_WPA_PSK:
                 {
                     /* Initialize the authentication context for WPA. */
-
+                    
                     if (WDRV_WINC_STATUS_OK != WDRV_WINC_AuthCtxSetWPA(&authCtx, (uint8_t*)appWiFiConfig.auth.authInfo.WPAPerPSK.key, strlen((const char*)appWiFiConfig.auth.authInfo.WPAPerPSK.key)))
                     {
                         break;
