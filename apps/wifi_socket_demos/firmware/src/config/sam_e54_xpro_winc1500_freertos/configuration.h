@@ -82,8 +82,15 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          1024
+#define SYS_CMD_PRINT_BUFFER_SIZE          1024U
 #define SYS_CMD_BUFFER_DMA_READY
+
+
+
+#define SYS_DEBUG_ENABLE
+#define SYS_DEBUG_GLOBAL_ERROR_LEVEL       SYS_ERROR_INFO
+#define SYS_DEBUG_BUFFER_DMA_READY
+#define SYS_DEBUG_USE_CONSOLE
 
 
 /* TIME System Service Configuration Options */
@@ -93,19 +100,12 @@ extern "C" {
 #define SYS_TIME_HW_COUNTER_PERIOD                  (0xFFFFU)
 #define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
 #define SYS_TIME_CPU_CLOCK_FREQUENCY                (120000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (188)
+#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (232)
 
-
-#define SYS_DEBUG_ENABLE
-#define SYS_DEBUG_GLOBAL_ERROR_LEVEL       SYS_ERROR_INFO
-#define SYS_DEBUG_BUFFER_DMA_READY
-#define SYS_DEBUG_USE_CONSOLE
-
-
-#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
-#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
-#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
 
 
 #define SYS_CONSOLE_INDEX_0                       0
@@ -152,7 +152,7 @@ extern "C" {
 #define DRV_SPI_QUEUE_SIZE_IDX0               4
 
 /* SPI Driver Common Configuration Options */
-#define DRV_SPI_INSTANCES_NUMBER              1
+#define DRV_SPI_INSTANCES_NUMBER              (1U)
 
 
 

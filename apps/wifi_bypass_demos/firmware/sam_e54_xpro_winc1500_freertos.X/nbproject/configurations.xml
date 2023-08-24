@@ -323,6 +323,7 @@
           <itemPath>../src/config/sam_e54_xpro_winc1500_freertos/config.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro_winc1500_freertos/user_settings.h</itemPath>
           <itemPath>../src/config/sam_e54_xpro_winc1500_freertos/FreeRTOSConfig.h</itemPath>
+          <itemPath>../src/config/sam_e54_xpro_winc1500_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f3" displayName="FreeRTOS" projectFiles="true">
@@ -486,6 +487,11 @@
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="system" displayName="system" projectFiles="true">
+        <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
+          <itemPath>../src/config/sam_e54_xpro_winc1500_freertos/system/tmr/sys_tmr.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="f6" displayName="third_party" projectFiles="true">
         <logicalFolder name="f1" displayName="wolfMQTT" projectFiles="true">
           <logicalFolder name="f1" displayName="wolfmqtt" projectFiles="true">
@@ -592,9 +598,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ge_448.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ge_operations.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hash.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hc128.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hmac.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/idea.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/integer.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/logging.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/md2.h</itemPath>
@@ -610,7 +614,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/pkcs7.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/poly1305.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/pwdbased.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rabbit.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/random.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rc2.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ripemd.h</itemPath>
@@ -634,6 +637,11 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha256.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sha512.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_port.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sakke.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/falcon.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/eccsi.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/kdf.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/siphash.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="wolfssl" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/wolfssl/callbacks.h</itemPath>
@@ -648,6 +656,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/test.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/version.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfio.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/openssl/compat_types.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
       <itemPath>../src/app_wifi.h</itemPath>
@@ -941,9 +950,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ge_low_mem.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ge_operations.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hash.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hc128.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hmac.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/idea.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/integer.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/logging.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/md2.c</itemPath>
@@ -954,7 +961,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/pkcs7.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/poly1305.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/pwdbased.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rabbit.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rc2.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ripemd.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rsa.c</itemPath>
@@ -983,6 +989,11 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha256.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha512.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/kdf.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/eccsi.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sakke.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/falcon.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/siphash.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="wolfssl" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/src/crl.c</itemPath>
@@ -994,6 +1005,11 @@
         <itemPath>../src/third_party/wolfssl/src/tls13.c</itemPath>
         <itemPath>../src/third_party/wolfssl/src/wolfio.c</itemPath>
         <itemPath>../src/third_party/wolfssl/src/internal.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/x509.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/pk.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/x509_str.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/dtls13.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/conf.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/app.c</itemPath>
@@ -1098,12 +1114,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.20</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAME54_DFP" vendor="Microchip" version="3.7.122"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="SAME54_DFP" vendor="Microchip" version="3.8.234"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -1586,6 +1602,7 @@
       <C32>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -1643,6 +1660,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1682,6 +1700,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1710,6 +1729,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>

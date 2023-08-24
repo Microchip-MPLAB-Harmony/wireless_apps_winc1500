@@ -2,24 +2,26 @@
 
 This example project demonstrates the WINC1500 applications of WiFi in Socket mode.
 
--   **[WiFi Provisioning](docs/GUID-DB7F0202-30DD-4848-AE43-CF154294E842.md)**  
+-   **[WiFi Provisioning](GUID-DB7F0202-30DD-4848-AE43-CF154294E842.md)**  
 
--   **[WiFi Station Mode / Access Point Mode Demo](docs/GUID-F459DB00-6C0A-4DC0-99F6-C67C5C4A7C52.md)**  
+-   **[WiFi Station Mode / Access Point Mode Demo](GUID-F459DB00-6C0A-4DC0-99F6-C67C5C4A7C52.md)**  
 
--   **[SSL Demo](docs/GUID-D776A67C-BE2A-4EC3-A149-32AC22EB4C5A.md)**  
+-   **[SSL Demo](GUID-D776A67C-BE2A-4EC3-A149-32AC22EB4C5A.md)**  
 
--   **[SNTP Demo](docs/GUID-EC458E8F-7C6B-4F4A-929B-3DB23A6508CF.md)**  
+-   **[SNTP Demo](GUID-EC458E8F-7C6B-4F4A-929B-3DB23A6508CF.md)**  
 
--   **[Ping Demo](docs/GUID-BADEF0EB-B3EA-4EF9-8B9B-8DAC044C7957.md)**  
+-   **[Ping Demo](GUID-BADEF0EB-B3EA-4EF9-8B9B-8DAC044C7957.md)**  
 
--   **[OTA Demo](docs/GUID-6D2D8401-87A9-4600-8700-F113BA941E5D.md)**  
+-   **[OTA Demo](GUID-6D2D8401-87A9-4600-8700-F113BA941E5D.md)**  
 
--   **[MQTT Demo](docs/GUID-AE60932A-703A-481E-817A-53DCFD93BA11.md)**  
+-   **[MQTT Demo](GUID-AE60932A-703A-481E-817A-53DCFD93BA11.md)**  
 
--   **[Iperf Demo](docs/GUID-0FD5A351-8B22-466E-90C3-3DCA88C651D3.md)**  
+-   **[Iperf Demo](GUID-0FD5A351-8B22-466E-90C3-3DCA88C651D3.md)**  
 
--   **[Certificate Download OTA Demo](docs/GUID-BD742FD9-613D-4BCD-9E9F-7A5E7A3BDCA2.md)**  
+-   **[Certificate Download OTA Demo](GUID-BD742FD9-613D-4BCD-9E9F-7A5E7A3BDCA2.md)**  
 
+
+**Parent topic:**[Harmony 3 Wireless application examples for WINC1500](GUID-D41DC58E-4197-40C3-B2E5-298EE2491305.md)
 
 ## Description
 
@@ -35,15 +37,25 @@ To build the application, refer to the following table and open the project usin
 
 |Project Name|Description|
 |------------|-----------|
-|sam\_e54\_xpro\_winc1500.X|MPLABX project for SAME54 and WINC1500 Xplained pro|
-|sam\_d21\_xpro\_winc1500.X|MPLABX project for SAMD21 and WINC1500 Xplained pro|
-|sam\_e54\_xpro\_winc1500\_freertos.X|MPLABX project for SAME54 and WINC1500 Xplained pro using FreeRTOS|
+|sam\_e54\_xpro\_winc1500.X|MPLABX project for SAME54 Xplained Pro Evaluation Kit and WINC1500 Xplained pro|
+|sam\_d21\_xpro\_winc1500.X|MPLABX project for SAMD21 Xplained Pro Evaluation Kit and WINC1500 Xplained pro|
+|sam\_e54\_xpro\_winc1500\_freertos.X|MPLABX project for SAME54 Xplained Pro Evaluation Kit and WINC1500 Xplained pro using FreeRTOS|
 |sam\_a5d27\_som1\_winc1500.X|MPLABX project for SAMA5D27 and WINC1500 WiFi 7 Click board|
+|pic32mz\_ef\_curiosity\_v2\_winc1500.X|MPLABX project for PIC32MZ EF 2.0 curiosity board and WINC1500 Xplained pro|
 | |
 
 ## Setting up SAMXXX Xplained Pro board
 
 -   Connect the Debug USB port on the SAMXXX Xplained Pro board to the computer using a micro USB cable
+
+-   Connect the WINC1500 Xplained pro on the EXT1 header of SAMXXX Xplained Pro board
+
+
+## Setting up PIC32MZ EF 2.0 Curiosity board
+
+-   Connect the Debug USB port on the PIC32MZ EF 2.0 Curiosity board to the computer using a micro USB cable
+
+-   Connect the WINC1500 Xplained pro on the EXT1 header of PIC32MZ EF 2.0 Curiosity board
 
 
 ## Setting up SAMA5D27-SOM1-EK1 Evaluation Kit
@@ -134,15 +146,15 @@ Application command parameters information
 
 |Application|Description|
 |-----------|-----------|
-|[WiFi station mode/Access point mode demo](docs/GUID-F459DB00-6C0A-4DC0-99F6-C67C5C4A7C52.md)|Demonstartes the Station Mode or Access Point\(AP\) mode of WINC1500|
-|[OTA Demo](docs/GUID-6D2D8401-87A9-4600-8700-F113BA941E5D.md)|Demonstrates OTA firmware upgrade|
-|[SSL Demo](docs/GUID-D776A67C-BE2A-4EC3-A149-32AC22EB4C5A.md)|Demonstrates TCP SSL Client application|
-|[Ping Demo](docs/GUID-BADEF0EB-B3EA-4EF9-8B9B-8DAC044C7957.md)|Demonstrates the Ping test|
-|[Iperf Demo](docs/GUID-0FD5A351-8B22-466E-90C3-3DCA88C651D3.md)|Demonstrates the iperf application|
-|[SNTP Demo](docs/GUID-EC458E8F-7C6B-4F4A-929B-3DB23A6508CF.md)|Demonstrates how to retrieve time information from the time server|
-|[MQTT Demo](docs/GUID-AE60932A-703A-481E-817A-53DCFD93BA11.md)|Demonstrates MQTT Application|
-|[WiFi Provisioning Demo](docs/GUID-DB7F0202-30DD-4848-AE43-CF154294E842.md)|Demonstartes the WiFi provisioning application|
-|[Certificate download via OTA Demo](docs/GUID-BD742FD9-613D-4BCD-9E9F-7A5E7A3BDCA2.md)|Demonstartes Certificate download via OTA application|
+|[WiFi station mode/Access point mode demo](GUID-F459DB00-6C0A-4DC0-99F6-C67C5C4A7C52.md)|Demonstartes the Station Mode or Access Point\(AP\) mode of WINC1500|
+|[OTA Demo](GUID-6D2D8401-87A9-4600-8700-F113BA941E5D.md)|Demonstrates OTA firmware upgrade|
+|[SSL Demo](GUID-D776A67C-BE2A-4EC3-A149-32AC22EB4C5A.md)|Demonstrates TCP SSL Client application|
+|[Ping Demo](GUID-BADEF0EB-B3EA-4EF9-8B9B-8DAC044C7957.md)|Demonstrates the Ping test|
+|[Iperf Demo](GUID-0FD5A351-8B22-466E-90C3-3DCA88C651D3.md)|Demonstrates the iperf application|
+|[SNTP Demo](GUID-EC458E8F-7C6B-4F4A-929B-3DB23A6508CF.md)|Demonstrates how to retrieve time information from the time server|
+|[MQTT Demo](GUID-AE60932A-703A-481E-817A-53DCFD93BA11.md)|Demonstrates MQTT Application|
+|[WiFi Provisioning Demo](GUID-DB7F0202-30DD-4848-AE43-CF154294E842.md)|Demonstartes the WiFi provisioning application|
+|[Certificate download via OTA Demo](GUID-BD742FD9-613D-4BCD-9E9F-7A5E7A3BDCA2.md)|Demonstartes Certificate download via OTA application|
 | |
 
 ### Steps to isolate/copy individual application\(s\) from the demo

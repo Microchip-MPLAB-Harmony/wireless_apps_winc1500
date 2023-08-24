@@ -1,4 +1,4 @@
-"Pin Number","Pin ID","Custom Name","Function","Mode", "Direction","Latch","Pull Up","Pull Down","Drive Strength"
+Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,Drive Strength
 1,PA00,,Available,,,,,,NORMAL
 2,PA01,,Available,,,,,,NORMAL
 3,PA02,,Available,,,,,,NORMAL
@@ -6,7 +6,7 @@
 5,PB04,,EIC_EXTINT4,Digital,High Impedance,n/a,No,No,NORMAL
 6,PB05,WDRV_WINC_CHIP_EN,GPIO,Digital,Out,High,,,NORMAL
 9,PB06,WDRV_WINC_RESETN,GPIO,Digital,Out,High,,,NORMAL
-10,PB07,GPIO_PB07,GPIO,Digital,Out,High,,,NORMAL
+10,PB07,,Available,,,,,,NORMAL
 11,PB08,,Available,,,,,,NORMAL
 12,PB09,,Available,,,,,,NORMAL
 13,PA04,,SERCOM0_PAD0,Digital,High Impedance,n/a,No,No,NORMAL

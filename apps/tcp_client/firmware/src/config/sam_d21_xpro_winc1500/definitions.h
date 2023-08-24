@@ -56,7 +56,6 @@
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
-#include "peripheral/dmac/plib_dmac.h"
 #include "peripheral/eic/plib_eic.h"
 #include "peripheral/tc/plib_tc3.h"
 #include "system/time/sys_time.h"
@@ -65,7 +64,6 @@
 #include "driver/spi/drv_spi.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
-#include "system/dma/sys_dma.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
 #include "app.h"
@@ -79,6 +77,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMD21J18A"
+#define DEVICE_ARCH			 "CORTEX-M0PLUS"
+#define DEVICE_FAMILY		 "SAMD"
+#define DEVICE_SERIES		 "SAMD21"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 48000000
@@ -197,9 +201,9 @@ typedef struct
     /* SPI0 Driver Object */
     SYS_MODULE_OBJ drvSPI0;
 
-    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysDebug;
 
+    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysConsole0;
 
 

@@ -156,6 +156,7 @@
           <itemPath>../src/config/sam_d21_xpro_winc1500/configuration.h</itemPath>
           <itemPath>../src/config/sam_d21_xpro_winc1500/interrupts.h</itemPath>
           <itemPath>../src/config/sam_d21_xpro_winc1500/device_vectors.h</itemPath>
+          <itemPath>../src/config/sam_d21_xpro_winc1500/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -447,12 +448,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.20</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
         <pack name="SAMD21_DFP" vendor="Microchip" version="3.6.144"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

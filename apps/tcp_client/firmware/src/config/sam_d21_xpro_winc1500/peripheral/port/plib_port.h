@@ -83,15 +83,6 @@
 #define WDRV_WINC_RESETN_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 6U)) & 0x01U)
 #define WDRV_WINC_RESETN_PIN                  PORT_PIN_PB06
 
-/*** Macros for GPIO_PB07 pin ***/
-#define GPIO_PB07_Set()               (PORT_REGS->GROUP[1].PORT_OUTSET = ((uint32_t)1U << 7U))
-#define GPIO_PB07_Clear()             (PORT_REGS->GROUP[1].PORT_OUTCLR = ((uint32_t)1U << 7U))
-#define GPIO_PB07_Toggle()            (PORT_REGS->GROUP[1].PORT_OUTTGL = ((uint32_t)1U << 7U))
-#define GPIO_PB07_OutputEnable()      (PORT_REGS->GROUP[1].PORT_DIRSET = ((uint32_t)1U << 7U))
-#define GPIO_PB07_InputEnable()       (PORT_REGS->GROUP[1].PORT_DIRCLR = ((uint32_t)1U << 7U))
-#define GPIO_PB07_Get()               (((PORT_REGS->GROUP[1].PORT_IN >> 7U)) & 0x01U)
-#define GPIO_PB07_PIN                  PORT_PIN_PB07
-
 // *****************************************************************************
 /* PORT Group
 

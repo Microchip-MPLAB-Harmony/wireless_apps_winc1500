@@ -168,6 +168,7 @@
           <itemPath>../src/config/sam_a5d27_som1_winc1500/configuration.h</itemPath>
           <itemPath>../src/config/sam_a5d27_som1_winc1500/device_cache.h</itemPath>
           <itemPath>../src/config/sam_a5d27_som1_winc1500/interrupts.h</itemPath>
+          <itemPath>../src/config/sam_a5d27_som1_winc1500/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -245,7 +246,6 @@
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/ssc1.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/chipid.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/mpddrc.h</itemPath>
-            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/smc.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/uart3.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/flexcom2.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/l2cc.h</itemPath>
@@ -291,6 +291,7 @@
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/aximx.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/aes.h</itemPath>
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/rtc.h</itemPath>
+            <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/instance/hsmc.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/ATSAMA5D27CD1G_DFP/pio/sama5d27cd1g.h</itemPath>
@@ -556,13 +557,13 @@
         <targetDevice>ATSAMA5D27CD1G</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>jlink</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.20</languageToolchainVersion>
+        <languageToolchainVersion>4.30</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.6.69"/>
+        <pack name="SAMA5D2_DFP" vendor="Microchip" version="1.9.106"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
@@ -601,7 +602,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -658,7 +658,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -698,7 +697,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -747,6 +745,8 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
@@ -778,6 +778,9 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
+        <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
         <property key="memories.bootflash" value="true"/>

@@ -55,8 +55,8 @@
 #include "peripheral/gpio/plib_gpio.h"
 #include "peripheral/evic/plib_evic.h"
 #include "bsp/bsp.h"
-#include "system/time/sys_time.h"
 #include "peripheral/uart/plib_uart6.h"
+#include "system/time/sys_time.h"
 #include "peripheral/coretimer/plib_coretimer.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
@@ -201,9 +201,9 @@ typedef struct
     /* SPI0 Driver Object */
     SYS_MODULE_OBJ drvSPI0;
 
+    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysDebug;
 
-    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysConsole0;
 
 
