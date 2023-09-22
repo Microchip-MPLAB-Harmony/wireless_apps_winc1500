@@ -3,7 +3,7 @@ import os
 def instantiateComponent(appExampleApp):
     print('Power Save Mode Application')
     configName = Variables.get('__CONFIGURATION_NAME')
-    templatePath = os.path.relpath(os.path.normpath(os.path.join(Variables.get("__PROJECT_SRC_PATH"), '../../templates')), start=Module.getPath())
+    templatePath = os.path.relpath(os.path.normpath(os.path.join(Variables.get("__PROJECT_SRC_PATH"), '..\..\templates')), start=Module.getPath())
 
     appExampleApp.addDependency('wdrv_winc', 'WDRV_WINC', True, True);
 
