@@ -35,9 +35,9 @@ This example will be only available with SAME54 Host
     ![cert_ota_log_new](GUID-549EE543-0C5B-423E-AB18-B570F8CE7A35-low.png)
 
 
-## Download Root Certificates as a bundle
+## Download Root Certificates as Single Image (as a bundle)
 
-The existing application can download the Root certificates in der or pem format. If the user wants to convert the certificates into custom WINC format and download it as a bundle, follow the below mentioned steps.
+The existing application can download the Root certificates in der or pem format. If the user wants to convert the certificates into custom WINC format and download it as single image (as a bundle), follow the below mentioned steps.
 
 1. Enable the macro "ROOT_CERT_BUNDLE" in "app_cert_download_ota.h"
 2. The root certificate format to be used with winc flash is a winc custom format. User can use the "wireless_wifi\utilities\wifi\winc\tools\image_tool.exe" to convert the root certificate to required format. <br/>User can use the method mentioned in step 3 to convert the certificate into custom WINC format and rename the file as "root_certs.bin"
@@ -86,3 +86,8 @@ This will create a 1MB binary flash image with the root certificates located at 
 
 After creating the image, place this "root_cert.bin" file in the HTTP server and follow the steps 4 to 8 to run the application.
 
+## Root Certificate Format in WINC1500
+
+Given below is an example of a WINC1500 root certificate store with two certificates (out of a total of 9).
+
+![flash_cert_format_1_1500](GUID-84B78E9A-59BE-4340-951F-A27CA7965481-low.png)
